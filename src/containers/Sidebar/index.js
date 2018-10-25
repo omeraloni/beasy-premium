@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 import IntlMessages from "Util/IntlMessages";
 import { Nav, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import SideMenuLink from "Components/Beasy/SideMenuLink/SideMenuLink";
+import SideMenuLink from "Components/Beasy/SideMenu/SideMenuLink/SideMenuLink";
+import SubMenuLink from "Components/Beasy/SideMenu/SubMenuLink/SubMenuLink";
+import ComingSoonBadge from "Components/Beasy/Badges/ComingSoonBadge"
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { withRouter } from "react-router-dom";
 import classnames from "classnames";
@@ -237,16 +239,14 @@ class Sidebar extends Component {
               option={{ suppressScrollX: true, wheelPropagation: false }}
             >
               <Nav vertical className="list-unstyled">
-                <NavItem
-                  className={classnames({
+                <SideMenuLink
+                  link={"/app/beasy/home"}
+                  classes={{
                     active: this.state.selectedParentMenu == "beasy"
-                  })}
-                >
-                  <NavLink to="/app/beasy">
-                    <i className="iconsmind-Compass-Rose" />{" "}
-                    <IntlMessages id="Beasy" />
-                  </NavLink>
-                </NavItem>
+                  }}
+                  clicked={e => this.openSubMenu(e, "beasy")}
+                  icon={"iconsmind-Compass-Rose"}
+                  text={"Beasy"} />
 
                 <SideMenuLink
                   link={"/app/dashboards/default"}
@@ -254,7 +254,8 @@ class Sidebar extends Component {
                     active: this.state.selectedParentMenu == "dashboards"
                   }}
                   clicked={e => this.openSubMenu(e, "dashboards")}
-                  icon={"iconsmind-Shop-4"} text={"menu.dashboards"} />
+                  icon={"iconsmind-Shop-4"}
+                  text={"menu.dashboards"} />
 
                 <SideMenuLink
                   link={"/app/layouts"}
@@ -271,16 +272,8 @@ class Sidebar extends Component {
                     active: this.state.selectedParentMenu == "applications"
                   }}
                   clicked={e => this.openSubMenu(e, "applications")}
-                  icon={"iconsmind-Air-Balloon"} text={"menu.applications"} />
-
-                <SideMenuLink
-                  link={"/app/ui"}
-                  classes={{
-                    active: this.state.selectedParentMenu == "ui"
-                  }}
-                  clicked={e => this.openSubMenu(e, "ui")}
-                  icon={"iconsmind-Pantone"}
-                  text={"menu.ui"} />
+                  icon={"iconsmind-Air-Balloon"}
+                  text={"menu.applications"} />
 
                 <SideMenuLink
                   link={"/app/ui"}
@@ -309,6 +302,24 @@ class Sidebar extends Component {
             <PerfectScrollbar
               option={{ suppressScrollX: true, wheelPropagation: false }}
             >
+              <Nav
+                className={classnames({
+                  "d-block": this.state.selectedParentMenu == "beasy"
+                })}
+                data-parent="beasy"
+              >
+                <SubMenuLink link={"/app/beasy/home"}
+                  icon={"iconsmind-Home-5"}
+                  text={"Home"} />
+
+                <SubMenuLink link={"/app/beasy/aboutUs"}
+                  icon={"iconsmind-Information"}
+                  text={"About Us"} >
+                  <ComingSoonBadge> </ComingSoonBadge>
+
+                </ SubMenuLink>
+              </Nav>
+
               <Nav
                 className={classnames({
                   "d-block": this.state.selectedParentMenu == "dashboards"
@@ -346,18 +357,14 @@ class Sidebar extends Component {
                 })}
                 data-parent="layouts"
               >
-                <NavItem>
-                  <NavLink to="/app/layouts/data-list">
-                    <i className="simple-icon-credit-card" />{" "}
-                    <IntlMessages id="menu.data-list" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/layouts/thumb-list">
-                    <i className="simple-icon-list" />{" "}
-                    <IntlMessages id="menu.thumb-list" />
-                  </NavLink>
-                </NavItem>
+                <SubMenuLink link={"/app/layouts/data-list"}
+                  icon={"simple-icon-credit-card"}
+                  text={"menu.data-list"} />
+
+                <SubMenuLink link={"/app/layouts/thumb-list"}
+                  icon={"simple-icon-list"}
+                  text={"menu.thumb-list"} />
+
                 <NavItem>
                   <NavLink to="/app/layouts/image-list">
                     <i className="simple-icon-grid" />{" "}

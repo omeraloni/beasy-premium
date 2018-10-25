@@ -1,5 +1,5 @@
 export const defaultMenuType = 'menu-default'; // 'menu-default', 'menu-sub-hidden', 'menu-hidden';
-export const defaultStartPath = '/app/beasy'; 
+export const defaultStartPath = '/app/beasy/home'; 
 export const subHiddenBreakpoint=1440;
 export const menuHiddenBreakpoint = 768;
 export const defaultLocale={

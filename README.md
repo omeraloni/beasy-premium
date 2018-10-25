@@ -6,4 +6,7 @@ After clone:
 2. npm install
 
 To start locally:
-1.npm strat - will update on every change
+
+1.npm strat
+
+It will update on every change

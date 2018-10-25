@@ -9,7 +9,7 @@ class ForgotPasswordLayout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "demo@gogo.com"
+      email: "demo@beasy.com"
     };
   }
 
@@ -19,6 +19,11 @@ class ForgotPasswordLayout extends Component {
   componentWillUnmount() {
     document.body.classList.remove("background");
   }
+
+  onChangeHandler = () => event => {
+    this.setState({ email: event.target.value })
+};
+
   render() {
     return (
       <Fragment>
@@ -48,7 +53,7 @@ class ForgotPasswordLayout extends Component {
                     </CardTitle>
                     <Form>
                       <Label className="form-group has-float-label mb-4">
-                        <Input type="email" defaultValue={this.state.email} />
+                        <Input type="email" defaultValue={this.state.email} onChange={this.onChangeHandler()} />
                         <IntlMessages id="user.email" />
                       </Label>
 

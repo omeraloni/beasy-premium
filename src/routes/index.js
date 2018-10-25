@@ -4,6 +4,7 @@ import { Route, withRouter, Switch, Redirect } from 'react-router-dom';
 import TopNav from 'Containers/TopNav'
 import Sidebar from 'Containers/Sidebar';
 
+import beasy from './beasy';
 import dashboards from './dashboards';
 import layouts from './layouts';
 import applications from './applications';
@@ -25,6 +26,7 @@ class MainApp extends Component {
 				<main>
 					<div className="container-fluid">
 						<Switch>
+						<Route path={`${match.url}/beasy`} component={beasy} />
 							<Route path={`${match.url}/applications`} component={applications} />
 							<Route path={`${match.url}/dashboards`} component={dashboards} />
 							<Route path={`${match.url}/layouts`} component={layouts} />

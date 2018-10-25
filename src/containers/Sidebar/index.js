@@ -3,9 +3,10 @@ import ReactDOM from "react-dom";
 import IntlMessages from "Util/IntlMessages";
 import { Nav, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import classnames from "classnames";
+import SideMenuLink from "Components/Beasy/SideMenuLink/SideMenuLink";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { withRouter } from "react-router-dom";
+import classnames from "classnames";
 
 import { connect } from "react-redux";
 import {
@@ -159,7 +160,7 @@ class Sidebar extends Component {
       });
     } else if (this.state.selectedParentMenu == "") {
       this.setState({
-        selectedParentMenu: "dashboards"
+        selectedParentMenu: "beasy"
       });
     }
   }
@@ -238,69 +239,66 @@ class Sidebar extends Component {
               <Nav vertical className="list-unstyled">
                 <NavItem
                   className={classnames({
+                    active: this.state.selectedParentMenu == "beasy"
+                  })}
+                >
+                  <NavLink to="/app/beasy">
+                    <i className="iconsmind-Compass-Rose" />{" "}
+                    <IntlMessages id="Beasy" />
+                  </NavLink>
+                </NavItem>
+
+                <SideMenuLink
+                  link={"/app/dashboards/default"}
+                  classes={{
                     active: this.state.selectedParentMenu == "dashboards"
-                  })}
-                >
-                  <NavLink
-                    to="/app/dashboards/default"
-                    onClick={e => this.openSubMenu(e, "dashboards")}
-                  >
-                    <i className="iconsmind-Shop-4" />{" "}
-                    <IntlMessages id="menu.dashboards" />
-                  </NavLink>
-                </NavItem>
-                <NavItem
-                  className={classnames({
+                  }}
+                  clicked={e => this.openSubMenu(e, "dashboards")}
+                  icon={"iconsmind-Shop-4"} text={"menu.dashboards"} />
+
+                <SideMenuLink
+                  link={"/app/layouts"}
+                  classes={{
                     active: this.state.selectedParentMenu == "layouts"
-                  })}
-                >
-                  <NavLink
-                    to="/app/layouts"
-                    onClick={e => this.openSubMenu(e, "layouts")}
-                  >
-                    <i className="iconsmind-Digital-Drawing" />{" "}
-                    <IntlMessages id="menu.layouts" />
-                  </NavLink>
-                </NavItem>
-                <NavItem
-                  className={classnames({
+                  }}
+                  clicked={e => this.openSubMenu(e, "layouts")}
+                  icon={"iconsmind-Digital-Drawing"}
+                  text={"menu.layouts"} />
+
+                <SideMenuLink
+                  link={"/app/applications"}
+                  classes={{
                     active: this.state.selectedParentMenu == "applications"
-                  })}
-                >
-                  <NavLink
-                    to="/app/applications"
-                    onClick={e => this.openSubMenu(e, "applications")}
-                  >
-                    <i className="iconsmind-Air-Balloon" />{" "}
-                    <IntlMessages id="menu.applications" />
-                  </NavLink>
-                </NavItem>
-                <NavItem
-                  className={classnames({
+                  }}
+                  clicked={e => this.openSubMenu(e, "applications")}
+                  icon={"iconsmind-Air-Balloon"} text={"menu.applications"} />
+
+                <SideMenuLink
+                  link={"/app/ui"}
+                  classes={{
                     active: this.state.selectedParentMenu == "ui"
-                  })}
-                >
-                  <NavLink
-                    to="/app/ui"
-                    onClick={e => this.openSubMenu(e, "ui")}
-                  >
-                    <i className="iconsmind-Pantone" />{" "}
-                    <IntlMessages id="menu.ui" />
-                  </NavLink>
-                </NavItem>
-                <NavItem
-                  className={classnames({
+                  }}
+                  clicked={e => this.openSubMenu(e, "ui")}
+                  icon={"iconsmind-Pantone"}
+                  text={"menu.ui"} />
+
+                <SideMenuLink
+                  link={"/app/ui"}
+                  classes={{
+                    active: this.state.selectedParentMenu == "ui"
+                  }}
+                  clicked={e => this.openSubMenu(e, "ui")}
+                  icon={"iconsmind-Pantone"}
+                  text={"menu.ui"} />
+
+                <SideMenuLink
+                  link={"/app/menu"}
+                  classes={{
                     active: this.state.selectedParentMenu == "menu"
-                  })}
-                >
-                  <NavLink
-                    to="/app/menu"
-                    onClick={e => this.openSubMenu(e, "menu")}
-                  >
-                    <i className="iconsmind-Three-ArrowFork" />{" "}
-                    <IntlMessages id="menu.menu" />
-                  </NavLink>
-                </NavItem>
+                  }}
+                  clicked={e => this.openSubMenu(e, "menu")}
+                  icon={"iconsmind-Three-ArrowFork"}
+                  text={"menu.menu"} />
               </Nav>
             </PerfectScrollbar>
           </div>

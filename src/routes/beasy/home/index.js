@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import OpportunityCard from 'Components/Beasy/Opportunity/OpportunityCard'
 import {
   Row,
   Card,
@@ -15,11 +16,7 @@ import {
   DropdownToggle,
   DropdownItem,
   Input,
-  CardBody,
-  CardSubtitle,
-  CardImg,
   Label,
-  CardText,
   Badge
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
@@ -75,7 +72,7 @@ export default class ImageListLayout extends Component {
       selectedItems: [],
       categories: [],
       lastChecked: null,
-      displayOptionsIsOpen:false
+      displayOptionsIsOpen: false
     };
   }
 
@@ -137,7 +134,7 @@ export default class ImageListLayout extends Component {
     }
   }
 
-  handleCheckChange(event, id) {
+  handleCheckChange(id) {
     if (this.state.lastChecked == null) {
       this.setState({
         lastChecked: id
@@ -171,6 +168,9 @@ export default class ImageListLayout extends Component {
     }
   }
 
+  isSelected(product) {
+    return this.state.selectedItems.includes(product.id)
+  }
   getIndex(value, arr, prop) {
     for (var i = 0; i < arr.length; i++) {
       if (arr[i][prop] === value) {
@@ -278,7 +278,7 @@ export default class ImageListLayout extends Component {
                     backdrop="static"
                   >
                     <ModalHeader toggle={this.toggleModal}>
-                    <IntlMessages id="layouts.add-new-modal-title" />
+                      <IntlMessages id="layouts.add-new-modal-title" />
                     </ModalHeader>
                     <ModalBody>
                       <Label>
@@ -289,7 +289,7 @@ export default class ImageListLayout extends Component {
                         <IntlMessages id="layouts.category" />
                       </Label>
                       <Select
-                      components={{ Input:  CustomSelectInput}}
+                        components={{ Input: CustomSelectInput }}
                         className="react-select"
                         classNamePrefix="react-select"
                         name="form-field-name"
@@ -417,8 +417,8 @@ export default class ImageListLayout extends Component {
                   <div className="d-block d-md-inline-block">
                     <UncontrolledDropdown className="mr-1 float-md-left btn-group mb-1">
                       <DropdownToggle caret color="outline-dark" size="xs">
-                      <IntlMessages id="layouts.orderby" />
-                       {this.state.selectedOrderOption.label}
+                        <IntlMessages id="layouts.orderby" />
+                        {this.state.selectedOrderOption.label}
                       </DropdownToggle>
                       <DropdownMenu>
                         {this.state.orderOptions.map((order, index) => {
@@ -476,49 +476,7 @@ export default class ImageListLayout extends Component {
               if (this.state.displayMode === "imagelist") {
                 return (
                   <Colxx sm="6" lg="4" xl="3" className="mb-3" key={product.id}>
-                    <Card>
-                      <div className="position-relative">
-                        <NavLink
-                          to={`/app/layouts/data-list?p=${product.id}`}
-                          className="w-40 w-sm-100"
-                        >
-                          <CardImg top alt={product.name} src={product.img} />
-                        </NavLink>
-                        <Badge
-                          color={product.statusColor}
-                          pill
-                          className="position-absolute badge-top-left"
-                        >
-                          {product.status}
-                        </Badge>
-                      </div>
-                      <CardBody>
-                        <Row>
-                          <Colxx xxs="2">
-                            <CustomInput
-                              className="itemCheck mb-0"
-                              type="checkbox"
-                              id={`check_${product.id}`}
-                              checked={this.state.selectedItems.includes(
-                                product.id
-                              )}
-                              onClick={event =>
-                                this.handleCheckChange(event, product.id)
-                              }
-                              label=""
-                            />
-                          </Colxx>
-                          <Colxx xxs="10">
-                            <CardSubtitle className="mb-4">
-                              {product.name}
-                            </CardSubtitle>
-                            <CardText className="text-muted text-small mb-0 font-weight-light">
-                              {product.createDate}
-                            </CardText>
-                          </Colxx>
-                        </Row>
-                      </CardBody>
-                    </Card>
+                    <OpportunityCard />
                   </Colxx>
                 );
               } else if (this.state.displayMode === "thumblist") {

@@ -249,6 +249,15 @@ class Sidebar extends Component {
                   text={"Beasy"} />
 
                 <SideMenuLink
+                  link={"/app/matchmaker/new"}
+                  classes={{
+                    active: this.state.selectedParentMenu == "matchmaker"
+                  }}
+                  clicked={e => this.openSubMenu(e, "matchmaker")}
+                  icon={"iconsmind-Idea-2"}
+                  text={"Match Maker"} />
+
+                <SideMenuLink
                   link={"/app/dashboards/default"}
                   classes={{
                     active: this.state.selectedParentMenu == "dashboards"
@@ -318,6 +327,18 @@ class Sidebar extends Component {
                   <ComingSoonBadge> </ComingSoonBadge>
 
                 </ SubMenuLink>
+              </Nav>
+
+              <Nav
+                className={classnames({
+                  "d-block": this.state.selectedParentMenu == "matchmaker"
+                })}
+                data-parent="matchmaker"
+              >
+                <SubMenuLink link={"/app/matchmaker/new"}
+                  icon={"iconsmind-Home-5"}
+                  text={"New"} />
+
               </Nav>
 
               <Nav

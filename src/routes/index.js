@@ -5,6 +5,7 @@ import TopNav from 'Containers/TopNav'
 import Sidebar from 'Containers/Sidebar';
 
 import beasy from './beasy';
+import matchmaker from './matchmaker';
 import dashboards from './dashboards';
 import layouts from './layouts';
 import applications from './applications';
@@ -18,15 +19,16 @@ class MainApp extends Component {
 	}
 
 	render() {
-		const { match, containerClassnames} = this.props;
+		const { match, containerClassnames } = this.props;
 		return (
 			<div id="app-container" className={containerClassnames}>
 				<TopNav history={this.props.history} />
-				<Sidebar/>
+				<Sidebar />
 				<main>
 					<div className="container-fluid">
 						<Switch>
-						<Route path={`${match.url}/beasy`} component={beasy} />
+							<Route path={`${match.url}/beasy`} component={beasy} />
+							<Route path={`${match.url}/matchmaker`} component={matchmaker} />
 							<Route path={`${match.url}/applications`} component={applications} />
 							<Route path={`${match.url}/dashboards`} component={dashboards} />
 							<Route path={`${match.url}/layouts`} component={layouts} />
@@ -40,8 +42,8 @@ class MainApp extends Component {
 	}
 }
 const mapStateToProps = ({ menu }) => {
-	const { containerClassnames} = menu;
+	const { containerClassnames } = menu;
 	return { containerClassnames };
-  }
-  
-  export default withRouter(connect(mapStateToProps, {})(MainApp));
+}
+
+export default withRouter(connect(mapStateToProps, {})(MainApp));

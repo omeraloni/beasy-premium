@@ -11,7 +11,7 @@ import Rating from "Components/Rating";
 
 class OpportunityCard extends Component {
     render() {
-        const { product, isChecked, clickHandler } = this.props;
+        const { image, name, clickHandler } = this.props;
         return (
             <Card className="mb-4">
             <div className="position-absolute card-top-buttons">
@@ -20,14 +20,14 @@ class OpportunityCard extends Component {
               </Button>
             </div>
             <img
-              src="/assets/img/detail.jpg"
+              src={image}
               alt="Detail"
               className="card-img-top"
             />
 
             <CardBody>
               <p className="text-muted text-small mb-2">
-                <IntlMessages id="layouts.description" />
+                <IntlMessages id={name} />
               </p>
               <p className="mb-3">
                 It’s all about simplicity…Less is more. Chocolate Cake

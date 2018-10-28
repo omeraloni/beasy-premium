@@ -115,6 +115,138 @@ export default class FormsUi extends Component {
           </Colxx>
         </Row>
 
+              <Row className="mb-4">
+          <Colxx xxs="12">
+            <Card>
+              <CardBody>
+                <CardTitle>
+                  <IntlMessages id="Match Maker" />
+                </CardTitle>
+                <Form>
+                <FormGroup row>
+                    <Label sm={2} className="pt-0">
+                      <IntlMessages id="What do you want to achieve?" />
+                    </Label>
+                    <Colxx sm={10}>
+                      <FormGroup check>
+                        <Label check>
+                          <Input type="checkbox" name="check1" /> Example
+                          <IntlMessages id="forms.checkbox" />
+                        </Label>
+                      </FormGroup>
+                    </Colxx>
+                  </FormGroup>
+
+                  <FormGroup row>
+                    <Colxx sm={6}>
+                      <FormGroup>
+                        <Label for="exampleEmailGrid">
+                          <IntlMessages id="forms.email" />
+                        </Label>
+                        <Input
+                          type="email"
+                          name="exampleEmailGrid"
+                          id="exampleEmailGrid"
+                          placeholder="Email"
+                        />
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={6}>
+                      <FormGroup>
+                        <Label for="examplePasswordGrid">
+                          <IntlMessages id="forms.password" />
+                        </Label>
+                        <Input
+                          type="password"
+                          name="examplePasswordGrid"
+                          id="examplePasswordGrid"
+                          placeholder="Password"
+                        />
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={12}>
+                      <FormGroup>
+                        <Label for="exampleAddressGrid">
+                          <IntlMessages id="forms.address" />
+                        </Label>
+                        <Input
+                          type="text"
+                          name="exampleAddressGrid"
+                          id="exampleAddressGrid"
+                          placeholder="1234 Main St"
+                        />
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={12}>
+                      <FormGroup>
+                        <Label for="exampleAddress2Grid">
+                          <IntlMessages id="forms.address2" />
+                        </Label>
+                        <Input
+                          type="text"
+                          name="exampleAddress2Grid"
+                          id="exampleAddress2Grid"
+                          placeholder="Apartment, studio, or floor"
+                        />
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={6}>
+                      <FormGroup>
+                        <Label for="exampleEmailGrid">
+                          <IntlMessages id="forms.city" />
+                        </Label>
+                        <Input
+                          type="text"
+                          name="exampleTextGrid"
+                          id="exampleTextGrid"
+                          placeholder="City"
+                        />
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={4}>
+                      <FormGroup>
+                        <Label>
+                          <IntlMessages id="forms.state" />
+                        </Label>
+                        <Input type="select">
+                          <option>Option 1</option>
+                          <option>Option 2</option>
+                          <option>Option 3</option>
+                          <option>Option 4</option>
+                          <option>Option 5</option>
+                        </Input>
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={2}>
+                      <FormGroup>
+                        <Label for="exampleZipGrid">
+                          <IntlMessages id="forms.zip" />
+                        </Label>
+                        <Input
+                          type="text"
+                          name="exampleZipGrid"
+                          id="exampleZipGrid"
+                          placeholder="Zip"
+                        />
+                      </FormGroup>
+                    </Colxx>
+                  </FormGroup>
+
+                  <Button color="primary">
+                    <IntlMessages id="forms.signup" />
+                  </Button>
+                </Form>
+              </CardBody>
+            </Card>
+          </Colxx>
+        </Row>
+
         <Row className="mb-4">
           <Colxx xxs="12">
             <Card>
@@ -224,20 +356,6 @@ export default class FormsUi extends Component {
                         <Label check>
                           <Input type="radio" name="radio1" disabled />
                           <IntlMessages id="forms.third-radio-disabled" />
-                        </Label>
-                      </FormGroup>
-                    </Colxx>
-                  </FormGroup>
-
-                  <FormGroup row>
-                    <Label sm={2} className="pt-0">
-                      <IntlMessages id="forms.checkbox" />
-                    </Label>
-                    <Colxx sm={10}>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" name="check1" /> Example
-                          <IntlMessages id="forms.checkbox" />
                         </Label>
                       </FormGroup>
                     </Colxx>
@@ -360,124 +478,6 @@ export default class FormsUi extends Component {
 
                   <Button color="primary">
                     <IntlMessages id="forms.submit" />
-                  </Button>
-                </Form>
-              </CardBody>
-            </Card>
-          </Colxx>
-        </Row>
-
-        <Row className="mb-4">
-          <Colxx xxs="12">
-            <Card>
-              <CardBody>
-                <CardTitle>
-                  <IntlMessages id="forms.grid" />
-                </CardTitle>
-                <Form>
-                  <FormGroup row>
-                    <Colxx sm={6}>
-                      <FormGroup>
-                        <Label for="exampleEmailGrid">
-                          <IntlMessages id="forms.email" />
-                        </Label>
-                        <Input
-                          type="email"
-                          name="exampleEmailGrid"
-                          id="exampleEmailGrid"
-                          placeholder="Email"
-                        />
-                      </FormGroup>
-                    </Colxx>
-
-                    <Colxx sm={6}>
-                      <FormGroup>
-                        <Label for="examplePasswordGrid">
-                          <IntlMessages id="forms.password" />
-                        </Label>
-                        <Input
-                          type="password"
-                          name="examplePasswordGrid"
-                          id="examplePasswordGrid"
-                          placeholder="Password"
-                        />
-                      </FormGroup>
-                    </Colxx>
-
-                    <Colxx sm={12}>
-                      <FormGroup>
-                        <Label for="exampleAddressGrid">
-                          <IntlMessages id="forms.address" />
-                        </Label>
-                        <Input
-                          type="text"
-                          name="exampleAddressGrid"
-                          id="exampleAddressGrid"
-                          placeholder="1234 Main St"
-                        />
-                      </FormGroup>
-                    </Colxx>
-
-                    <Colxx sm={12}>
-                      <FormGroup>
-                        <Label for="exampleAddress2Grid">
-                          <IntlMessages id="forms.address2" />
-                        </Label>
-                        <Input
-                          type="text"
-                          name="exampleAddress2Grid"
-                          id="exampleAddress2Grid"
-                          placeholder="Apartment, studio, or floor"
-                        />
-                      </FormGroup>
-                    </Colxx>
-
-                    <Colxx sm={6}>
-                      <FormGroup>
-                        <Label for="exampleEmailGrid">
-                          <IntlMessages id="forms.city" />
-                        </Label>
-                        <Input
-                          type="text"
-                          name="exampleTextGrid"
-                          id="exampleTextGrid"
-                          placeholder="City"
-                        />
-                      </FormGroup>
-                    </Colxx>
-
-                    <Colxx sm={4}>
-                      <FormGroup>
-                        <Label>
-                          <IntlMessages id="forms.state" />
-                        </Label>
-                        <Input type="select">
-                          <option>Option 1</option>
-                          <option>Option 2</option>
-                          <option>Option 3</option>
-                          <option>Option 4</option>
-                          <option>Option 5</option>
-                        </Input>
-                      </FormGroup>
-                    </Colxx>
-
-                    <Colxx sm={2}>
-                      <FormGroup>
-                        <Label for="exampleZipGrid">
-                          <IntlMessages id="forms.zip" />
-                        </Label>
-                        <Input
-                          type="text"
-                          name="exampleZipGrid"
-                          id="exampleZipGrid"
-                          placeholder="Zip"
-                        />
-                      </FormGroup>
-                    </Colxx>
-                  </FormGroup>
-
-                  <Button color="primary">
-                    <IntlMessages id="forms.signup" />
                   </Button>
                 </Form>
               </CardBody>

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
 import IntlMessages from "Util/IntlMessages";
+import MatchMakerData from "Data/MatchMakerFormData";
 import {
   Row,
   Card,
@@ -55,6 +56,7 @@ export default class FormsUi extends Component {
     this.handleChangeDateLabelTop = this.handleChangeDateLabelTop.bind(this);
 
     this.state = {
+      ageOptions:[],
       selectedOption: "",
       selectedOptionLabelOver: "",
       selectedOptionLabelTop: "",
@@ -70,6 +72,10 @@ export default class FormsUi extends Component {
       tagsLabelTop: []
     };
   }
+
+  handleAgeChange = ageOptions => {
+    this.setState({ ageOptions });
+  };
 
   handleTagChange(tags) {
     this.setState({ tags });
@@ -115,28 +121,194 @@ export default class FormsUi extends Component {
           </Colxx>
         </Row>
 
-              <Row className="mb-4">
+        <Row className="mb-4">
           <Colxx xxs="12">
             <Card>
               <CardBody>
                 <CardTitle>
-                  <IntlMessages id="Match Maker" />
+                  <IntlMessages id="MatchMaker" />
                 </CardTitle>
                 <Form>
-                <FormGroup row>
-                    <Label sm={2} className="pt-0">
-                      <IntlMessages id="What do you want to achieve?" />
-                    </Label>
-                    <Colxx sm={10}>
-                      <FormGroup check>
-                        <Label check>
-                          <Input type="checkbox" name="check1" /> Example
-                          <IntlMessages id="forms.checkbox" />
+                  <FormGroup row>
+                    <Colxx sm={4}>
+                      <FormGroup>
+                        <Label className="pt-0">
+                          <IntlMessages id="What are you looking for?" />
                         </Label>
+                        <Colxx>
+                          {MatchMakerData.mainGoals().ranges.map(goal => {
+                            return (
+                              <FormGroup check>
+                                <Label check>
+                                  <Input type="checkbox" key={goal.value} name={goal.value} />
+                                  <IntlMessages id={goal.label} />
+                                </Label>
+                              </FormGroup>
+                            )
+                          })}
+
+                        </Colxx>
+                      </FormGroup>
+                    </Colxx>
+                    <Colxx sm={4}>
+                      <FormGroup>
+                        <Label className="pt-0">
+                          <IntlMessages id="What Do you want to achieve?" />
+                        </Label>
+                        <Colxx>
+                          {MatchMakerData.achieve().ranges.map(goal => {
+                            return (
+                              <FormGroup check>
+                                <Label check>
+                                  <Input type="checkbox" key={goal.value} name={goal.value} />
+                                  <IntlMessages id={goal.label} />
+                                </Label>
+                              </FormGroup>
+                            )
+                          })}
+
+                        </Colxx>
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={4}>
+                      <FormGroup >
+                        <Label className="pt-0">
+                          <IntlMessages id="How?" />
+                        </Label>
+                        <Colxx>
+                          {MatchMakerData.how().ranges.map(goal => {
+                            return (
+                              <FormGroup check>
+                                <Label check>
+                                  <Input type="checkbox" key={goal.value} name={goal.value} />
+                                  <IntlMessages id={goal.label} />
+                                </Label>
+                              </FormGroup>
+                            )
+                          })}
+
+                        </Colxx>
                       </FormGroup>
                     </Colxx>
                   </FormGroup>
 
+                  <FormGroup row>
+                    <Colxx sm={2}>
+                      <IntlMessages id="Target Audiance" />
+                    </Colxx>
+                    <Colxx sm={5}>
+                      <FormGroup>
+                        <Label className="pt-0" for="genderRadio">
+                          <IntlMessages id="Gender" />
+                        </Label>
+                        <Colxx>
+
+                          <div>
+                            <CustomInput
+                              type="checkbox"
+                              id="male"
+                              label="Male"
+                              name="male"
+                            />
+                            <CustomInput
+                              type="checkbox"
+                              id="female"
+                              label="Female"
+                              name="female"
+                            />
+                          </div>
+
+                        </Colxx>
+                      </FormGroup>
+                    </Colxx>
+                    <Colxx sm={5}>
+                      <FormGroup>
+                        <Label className="pt-0">
+                          <IntlMessages id="Age" />
+                        </Label>
+                        <Colxx>
+                          <Select
+                            components={{ Input: CustomSelectInput }}
+                            className="react-select"
+                            classNamePrefix="react-select"
+                            isMulti
+                            name="age"
+                            value={this.state.ageOptions}
+                            onChange={this.handleAgeChange}
+                            options={MatchMakerData.age().ranges}
+                          />
+
+                        </Colxx>
+                      </FormGroup>
+                    </Colxx>
+
+
+
+                  </FormGroup>
+                  <FormGroup row>
+                    <Colxx sm={4}>
+                      <FormGroup>
+                        <Label className="pt-0">
+                          <IntlMessages id="What are you looking for?" />
+                        </Label>
+                        <Colxx>
+                          {MatchMakerData.mainGoals().ranges.map(goal => {
+                            return (
+                              <FormGroup check>
+                                <Label check>
+                                  <Input type="checkbox" key={goal.value} name={goal.value} />
+                                  <IntlMessages id={goal.label} />
+                                </Label>
+                              </FormGroup>
+                            )
+                          })}
+
+                        </Colxx>
+                      </FormGroup>
+                    </Colxx>
+                    <Colxx sm={4}>
+                      <FormGroup>
+                        <Label className="pt-0">
+                          <IntlMessages id="What Do you want to achieve?" />
+                        </Label>
+                        <Colxx>
+                          {MatchMakerData.achieve().ranges.map(goal => {
+                            return (
+                              <FormGroup check>
+                                <Label check>
+                                  <Input type="checkbox" key={goal.value} name={goal.value} />
+                                  <IntlMessages id={goal.label} />
+                                </Label>
+                              </FormGroup>
+                            )
+                          })}
+
+                        </Colxx>
+                      </FormGroup>
+                    </Colxx>
+
+                    <Colxx sm={4}>
+                      <FormGroup >
+                        <Label className="pt-0">
+                          <IntlMessages id="How?" />
+                        </Label>
+                        <Colxx>
+                          {MatchMakerData.how().ranges.map(goal => {
+                            return (
+                              <FormGroup check>
+                                <Label check>
+                                  <Input type="checkbox" key={goal.value} name={goal.value} />
+                                  <IntlMessages id={goal.label} />
+                                </Label>
+                              </FormGroup>
+                            )
+                          })}
+
+                        </Colxx>
+                      </FormGroup>
+                    </Colxx>
+                  </FormGroup>
                   <FormGroup row>
                     <Colxx sm={6}>
                       <FormGroup>

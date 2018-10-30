@@ -20,6 +20,10 @@ class OpportunityCard extends Component {
 
 
   render() {
+    var iStyle = {
+      fontSize: '2rem'
+    };
+
     const { product } = this.props;
     return (
       <Card className="mb-4">
@@ -53,14 +57,13 @@ class OpportunityCard extends Component {
           <p className="text-muted mb-2">
             <IntlMessages id="Target Audiance" />
           </p>
-          <p className="mb-3">
-            <IntlMessages id="Gender: " />
-            {product.gender.map(g => {
+          <p className="mb-4" text-large>
+             {product.gender.map(g => {
               if (g === "Female") {
-                return <i className="iconsmind-Business-Woman" />
+                return <i style={iStyle} className="iconsmind-Girl" />
               }
               if (g === "Male") {
-                return <i className="iconsmind-Business-Man" />
+                return <i style={iStyle} className="iconsmind-Boy" />
               }
             })}
           </p>

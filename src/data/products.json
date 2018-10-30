@@ -345,6 +345,176 @@
             "notes": [
                 "is running a serial of ‘Open Club’ - Music and Fitness events in more than 500 clubs, across 50 states. We invite brands to join our awesome events from sport/music/bar or related industries"
             ]
+        },
+        {
+            "id": 11,
+            "name": "Virgin Trains ",
+            "area": [
+                "UK"
+            ],
+            "companyDescription": "Train operating company",
+            "companyLocation": "London, UK",
+            "img": "/assets/img/beasy/virgin-trains.png",
+            "title": "Looking for a Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Music", "Entertainment"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 22,
+            "ageMax": 55,
+            "location": "UK",
+            "description": "Born in ’97, we’ve been putting trains on the West Coast of UK Main Line tracks for more than 20 years now. Running up to a vision-blurring 125mph with free onboard entertainment, a proper walk-in shop and comfy seats; we make journeys memorable",
+            "goals": [
+                "Create service/product", "Generate value"
+            ],
+            "how": [
+                "Traditional Marketing", "Social Marketing", "Make better ride experience"
+            ],
+            "notes": [
+                "Virgin Trains operates free onboard entertainment in our trains. We are looking to generate value with our entertainment system by partnerships with Music/ Media/ Content providers brand"
+            ]
+        },
+        {
+            "id": 12,
+            "name": "Greenpeace",
+            "area": [
+                "40 countries around the globe"
+            ],
+            "companyDescription": "Environmental organization",
+            "companyLocation": "Amsterdam, Netherlands",
+            "img": "/assets/img/beasy/planet-fitness.png",
+            "title": "Looking for Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Environment", "Eco-Friendly", "Sustainability", "Animal-Friendly"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 21,
+            "ageMax": 120,
+            "location": "Global",
+            "description": "Greenpeace is a global, independent campaigning organization that uses peaceful protest and creative communication to expose global environmental problems and promote solutions that are essential to a green and peaceful future",
+            "goals": [
+                "Publicity", "Exposure"
+            ],
+            "how": [
+                "Cross media campaign", "Strategic Campaign "
+            ],
+            "notes": [
+                "Greenpeace’s ‘Be apart’ Global campaign is about creating creative communication with companies and influencers around the globe to contribute to Greenpeace protest and Go-Green as a company and individuals. Join us to our partners program.  It’s a win-win situation for everybody"
+            ]
+        },
+        {
+            "id": 13,
+            "name": "Yoga Now",
+            "area": [
+                "Chicago, Illinois"
+            ],
+            "companyDescription": "Yoga and healing studio",
+            "companyLocation": "Chicago, Illinois",
+            "img": "/assets/img/beasy/yoga-now.png",
+            "title": "Looking for Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Sport", "Healing", "Yoga"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 26,
+            "ageMax": 60,
+            "location": "Chicago, Illinois",
+            "description": "Yoga Now provides inspiring, soulful transformation through yoga classes and massages in an eco-friendly studio and in the workplace. We are committed to providing yoga and healing which creates a healthy body and promotes a long and peaceful life." ,
+            "goals": [
+                "Generate value"
+            ],
+            "how": [
+                "Event Sponsorship"
+            ],
+            "notes": [
+                "Yoga Now is running serial events and workshops program throughout the year. We are looking for relevant event sponsor for long-term partnership"
+            ]
+        },
+        {
+            "id": 14,
+            "name": "Green Fitness Studio ",
+            "area": [
+                "Brooklyn, NY"
+            ],
+            "companyDescription": "Service Fitness studio",
+            "companyLocation": "Brooklyn, NY",
+            "img": "/assets/img/beasy/planet-fitness.jpg    ",
+            "title": "Looking for Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Sport", "Fitness", "Wellness", "Eco-Friendly"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 26,
+            "ageMax": 60,
+            "location": "Brooklyn, NY",
+            "description": "Green Fitness is a Full Service studio – everything you need in one place to feel great and look great. Personal training, nutritional coaching, massage and spa treatments. Green Fitness Studio is the first eco friendly fitness center. We constantly challenge ourselves to make our studio more eco friendly and energy efficient.",
+            "goals": [
+                "Create service/product", "Generate value"
+            ],
+            "how": [
+                "Long-Tern partnership", "Rebranding", "Distribution point", "Cross media promotion"
+            ],
+            "notes": [
+                "Green Fitness Studio is proud to be the first ecofriendly fitness center, we are looking to rebrand to be also a fun, experience venue. If you are a fun, cool brand and you believe you can contribute value to our members, partner with us and you will have full exposure, media promotion, and Distribution point to your Product."
+            ]
+        },
+        {
+            "id": 15,
+            "name": "SoundCloud",
+            "area": [
+                "Global"
+            ],
+            "companyDescription": "Open audio platform",
+            "companyLocation": "Berlin, Germany",
+            "img": "/assets/img/beasy/soundcloud.png",
+            "title": "Looking for a Co-Marketing Campaign partnership",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Music", "Party", "Creation"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 25,
+            "ageMax": 35,
+            "location": "Berlin / London ",
+            "description": "SoundCloud is the world’s leading social sound platform where anyone can create sounds and share them everywhere. Recording and uploading sounds to SoundCloud lets people easily share them privately with their friends or publicly to blogs, sites and social networks",
+            "goals": [
+                "Exposure to potential customers", "Create content", "Grow on social network"
+            ],
+            "how": [
+                "Cross promotion campaign"
+            ],
+            "notes": [
+                "SoundCloud Expands “First On SoundCloud” Campaign to the U.K. and Germany. Campaign features artists from both countries who started their careers on SoundCloud. We are looking for a brand to team up for the promotion of this awesome campaign. Brands and creators will get promoted across SoundCloud playlists, social mentions, newsletters and blog, out of home advertising, plus fast track consideration for monetization in SoundCloud’s Premier and partnership opportunities"
+            ]
         }
     ]
 }

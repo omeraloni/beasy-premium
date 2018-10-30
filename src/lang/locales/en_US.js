@@ -515,5 +515,11 @@ module.exports = {
   /* 07.18.Sortable */
   "sortable.columns": "Sorting Columns",
   "sortable.basic": "Basic",
-  "sortable.handles": "Handles"
+  "sortable.handles": "Handles",
+
+  /* 13.Beasy Menu */
+  "menu.beasy": "Beasy",
+  "menu.opportunity_feed": "Opportunity Feed",
+  "menu.matchmaker": "MatchMaker",
+  "menu.new": "New"
 };

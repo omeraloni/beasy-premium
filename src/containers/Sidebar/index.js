@@ -240,7 +240,7 @@ class Sidebar extends Component {
             >
               <Nav vertical className="list-unstyled">
                 <SideMenuLink
-                  link={"/app/beasy/home"}
+                  link={"/app/beasy/opportunity_feed"}
                   classes={{
                     active: this.state.selectedParentMenu == "beasy"
                   }}
@@ -317,9 +317,9 @@ class Sidebar extends Component {
                 })}
                 data-parent="beasy"
               >
-                <SubMenuLink link={"/app/beasy/home"}
+                <SubMenuLink link={"/app/beasy/opportunity_feed"}
                   icon={"iconsmind-Home-5"}
-                  text={"Home"} />
+                  text={"menu.opportunity_feed"} />
 
                 <SubMenuLink link={"/app/beasy/aboutUs"}
                   icon={"iconsmind-Information"}

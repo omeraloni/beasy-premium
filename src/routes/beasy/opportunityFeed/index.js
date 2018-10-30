@@ -260,7 +260,7 @@ export default class ImageListLayout extends Component {
           <Row>
             <Colxx xxs="12">
               <div className="mb-2">
-                <h1><IntlMessages id="menu.image-list" /></h1>
+                <h1><IntlMessages id="Your Next Business Opportunity" /></h1>
 
                 <div className="float-sm-right">
                   <Button
@@ -371,7 +371,9 @@ export default class ImageListLayout extends Component {
                   </ButtonDropdown>
                 </div>
 
-
+                {console.log("BreadCrumb")}
+                {console.log(this.props.match)}
+                {console.log(this.props.match.params)}
                 <BreadcrumbItems match={this.props.match} />
 
               </div>

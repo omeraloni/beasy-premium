@@ -476,7 +476,7 @@ export default class ImageListLayout extends Component {
               if (this.state.displayMode === "imagelist") {
                 return (
                   <Colxx sm="6" lg="4" xl="3" className="mb-3" key={product.id}>
-                    <OpportunityCard image={product.img} name={product.name} />
+                    <OpportunityCard product={product}/>
                   </Colxx>
                 );
               } else if (this.state.displayMode === "thumblist") {

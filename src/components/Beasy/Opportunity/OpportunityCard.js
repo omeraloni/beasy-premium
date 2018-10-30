@@ -11,7 +11,7 @@ import Rating from "Components/Rating";
 
 class OpportunityCard extends Component {
     render() {
-        const { image, name, clickHandler } = this.props;
+        const { product} = this.props;
         return (
             <Card className="mb-4">
             <div className="position-absolute card-top-buttons">
@@ -20,26 +20,20 @@ class OpportunityCard extends Component {
               </Button>
             </div>
             <img
-              src={image}
+              src={product.img}
               alt="Detail"
               className="card-img-top"
             />
 
             <CardBody>
               <p className="text-muted text-small mb-2">
-                <IntlMessages id={name} />
+                <IntlMessages id={product.name} />
+              </p>
+              <p className="text mb-2">
+                <IntlMessages id={product.title} />
               </p>
               <p className="mb-3">
-                It’s all about simplicity…Less is more. Chocolate Cake
-                exclusively brings you the classic chocolate cake.
-                This cake is the one you always dream of-moist cake
-                and creamy chocolate frosting.
-                <br />
-                <br /> This cake proudly serves itself for a family
-                gathering, a dinner party, a birthday celebration, a
-                baby christening, and a gift to someone special or
-                simply to have on hand on the cake stand at home
-                served with an ice cold glass of milk!
+                {product.description}
               </p>
 
               <p className="text-muted text-small mb-2">
@@ -49,36 +43,31 @@ class OpportunityCard extends Component {
                 <Rating total={5} rating={5} interactive={false} />
               </div>
 
-              <p className="text-muted text-small mb-2">
-              <IntlMessages id="layouts.price" />
+              <p className="text-muted text-medium mb-2">
+              <IntlMessages id="Target Audiance" />
               </p>
-              <p className="mb-3">$8,14</p>
+              <p className="mb-3">              
+                 <IntlMessages id="Gender: " /> 
+                  {product.gender.map(g => {
+                    return g + "  "
+                  })}
+              </p>
+              <p className="mb-3">              
+                 <IntlMessages id="Age: " /> 
+                  {product.ageMax}
+              </p>
               <p className="text-muted text-small mb-2">
-                <IntlMessages id="layouts.ingredients" />
+                <IntlMessages id="Interests" />
               </p>
               <div className="mb-3">
                 <p className="d-sm-inline-block mb-1">
-                  <Badge color="outline-secondary mb-1 mr-1" pill>
-                    Flour
-                  </Badge>
-                  <Badge color="outline-secondary mb-1 mr-1" pill>
-                    Chocolate
-                  </Badge>
-                  <Badge color="outline-secondary mb-1 mr-1" pill>
-                    Caster Sugar
-                  </Badge>
-                  <Badge color="outline-secondary mb-1 mr-1" pill>
-                    Baking Powder
-                  </Badge>
-                  <Badge color="outline-secondary mb-1 mr-1" pill>
-                    Milk
-                  </Badge>
-                  <Badge color="outline-secondary mb-1 mr-1" pill>
-                    Eggs
-                  </Badge>
-                  <Badge color="outline-secondary mb-1 mr-1" pill>
-                    Vegetable Oil
-                  </Badge>
+                {product.interests.map(i => {
+                  return (
+                    <Badge color="outline-secondary mb-1 mr-1" pill>
+                      {i}
+                    </Badge>
+                  )
+                })}
                 </p>
               </div>
 

@@ -1,134 +1,175 @@
 {
-    "data":[
+    "data": [
         {
             "id": 1,
-            "name" :"Marble Cake",
-            "img":"/assets/img/beasy/bembien_bag.jpeg",
-            "category" : "Cakes",
-            "createDate" : "02.04.2018",
-            "status" : "ON HOLD",
+            "name": "Bembien",
+            "area": [
+                "US",
+                "Europe"
+            ],
+            "companyDescription": "@ location: Woven Artisans’ Basket Bags @ Bali",
+            "img": "/assets/img/beasy/bembien.png",
+            "title": "Looking for a Co-Marketing campaign partnership",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
             "statusColor": "primary",
-            "description" :"Wedding cake with flowers Macarons and blueberries",
-            "sales": 1647,
-            "stock": 62
-        }, {
-            "id":2,
-            "name" :"Fat Rascal",
-            "category" : "Cupcakes",
-            "img":"/assets/img/beasy/bembien.png",
-            "createDate" : "01.04.2018",
-            "status" : "PROCESSED",
-            "statusColor": "secondary",
-            "description" :"Cheesecake with chocolate cookies and Cream biscuits",
-            "sales": 1240,
-            "stock": 48
-        }, {
-            "id":3,
-            "name" :"Chocolate Cake",
-            "img":"/assets/img/beasy/Corona.svg.png",
-            "category" : "Cakes",
-            "createDate" : "25.03.2018",
-            "status" : "PROCESSED",
-            "statusColor": "secondary",
-            "description" :"Homemade cheesecake with fresh berries and mint",
-            "sales": 1080,
-            "stock": 57
-        },{
-            "id":4,
-            "name" :"Goose Breast",
-            "img":"/assets/img/beasy/jango.png",
-            "category" : "Cakes",
-            "createDate" : "21.03.2018",
-            "status" : "PROCESSED",
-            "statusColor": "secondary",
-            "description" :"Chocolate cake with berries",
-            "sales": 1014,
-            "stock": 41
-        },{
-            "id":5,
-            "name" :"Petit Gâteau",
-            "category" : "Cupcakes",
-            "img":"/assets/img/beasy/parley-logo.jpg",
-            "createDate" : "02.06.2018",
-            "status" : "ON HOLD",
+            "interests": [
+                "Fashion",
+                "Lifestyle"
+            ],
+            "gender": [
+                "Woman"
+            ],
+            "ageMin": 12,
+            "ageMax": 120,
+            "location": "East coast US",
+            "description": "Handmade Basket Bags from natural materials by talented artisans from around the world. 10% of Bembien’s proceeds go to Nest, a nonprofit committed to the social and economic advancement of artisans",
+            "goals": [
+                "Exposure to potential customers",
+                "Grow on social network"
+            ],
+            "how": [
+                "Social Marketing Campaign",
+                "Influencers Campaign"
+            ],
+            "notes": [
+                "Willing to give products",
+                "Social contest Open for new ideas"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Patagonia",
+            "area": [
+                "Global"
+            ],
+            "companyDescription": "@location: Activewear and sport gear retailers @Ventura, California ",
+            "img": "/assets/img/beasy/patagonia.png",
+            "title": "Looking for a Business development partnership",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
             "statusColor": "primary",
-            "description" :"Chocolate cake with mascarpone",
-            "sales": 985,
-            "stock": 23
-        }, {
-            "id":6,
-            "name" :"Salzburger Nockerl",
-            "img":"/assets/img/beasy/patagonia.png",
-            "category" : "Desserts",
-            "createDate" : "14.07.2018",
-            "status" : "PROCESSED",
-            "statusColor": "secondary",
-            "description" :"Wedding cake decorated with donuts and wild berries",
-            "sales": 962,
-            "stock": 34
-        },{
-            "id":7,
-            "name" :"Napoleonshat",
-            "img":"/assets/img/beasy/planet-fitness.png",
-            "category" : "Desserts",
-            "createDate" : "05.02.2018",
-            "status" : "PROCESSED",
-            "statusColor": "secondary",
-            "description" :"Cheesecake with fresh berries and mint for dessert",
-            "sales": 921,
-            "stock": 31
-        },{
-            "id":8,
-            "name" :"Cheesecake",
-            "img":"/assets/img/beasy/virgin.png",
-            "category" : "Cakes",
-            "createDate" : "18.08.2018",
-            "status" : "ON HOLD",
+            "interests": [
+                "Outdoor activity",
+                "Sport"
+            ],
+            "gender": [
+                "Woman",
+                "Man"
+            ],
+            "ageMin": 18,
+            "ageMax": 25,
+            "location": "US",
+            "description": "Patagonia is an outdoor apparel company based in Ventura, California. A certified B-Corporation, Patagonia’s mission is to build the best product, cause no unnecessary harm and use its business to inspire and implement solutions to the environmental crisis.",
+            "goals": [
+                "Create service/product",
+                " Grow on social network"
+            ],
+            "how": [
+                "Cross media campaign"
+            ],
+            "notes": [
+                "Patagonia is looking to expand the business to new fields and promote Cross media campaigns with a fresh young brand."
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Jango",
+            "area": [
+                "Global"
+            ],
+            "companyDescription": "location: Free online music streaming service @ New York, NY",
+            "img": "/assets/img/beasy/jango.png",
+            "title": "Jango is looking for a Business development partnership",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
             "statusColor": "primary",
-            "description" :"Delicious vegan chocolate cake",
-            "sales": 887,
-            "stock": 21
-        },{
-            "id":9,
-            "name" :"Financier",
-            "img":"/assets/img/beasy/virgin-trains-small.png",
-            "category" : "Cakes",
-            "createDate" : "15.03.2018",
-            "status" : "ON HOLD",
+            "interests": [
+                "Music", "Games"
+            ],
+            "gender": [
+                "Woman",
+                "Man"
+            ],
+            "ageMin": 16,
+            "ageMax": 32,
+            "location": "US",
+            "description": "Jango is a free custom radio that plays your favorite music. Jango is all about making online music easy and fun - a free online music streaming service that allows you to create custom radio stations.",
+            "goals": [
+                "Create service/product", "Social Marketing Campaign"
+            ],
+            "how": [
+                "Business development partnership"
+            ],
+            "notes": [
+                "Jango is about to launch a new music gaming add-on feature to our app. We are looking for a strategic partner either from the gaming, music or any other relevant field, to team-up with."
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Woodies",
+            "area": [
+                "US"
+            ],
+            "companyDescription": "@ location: Bamboo designed Sunglasses@ Malibu, CA",
+            "img": "/assets/img/beasy/Woodies.png",
+            "title": "Woodies is looking for a Co-Marketing Campaign Partnership",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
             "statusColor": "primary",
-            "description" :"White chocolate strawberry yogurt cake decorated with fresh fruits and chocolate",
-            "sales": 865,
-            "stock": 53
-        },{
-            "id":10,
-            "name" :"Genoise",
-            "img":"/assets/img/beasy/woodies.jpg",
-            "category" : "Cupcakes",
-            "createDate" : "11.06.2018",
-            "status" : "PROCESSED",
-            "statusColor": "secondary",
-            "description" :"Christmas fruit cake, pudding on top",
-            "sales": 824,
-            "stock": 55
-        },{
-            "id":11,
-            "name" :"Gingerbread",
-            "img":"/assets/img/beasy/Woodies.png",
-            "category" : "Cakes",
-            "createDate" : "10.04.2018",
-            "status" : "ON HOLD",
+            "interests": [
+                "Fashion", "Fun", "Beach", "Outdoor activity"
+            ],
+            "gender": [
+                "Woman",
+                "Man"
+            ],
+            "ageMin": 17,
+            "ageMax": 27,
+            "location": "West Coast, US",
+            "description": "Woodies Bamboo Sunglasses: The combination of natural materials, handmade construction, and a connection to the wholesome fashion of the 1950's.",
+            "goals": [
+                "Launch a new product line", "Exposure to potential customers"
+            ],
+            "how": [
+                "Social Marketing Campaign"
+            ],
+            "notes": [
+                "Woodies is launching a new product line - Wood and bamboo designed Watches and a new matching Sunglasses collection. We are looking for a co-marketing partner to create a cool fashion campaign, promoted in Social media platforms"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "PlanetFitness",
+            "area": [
+                "@ location: gym and fitness centers @Hampton, New Hampshire US"
+            ],
+            "companyDescription": "@ location: Bamboo designed Sunglasses@ Malibu, CA",
+            "img": "/assets/img/beasy/planet-fitness.png",
+            "title": "PlanetFitness  is looking for Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
             "statusColor": "primary",
-            "description" :"Wedding cake decorated with donuts and wild berries",
-            "sales": 714,
-            "stock": 12
+            "interests": [
+                "Sport",     "Fitness", "Outdoor activity", "Music", "Event"
+            ],
+            "gender": [
+                "Woman",
+                "Man"
+            ],
+            "ageMin": 22,
+            "ageMax": 45,
+            "location": "PlanetsFitness clubs across 50 states",
+            "description": "PlanetFitness, one of the largest and fastest growing franchisors and operators of fitness centers in the U.S, with more than 1,500 locations in 50 states, is taking the fitness industry by storm! We've revolutionized the industry with our combination of affordable prices, great value and non-intimidating Judgement Free Zone®. PlanetFitness' mission is to enhance people's lives by providing a high-quality fitness experience",
+            "goals": [
+                "Exposure to potential customers", "Customers acquisition, Generate Leads"
+            ],
+            "how": [
+                "Running an event"
+            ],
+            "notes": [
+                "is running a serial of ‘Open Club’ - Music and Fitness events in more than 500 clubs, across 50 states. We invite brands to join our awesome events from sport/music/bar or related industries"
+            ]
         }
     ]
 }
-
-
-
-
-
-
-
-

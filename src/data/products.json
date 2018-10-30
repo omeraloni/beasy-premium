@@ -75,6 +75,176 @@
             ]
         },
         {
+            "id": 3,
+            "name": "Lush Cosmetics",
+            "area": [
+                "US"
+            ],
+            "companyDescription": "Cosmetics bath and body brand",
+            "companyLocation": "Chicago, Illinois",
+            "img": "/assets/img/beasy/Lush.png",
+            "title": "Looking for a Co-Marketing campaign partnership",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Beauty", "Lifestyle"
+            ],
+            "gender": [
+                "Female"
+            ],
+            "ageMin": 18,
+            "ageMax": 25,
+            "location": "Chicago, Illinois",
+            "description": "Lush Cosmetics is an all-natural bath and body brand. We make everything from shampoos and fragrances to massage bars and bath bombs. In addition to making the world more beautiful, one person at a time, Lush is dedicated to eco-friendly products and practices.",
+            "goals": [
+                "Target new Audience", "Exposure to potential customers"
+            ],
+            "how": [
+                "Social Marketing Campaign", "Influencers Campaign"
+            ],
+            "notes": [
+                "Offering brand partnership - Producing a video/ Social contest"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Influential",
+            "area": [
+                "US"
+            ],
+            "companyDescription": "Marketing Agency ",
+            "companyLocation": "Las Vegas, Nevada",
+            "img": "/assets/img/beasy/influential.png",
+            "title": "Looking for Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Art Influencer"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 22,
+            "ageMax": 45,
+            "location": "US",
+            "description": "Kenya-born and Brooklyn-based artist Wangechi Mutu creates performance, video, sculptures, and other works of art. The top art influencer’s Instagram feed features work by her and others. She has 31K followers.",
+            "goals": [
+                "Create service/product", "Create content"
+            ],
+            "how": [
+                "Product line design", "Social Marketing Campaign", "Influencers Campaign"
+            ],
+            "notes": [
+                "Professional ֿartist Influencer is looking for the next opportunity: Willing to paint and design different products lines to get exposure to her art."
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Corona Extra + Parley",
+            "area": [
+                "Global"
+            ],
+            "companyDescription": "Drinks",
+            "companyLocation": "CA / US",
+            "img": "/assets/img/beasy/corona.png",
+            "title": "Looking for Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Sport", "Surfing", "Sustainability", "Music", "Fun"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 21,
+            "ageMax": 45,
+            "location": "Santa Cruz, CA",
+            "description": "Corona Extra is The best Mexican beer in the world. Parley is an organization and collaboration network that raises awareness for the beauty and fragility of the oceans. With Corona‘s passion for beach, surf and ocean culture, and Parley‘s collaborative, eco-innovative approach to solutions, we are teaming up for the Oceans, to protect 100 islands from plastic pollution by 2020.",
+            "goals": [
+                "Exposure to potential customers", "Raise Awareness"
+            ],
+            "how": [
+                "Running an Event" ,"Cross media campaign"
+            ],
+            "notes": [
+                "As part of Corona X Parley collaborative project to protect 100 islands by 2020, we are running serial surfing events in Santa Cruz, CA. We are looking for a brand sponsorships that relates to the project’s field and values."
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Netflix",
+            "area": [
+                "Global"
+            ],
+            "companyDescription": "Internet entertainment service",
+            "companyLocation": "Los Gatos, California",
+            "img": "/assets/img/beasy/netflix.png",
+            "title": "Looking for a Strategic Partnership",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Entertainment", "Music"
+            ],
+            "gender": [
+                "Female",
+                "Male"
+            ],
+            "ageMin": 21,
+            "ageMax": 120,
+            "location": "New York",
+            "description": "Netflix is the world's leading internet entertainment service with more than 130 million memberships in over 190 countries enjoying TV series, documentaries and feature films across a wide variety of genres and languages",
+            "goals": [
+                "Publicity", "Create brand image"
+            ],
+            "how": [
+                "Event sponsorship", "Social Marketing Campaign"
+            ],
+            "notes": [
+                " Looking for brand partnerships that can give added value to Netflix’s Audience, for the upcoming Netflix’s Media events. Partners will have full exposure at the events and cross promotion."
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Viral Nation",
+            "area": [
+                "US"
+            ],
+            "companyDescription": "media influencers campaigns for brands globally",
+            "companyLocation": "New York",
+            "img": "/assets/img/beasy/viral-nation.png",
+            "title": "Looking for a Strategic Partnerships",
+            "dueDate": "02.04.2018",
+            "status": "ON HOLD",
+            "statusColor": "primary",
+            "interests": [
+                "Outdoor activity",
+                "Sport",
+                "Extreme sport"
+            ],
+            "gender": [
+                "Male"
+            ],
+            "ageMin": 17,
+            "ageMax": 24,
+            "location": "US",
+            "description": "Devin Graham, or known as devinsupertramp, is a videographer who producers adventure and extreme sport videos on YouTube for social media platforms",
+            "goals": [
+                "Create content", "Grow on social network"
+            ],
+            "how": [
+                "Influencers Campaign"
+            ],
+            "notes": [
+                "is looking to create extreme sport videos for sport and combine product endorsement"
+            ]
+        },
+        {
             "id": 8,
             "name": "Jango",
             "area": [

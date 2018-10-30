@@ -370,10 +370,7 @@ export default class ImageListLayout extends Component {
                     </DropdownMenu>
                   </ButtonDropdown>
                 </div>
-
-                {console.log("BreadCrumb")}
-                {console.log(this.props.match)}
-                {console.log(this.props.match.params)}
+                
                 <BreadcrumbItems match={this.props.match} />
 
               </div>

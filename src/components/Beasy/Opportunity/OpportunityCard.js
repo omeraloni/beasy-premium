@@ -10,6 +10,15 @@ import {
 import Rating from "Components/Rating";
 
 class OpportunityCard extends Component {
+  state = {
+    isButtonActive: false
+  }
+  checkButton = () => {
+    var isButtonActive = !this.state.isButtonActive
+    this.setState({ isButtonActive: isButtonActive });
+  };
+
+
   render() {
     const { product } = this.props;
     return (
@@ -124,6 +133,19 @@ class OpportunityCard extends Component {
             <Rating total={5} rating={5} interactive={false} />
           </div>
 
+          <p className="text-muted text-small mb-2">
+            <IntlMessages id="Add to Favorites" />
+          </p>
+          <Button
+            outline
+            color="secondary"
+            className="mb-2"
+            onClick={this.checkButton}
+            active={this.state.isButtonActive}
+          >
+            <i className="simple-icon-heart" />
+
+          </Button>
         </CardBody>
       </Card>
     );

@@ -7,7 +7,8 @@
                 "US",
                 "Europe"
             ],
-            "companyDescription": "@ location: Woven Artisans’ Basket Bags @ Bali",
+            "companyDescription": "Woven Artisans’ Basket Bags",
+            "companyLocation": "Bali",
             "img": "/assets/img/beasy/bembien.png",
             "title": "Looking for a Co-Marketing campaign partnership",
             "dueDate": "02.04.2018",
@@ -18,7 +19,7 @@
                 "Lifestyle"
             ],
             "gender": [
-                "Woman"
+                "Female"
             ],
             "ageMin": 12,
             "ageMax": 120,
@@ -43,7 +44,8 @@
             "area": [
                 "Global"
             ],
-            "companyDescription": "@location: Activewear and sport gear retailers @Ventura, California ",
+            "companyDescription": "Activewear and sport gear retailers",
+            "companyLocation": "Ventura, California",
             "img": "/assets/img/beasy/patagonia.png",
             "title": "Looking for a Business development partnership",
             "dueDate": "02.04.2018",
@@ -54,8 +56,8 @@
                 "Sport"
             ],
             "gender": [
-                "Woman",
-                "Man"
+                "Female",
+                "Male"
             ],
             "ageMin": 18,
             "ageMax": 25,
@@ -63,7 +65,7 @@
             "description": "Patagonia is an outdoor apparel company based in Ventura, California. A certified B-Corporation, Patagonia’s mission is to build the best product, cause no unnecessary harm and use its business to inspire and implement solutions to the environmental crisis.",
             "goals": [
                 "Create service/product",
-                " Grow on social network"
+                "Grow on social network"
             ],
             "how": [
                 "Cross media campaign"
@@ -78,9 +80,10 @@
             "area": [
                 "Global"
             ],
-            "companyDescription": "location: Free online music streaming service @ New York, NY",
+            "companyDescription": "Free online music streaming service",
+            "companyLocation": "New York, NY",
             "img": "/assets/img/beasy/jango.png",
-            "title": "Jango is looking for a Business development partnership",
+            "title": "Looking for a Business development partnership",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -88,8 +91,8 @@
                 "Music", "Games"
             ],
             "gender": [
-                "Woman",
-                "Man"
+                "Female",
+                "Male"
             ],
             "ageMin": 16,
             "ageMax": 32,
@@ -111,9 +114,10 @@
             "area": [
                 "US"
             ],
-            "companyDescription": "@ location: Bamboo designed Sunglasses@ Malibu, CA",
+            "companyDescription": "Bamboo designed Sunglasses",
+            "companyLocation": "Malibu, CA",
             "img": "/assets/img/beasy/Woodies.png",
-            "title": "Woodies is looking for a Co-Marketing Campaign Partnership",
+            "title": "Looking for a Co-Marketing Campaign Partnership",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -121,8 +125,8 @@
                 "Fashion", "Fun", "Beach", "Outdoor activity"
             ],
             "gender": [
-                "Woman",
-                "Man"
+                "Female",
+                "Male"
             ],
             "ageMin": 17,
             "ageMax": 27,
@@ -142,11 +146,12 @@
             "id": 10,
             "name": "PlanetFitness",
             "area": [
-                "@ location: gym and fitness centers @Hampton, New Hampshire US"
+                "US","Columbia", "Canada", "Puerto Rico", "The Dominican Republic" , "Mexico"
             ],
-            "companyDescription": "@ location: Bamboo designed Sunglasses@ Malibu, CA",
+            "companyDescription": "Gym and fitness centers",
+            "companyLocation": "Hampton, New Hampshire US",
             "img": "/assets/img/beasy/planet-fitness.png",
-            "title": "PlanetFitness  is looking for Strategic Partnerships",
+            "title": "Looking for Strategic Partnerships",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -154,8 +159,8 @@
                 "Sport",     "Fitness", "Outdoor activity", "Music", "Event"
             ],
             "gender": [
-                "Woman",
-                "Man"
+                "Female",
+                "Male"
             ],
             "ageMin": 22,
             "ageMax": 45,

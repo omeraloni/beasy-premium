@@ -38,7 +38,7 @@ export default class ImageListLayout extends Component {
     this.getIndex = this.getIndex.bind(this);
     this.toggleDisplayOptions = this.toggleDisplayOptions.bind(this);
 
-    const pageSizes = [8, 12, 16, 24, 50, 100];
+    const pageSizes = [8, 12];
     const orderOptions = [
       {
         column: "name",

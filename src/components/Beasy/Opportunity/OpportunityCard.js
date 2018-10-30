@@ -14,6 +14,7 @@ class OpportunityCard extends Component {
   constructor(...params) {
     super(...params);
     this.toggleCard = this.toggleCard.bind(this);
+    this.checkButton = this.checkButton.bind(this);
   }
   state = {
     isButtonActive: false,

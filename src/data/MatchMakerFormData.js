@@ -1,3 +1,32 @@
+module.exports.lookingFor = () => {
+    return ({
+        ranges: [
+            {
+                value: 'Strategic Partnership',
+                label: 'StrategicPartnership',
+                checked: true,
+            },
+            {
+                value: 'CoMarketingCampaign',
+                label: 'Co-Marketing campaign',
+                checked: false,
+            },
+            {
+                value: 'BusinessDevelopment',
+                label: 'Business Development ',
+                checked: false,
+            },
+            {
+                value: 'Other',
+                label: 'Other',
+                checked: false,
+            }
+        ],
+        title: "What are u looking for?",
+        adornment: ""
+    });
+}
+
 module.exports.mainGoals = () => {
     return ({
         ranges: [
@@ -7,8 +36,13 @@ module.exports.mainGoals = () => {
                 checked: true,
             },
             {
-                value: 'NewMarket',
-                label: 'Enter a New Market',
+                value: 'CreateServiceProduct',
+                label: 'Create service/product',
+                checked: false,
+            },
+            {
+                value: 'GenerateValue',
+                label: 'Generate value',
                 checked: false,
             },
             {
@@ -17,13 +51,18 @@ module.exports.mainGoals = () => {
                 checked: false,
             },
             {
+                value: 'NewAudience ',
+                label: 'Target a new Audience ',
+                checked: false,
+            },
+            {
                 value: 'CreateContent',
                 label: 'Create Content',
                 checked: false,
             },
             {
-                value: 'UserAcquisition',
-                label: 'User/Customer Acquisition',
+                value: 'SocialNetwork ',
+                label: 'Grow on social network ',
                 checked: false,
             },
             {
@@ -32,14 +71,13 @@ module.exports.mainGoals = () => {
                 checked: false,
             },
             {
-                value: 'CreateService',
-                label: 'Create Service/Product',
+                value: 'UserAcquisition',
+                label: 'User/Customer Acquisition',
                 checked: false,
-                
             },
             {
-                value: 'BusinessDevelopment',
-                label: 'Business Development Publicity',
+                value: 'Publicity',
+                label: 'Publicity',
                 checked: false,
             },
             {
@@ -57,28 +95,28 @@ module.exports.how = () => {
     return ({
         ranges: [
             {
-                value: 'SocialCampaign',
-                label: 'Social Campaign',
+                value: 'SocialMarketingPromotion',
+                label: 'Social Marketing Promotion',
                 checked: true,
             },
             {
-                value: 'TraditionalCampaign',
-                label: 'Traditional Campaign',
+                value: 'InfluencersCampaign',
+                label: 'Influencers Campaign (Bloggers, Endorsers, Advocates) ',
+                checked: false,
+            },
+            {
+                value: 'TraditionalMarketing',
+                label: 'Traditional Marketing',
+                checked: false,
+            },
+            {
+                value: 'CrossPromotionCampaign',
+                label: 'Cross Promotion Campaign',
                 checked: false,
             },
             {
                 value: 'Event',
                 label: 'Event',
-                checked: false,
-            },
-            {
-                value: 'Sponsership',
-                label: 'Sponsership',
-                checked: false,
-            },
-            {
-                value: 'LongTerm',
-                label: 'Long Term Strategic coope',
                 checked: false,
             },
             {
@@ -129,7 +167,7 @@ module.exports.achieve = () => {
             },
             {
                 value: 'IncreaseCostumerLoyality',
-                label: 'Increase Costumer Loyality',
+                label: "Increase Costumer's Loyality",
                 checked: false,
             },
             {

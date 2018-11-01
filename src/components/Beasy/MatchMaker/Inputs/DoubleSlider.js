@@ -9,10 +9,10 @@ import {
 
 class DoubleSlider extends Component {
     render() {
-        const { data } = this.props;
+        const { data, isDollar } = this.props;
         return (
             <Wrapper>
-                <Label className="pt-0" for={data.title}>
+                <Label className="pt-0" for={data.saveAs}>
                     <IntlMessages id={data.title} />
                 </Label>
                 <RangeTooltip
@@ -22,6 +22,7 @@ class DoubleSlider extends Component {
                     defaultValue={[data.defaultMin, data.defaultMax]}
                     allowCross={false}
                     pushable={data.min}
+                    isDollar= {data.isDollar}
                 />
             </Wrapper>
         );

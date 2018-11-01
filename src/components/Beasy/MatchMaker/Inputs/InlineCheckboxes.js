@@ -18,6 +18,7 @@ class InlineCheckboxes extends Component {
                     {data.ranges.map(r => {
                         return (
                             <CustomInput
+                                key={r.value}
                                 type="checkbox"
                                 id={r.value}
                                 label={r.label}

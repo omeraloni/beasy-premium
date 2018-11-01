@@ -169,34 +169,6 @@ module.exports.achieve = () => {
     });
 }
 
-module.exports.age = () => {
-    return ({
-        saveAs: "age",
-        ranges: [
-            {
-                value: '18',
-                label: '0-18',
-                key: 0,
-            },
-            {
-                value: '30',
-                label: '19-30',
-                key: 1,
-            },
-            {
-                value: '60',
-                label: '31-60',
-                key: 2,
-            },
-            {
-                value: '100',
-                label: '61+',
-                key: 3,
-            }
-        ]
-    });
-}
-
 module.exports.gender = () => {
     return ({
         saveAs: "gender",
@@ -210,7 +182,7 @@ module.exports.gender = () => {
                 label: 'Female',
             },
         ],
-        title: "Gender",
+        title: "matchmaker.gender",
         adornment: ""
     });
 }
@@ -223,6 +195,20 @@ module.exports.budget = () => {
         defaultMin: 1000,
         defaultMax: 10000,
         title: "matchmaker.budget",
+        isDollar: true,
+        adornment: ""
+    });
+}
+
+module.exports.age = () => {
+    return ({
+        saveAs: "age",
+        min: 0,
+        max: 120,
+        defaultMin: 18,
+        defaultMax: 35,
+        title: "matchmaker.age",
+        isDollar: false,
         adornment: ""
     });
 }

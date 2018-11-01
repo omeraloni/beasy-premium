@@ -133,24 +133,7 @@ export default class FormsUi extends Component {
                       <Audience />
                     </Colxx>
                   </FormGroup>
-                  <FormGroup>
-                    <Label className="pt-0">
-                      <IntlMessages id="matchmaker.age" />
-                    </Label>
-                    <Colxx>
-                      <Select
-                        components={{ Input: CustomSelectInput }}
-                        className="react-select"
-                        classNamePrefix="react-select"
-                        isMulti
-                        name="age"
-                        value={this.state.ageOptions}
-                        onChange={this.handleAgeChange}
-                        options={MatchMakerData.age().ranges}
-                      />
 
-                    </Colxx>
-                  </FormGroup>
                   <FormGroup row>
                         <DoubleSlider data={MatchMakerData.budget()}/>
                   </FormGroup>

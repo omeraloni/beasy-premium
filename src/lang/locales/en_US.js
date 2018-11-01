@@ -529,6 +529,7 @@ module.exports = {
   "matchmaker.age": "Age",
   "matchmaker.budget": "Budget (Anonymously)",
   "matchmaker.duration": "Project Duration",
-  "matchmaker.notes": "Add Notes"
+  "matchmaker.notes": "Add Notes",
+  "matchmaker.gender": "Gender"
 
 };

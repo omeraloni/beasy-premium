@@ -3,6 +3,7 @@ import { Colxx } from "Components/CustomBootstrap";
 import IntlMessages from "Util/IntlMessages";
 import MatchMakerData from "Data/MatchMakerFormData";
 import Checkboxes from "./Inputs/Checkboxes";
+import DoubleSlider from "./Inputs/DoubleSlider"
 
 import {
     FormGroup,
@@ -18,33 +19,16 @@ class Audiance extends Component {
                     <IntlMessages id="Target Audience" />
                 </Label>
                 <FormGroup row>
+                    <Colxx sm={6}>
                     <FormGroup>
-                        <Checkboxes data={MatchMakerData.gender()} />   
+                        <Checkboxes data={MatchMakerData.gender()} />
                     </FormGroup>
-
+                    </Colxx>
+                    <Colxx sm={6}>
                     <FormGroup>
-                        <Label className="pt-0" for="genderRadio">
-                            <IntlMessages id="Gender" />
-                        </Label>
-                        <Colxx sm={6}>
-
-                            <div>
-                                <CustomInput
-                                    type="checkbox"
-                                    id="male"
-                                    label="Male"
-                                    name="male"
-                                />
-                                <CustomInput
-                                    type="checkbox"
-                                    id="female"
-                                    label="Female"
-                                    name="female"
-                                />
-                            </div>
-
-                        </Colxx>
+                        <DoubleSlider data={MatchMakerData.age()} />
                     </FormGroup>
+                    </Colxx>
                 </FormGroup>
             </FormGroup>
         );

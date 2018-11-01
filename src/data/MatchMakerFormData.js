@@ -2,13 +2,13 @@ module.exports.lookingFor = () => {
     return ({
         ranges: [
             {
-                value: 'Strategic Partnership',
-                label: 'StrategicPartnership',
+                value: 'StrategicPartnership',
+                label: 'Strategic Partnership',
                 checked: true,
             },
             {
                 value: 'CoMarketingCampaign',
-                label: 'Co-Marketing campaign',
+                label: 'Co-Marketing Campaign',
                 checked: false,
             },
             {

@@ -41,16 +41,20 @@ export default class ImageListLayout extends Component {
     const pageSizes = [8, 12];
     const orderOptions = [
       {
+        column: "match",
+        label: "Match"
+      },
+      {
         column: "name",
-        label: "Product Name"
+        label: "Company Name"
       },
       {
-        column: "category",
-        label: "Category"
+        column: "location",
+        label: "Location"
       },
       {
-        column: "status",
-        label: "Status"
+        column: "interest",
+        label: "Interest"
       }
     ];
 

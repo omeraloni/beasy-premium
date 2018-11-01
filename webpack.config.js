@@ -70,7 +70,9 @@ module.exports = {
             Routes: path.resolve(__dirname, 'src/routes/'),
             Constants: path.resolve(__dirname, 'src/constants/'),
             Redux: path.resolve(__dirname, 'src/redux/'),
-            Data: path.resolve(__dirname, 'src/data/')
+            Data: path.resolve(__dirname, 'src/data/'),
+            Hoc: path.resolve(__dirname, 'src/hoc/')
+
         }
     },
     module: {

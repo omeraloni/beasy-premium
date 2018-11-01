@@ -7,6 +7,8 @@ import MatchMakerData from "Data/MatchMakerFormData";
 import Audience from "Components/Beasy/MatchMaker/Audience"
 import DatePicker from "react-datepicker";
 import Switch from "rc-switch";
+import InlineCheckboxes from "Components/Beasy/MatchMaker/Inputs/InlineCheckboxes"
+import MultiSelect from "Components/Beasy/MatchMaker/Inputs/MultiSelect"
 
 import {
   Row,
@@ -15,7 +17,6 @@ import {
   Input,
   FormGroup,
   Label,
-  CustomInput,
   Button,
   Form,
 } from "reactstrap";
@@ -84,20 +85,7 @@ export default class FormsUi extends Component {
                 <Form>
                   <FormGroup row>
                     <Colxx sm={9}>
-                      <Label for="exCustomInline">
-                        <IntlMessages id={MatchMakerData.lookingFor().title} />
-                      </Label>
-                      <div>
-                        {MatchMakerData.lookingFor().ranges.map(r => {
-                          return (
-                            <CustomInput
-                              type="checkbox"
-                              id={r.value}
-                              label={r.label}
-                              inline
-                            />)
-                        })}
-                      </div>
+                      <InlineCheckboxes data={MatchMakerData.lookingFor()} />
                     </Colxx>
                     <Colxx sm={3}>
                       <label>
@@ -116,42 +104,20 @@ export default class FormsUi extends Component {
                   <FormGroup row>
                     <Colxx sm={6}>
                       <FormGroup>
-                        <Label className="pt-0">
-                          <IntlMessages id={MatchMakerData.mainGoals().title} />
-                        </Label>
-                        <Colxx>
-                          <Select
-                            components={{ Input: CustomSelectInput }}
-                            className="react-select"
-                            classNamePrefix="react-select"
-                            isMulti
-                            name="goals"
-                            value={this.state.goalsOptions}
-                            onChange={this.handleGoalsChange}
-                            options={MatchMakerData.mainGoals().ranges}
-                          />
-
-                        </Colxx>
+                        <MultiSelect 
+                        data={MatchMakerData.goals()}
+                        values={this.state.goalsOptions}
+                        onChangeHandler={this.handleGoalsChange}
+                         /> 
                       </FormGroup>
                     </Colxx>
                     <Colxx sm={6}>
                       <FormGroup>
-                        <Label className="pt-0">
-                          <IntlMessages id={MatchMakerData.how().title} />
-                        </Label>
-                        <Colxx>
-                          <Select
-                            components={{ Input: CustomSelectInput }}
-                            className="react-select"
-                            classNamePrefix="react-select"
-                            isMulti
-                            name="how"
-                            value={this.state.howOptions}
-                            onChange={this.handleHowChange}
-                            options={MatchMakerData.how().ranges}
-                          />
-
-                        </Colxx>
+                      <MultiSelect 
+                        data={MatchMakerData.how()}
+                        values={this.state.howOptions}
+                        onChangeHandler={this.handleHowChange}
+                         /> 
                       </FormGroup>
                     </Colxx>
                   </FormGroup>

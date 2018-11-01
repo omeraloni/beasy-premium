@@ -1,5 +1,6 @@
 module.exports.lookingFor = () => {
     return ({
+        saveAs: "lookingFor",
         ranges: [
             {
                 value: 'StrategicPartnership',
@@ -27,8 +28,9 @@ module.exports.lookingFor = () => {
     });
 }
 
-module.exports.mainGoals = () => {
+module.exports.goals = () => {
     return ({
+        saveAs: "goals",
         ranges: [
             {
                 value: 'NewProduct',
@@ -93,6 +95,7 @@ module.exports.mainGoals = () => {
 
 module.exports.how = () => {
     return ({
+        saveAs: "how",
         ranges: [
             {
                 value: 'SocialMarketingPromotion',
@@ -142,6 +145,7 @@ module.exports.how = () => {
 
 module.exports.where = () => {
     return ({
+        saveAs: "where",
         ranges: [
             {
                 value: 'IL',
@@ -159,6 +163,7 @@ module.exports.where = () => {
 
 module.exports.achieve = () => {
     return ({
+        saveAs: "achieve",
         ranges: [
             {
                 value: 'BrandAwareness',
@@ -194,6 +199,7 @@ module.exports.achieve = () => {
 
 module.exports.age = () => {
     return ({
+        saveAs: "age",
         ranges: [
             {
                 value: '18',

@@ -307,7 +307,7 @@ export default class FormsUi extends Component {
                     <Input type="textarea" name="notes" id="notes" style={{ height: 200 }} />
                   </FormGroup>
                   <Button color="primary">
-                    <IntlMessages id="forms.signup" />
+                    <IntlMessages id="Get Beasy" />
                   </Button>
                 </Form>
               </CardBody>

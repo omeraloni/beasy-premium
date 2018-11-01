@@ -115,8 +115,18 @@ module.exports.how = () => {
                 checked: false,
             },
             {
-                value: 'Event',
-                label: 'Event',
+                value: 'RunningEvent',
+                label: 'Running an Event',
+                checked: false,
+            },
+            {
+                value: 'ExposureEvent',
+                label: 'Exposure at Event',
+                checked: false,
+            },
+            {
+                value: 'BecomeSponsor',
+                label: 'Become a Sponsor',
                 checked: false,
             },
             {

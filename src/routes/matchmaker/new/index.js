@@ -31,43 +31,18 @@ import "rc-slider/assets/index.css";
 import "react-rater/lib/react-rater.css";
 import "react-fine-uploader/gallery/gallery.css";
 
-const selectData = [
-  { label: "Chocolate", value: "chocolate", key: 0 },
-  { label: "Vanilla", value: "vanilla", key: 1 },
-  { label: "Strawberry", value: "strawberry", key: 2 },
-  { label: "Caramel", value: "caramel", key: 3 },
-  { label: "Cookies and Cream", value: "cookiescream", key: 4 },
-  { label: "Peppermint", value: "peppermint", key: 5 }
-];
-
 export default class FormsUi extends Component {
   constructor(props) {
     super(props);
-    this.handleTagChange = this.handleTagChange.bind(this);
-    this.handleTagChangeLabelOver = this.handleTagChangeLabelOver.bind(this);
-    this.handleChangeDateLabelOver = this.handleChangeDateLabelOver.bind(this);
-    this.handleTagChangeLabelTop = this.handleTagChangeLabelTop.bind(this);
-    this.handleChangeLabelTop = this.handleChangeLabelTop.bind(this);
-    this.handleChangeDateLabelTop = this.handleChangeDateLabelTop.bind(this);
 
     this.state = {
       ageOptions: [],
       goalsOptions: [],
       howOptions: [],
       isPublic: true,
-      selectedOption: "",
-      selectedOptionLabelOver: "",
-      selectedOptionLabelTop: "",
       startDate: null,
-      startDateLabelOver: null,
-      startDateLabelTop: null,
-      startDateTime: null,
       startDateRange: null,
       endDateRange: null,
-      embeddedDate: moment(),
-      tags: [],
-      tagsLabelOver: [],
-      tagsLabelTop: []
     };
   }
 
@@ -91,44 +66,13 @@ export default class FormsUi extends Component {
     this.setState({ endDateRange });
   };
 
-  handleTagChange(tags) {
-    this.setState({ tags });
-  }
-
-  handleTagChangeLabelOver(tagsLabelOver) {
-    this.setState({ tagsLabelOver });
-  }
-
-  handleTagChangeLabelTop(tagsLabelTop) {
-    this.setState({ tagsLabelTop });
-  }
-
-  handleChangeLabelOver = selectedOptionLabelOver => {
-    this.setState({ selectedOptionLabelOver });
-  };
-
-  handleChangeLabelTop = selectedOptionLabelTop => {
-    this.setState({ selectedOptionLabelTop });
-  };
-
-  handleChangeDateLabelOver(date) {
-    this.setState({
-      startDateLabelOver: date
-    });
-  }
-  handleChangeDateLabelTop(date) {
-    this.setState({
-      startDateLabelTop: date
-    });
-  }
-
   render() {
     return (
       <Fragment>
         <Row>
           <Colxx xxs="12">
             <BreadcrumbContainer
-              heading={<IntlMessages id="menu.forms" />}
+              heading={<IntlMessages id="matchmaker.matchmaker" />}
               match={this.props.match}
             />
             <Separator className="mb-5" />
@@ -139,9 +83,6 @@ export default class FormsUi extends Component {
           <Colxx xxs="12">
             <Card>
               <CardBody>
-                <CardTitle>
-                  <IntlMessages id="MatchMaker" />
-                </CardTitle>
                 <Form>
                   <FormGroup row>
                     <Colxx sm={9}>
@@ -162,7 +103,7 @@ export default class FormsUi extends Component {
                     </Colxx>
                     <Colxx sm={3}>
                       <label>
-                        <IntlMessages id="Public" />
+                        <IntlMessages id="matchmaker.public" />
                       </label>
                       <Switch
                         className="custom-switch custom-switch-primary"
@@ -244,7 +185,7 @@ export default class FormsUi extends Component {
                   </FormGroup>
                   <FormGroup>
                     <Label className="pt-0">
-                      <IntlMessages id="Age" />
+                      <IntlMessages id="matchmaker.age" />
                     </Label>
                     <Colxx>
                       <Select
@@ -262,7 +203,7 @@ export default class FormsUi extends Component {
                   </FormGroup>
                   <FormGroup row>
                     <label>
-                      <IntlMessages id="Budget (Anonymously)" />
+                      <IntlMessages id="matchmaker.budget" />
                     </label>
                     <RangeTooltip
                       min={100}
@@ -275,7 +216,7 @@ export default class FormsUi extends Component {
                   </FormGroup>
                   <FormGroup row>
                     <label>
-                      <IntlMessages id="Project Deadline " />
+                      <IntlMessages id="matchmaker.duration" />
                     </label>
                     <Row className="mb-5">
                       <Colxx xxs="6">
@@ -302,7 +243,7 @@ export default class FormsUi extends Component {
                   </FormGroup>
                   <FormGroup row>
                     <Label className="mt-4">
-                      <IntlMessages id="Add Notes" />
+                      <IntlMessages id="matchmaker.notes" />
                     </Label>
                     <Input type="textarea" name="notes" id="notes" style={{ height: 200 }} />
                   </FormGroup>

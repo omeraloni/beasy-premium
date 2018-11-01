@@ -521,5 +521,14 @@ module.exports = {
   "menu.beasy": "Beasy",
   "menu.opportunity_feed": "Opportunity Feed",
   "menu.matchmaker": "MatchMaker",
-  "menu.new": "New"
+  "menu.new": "New",
+
+  /* 13.Beasy MatchMaker */
+  "matchmaker.matchmaker": "MatchMaker",
+  "matchmaker.public": "Public",
+  "matchmaker.age": "Age",
+  "matchmaker.budget": "Budget (Anonymously)",
+  "matchmaker.duration": "Project Duration",
+  "matchmaker.notes": "Add Notes"
+
 };

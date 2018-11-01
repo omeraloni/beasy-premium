@@ -5,22 +5,18 @@ module.exports.lookingFor = () => {
             {
                 value: 'StrategicPartnership',
                 label: 'Strategic Partnership',
-                checked: true,
             },
             {
                 value: 'CoMarketingCampaign',
                 label: 'Co-Marketing Campaign',
-                checked: false,
             },
             {
                 value: 'BusinessDevelopment',
                 label: 'Business Development ',
-                checked: false,
             },
             {
                 value: 'Other',
                 label: 'Other',
-                checked: false,
             }
         ],
         title: "What are u looking for?",
@@ -35,57 +31,46 @@ module.exports.goals = () => {
             {
                 value: 'NewProduct',
                 label: 'Launch a New Product',
-                checked: true,
             },
             {
                 value: 'CreateServiceProduct',
                 label: 'Create service/product',
-                checked: false,
             },
             {
                 value: 'GenerateValue',
                 label: 'Generate value',
-                checked: false,
             },
             {
                 value: 'PotentialCustomers',
                 label: 'Exposure to potential customers',
-                checked: false,
             },
             {
                 value: 'NewAudience ',
                 label: 'Target a new Audience ',
-                checked: false,
             },
             {
                 value: 'CreateContent',
                 label: 'Create Content',
-                checked: false,
             },
             {
                 value: 'SocialNetwork ',
                 label: 'Grow on social network ',
-                checked: false,
             },
             {
                 value: 'GenerateLeads',
                 label: 'Generate Leads',
-                checked: false,
             },
             {
                 value: 'UserAcquisition',
                 label: 'User/Customer Acquisition',
-                checked: false,
             },
             {
                 value: 'Publicity',
                 label: 'Publicity',
-                checked: false,
             },
             {
                 value: 'Other',
                 label: 'Other',
-                checked: false,
             }
         ],
         title: "What is your Goal?",
@@ -99,43 +84,35 @@ module.exports.how = () => {
         ranges: [
             {
                 value: 'SocialMarketingPromotion',
-                label: 'Social Marketing Promotion',
-                checked: true,
+                label: 'Social Marketing Promotion'
             },
             {
                 value: 'InfluencersCampaign',
                 label: 'Influencers Campaign (Bloggers, Endorsers, Advocates) ',
-                checked: false,
             },
             {
                 value: 'TraditionalMarketing',
                 label: 'Traditional Marketing',
-                checked: false,
             },
             {
                 value: 'CrossPromotionCampaign',
                 label: 'Cross Promotion Campaign',
-                checked: false,
             },
             {
                 value: 'RunningEvent',
                 label: 'Running an Event',
-                checked: false,
             },
             {
                 value: 'ExposureEvent',
                 label: 'Exposure at Event',
-                checked: false,
             },
             {
                 value: 'BecomeSponsor',
                 label: 'Become a Sponsor',
-                checked: false,
             },
             {
                 value: 'Other',
                 label: 'Other',
-                checked: false,
             }
         ],
         title: "How?",
@@ -167,28 +144,23 @@ module.exports.achieve = () => {
         ranges: [
             {
                 value: 'BrandAwareness',
-                label: 'Brand Awareness',
-                checked: true,
+                label: 'Brand Awareness'
             },
             {
                 value: 'BrandImage',
                 label: 'Brand Image',
-                checked: false,
             },
             {
                 value: 'IncreaseSales',
                 label: 'Increase Sales',
-                checked: false,
             },
             {
                 value: 'IncreaseCostumerLoyality',
                 label: "Increase Costumer's Loyality",
-                checked: false,
             },
             {
                 value: 'Other',
                 label: 'Other',
-                checked: false,
             },
         ],
         title: "What do you want to achieve?",
@@ -222,5 +194,35 @@ module.exports.age = () => {
                 key: 3,
             }
         ]
+    });
+}
+
+module.exports.gender = () => {
+    return ({
+        saveAs: "gender",
+        ranges: [
+            {
+                value: 'Male',
+                label: 'Male',
+            },
+            {
+                value: 'Female',
+                label: 'Female',
+            },
+        ],
+        title: "Gender",
+        adornment: ""
+    });
+}
+
+module.exports.budget = () => {
+    return ({
+        saveAs: "budget",
+        min: 100,
+        max: 50000,
+        defaultMin: 1000,
+        defaultMax: 10000,
+        title: "matchmaker.budget",
+        adornment: ""
     });
 }

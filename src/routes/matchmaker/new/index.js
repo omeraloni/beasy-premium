@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
-import { RangeTooltip } from "Components/SliderTooltip";
 import IntlMessages from "Util/IntlMessages";
 import MatchMakerData from "Data/MatchMakerFormData";
 import Audience from "Components/Beasy/MatchMaker/Audience"
@@ -9,6 +8,8 @@ import DatePicker from "react-datepicker";
 import Switch from "rc-switch";
 import InlineCheckboxes from "Components/Beasy/MatchMaker/Inputs/InlineCheckboxes"
 import MultiSelect from "Components/Beasy/MatchMaker/Inputs/MultiSelect"
+import Checkboxes from "Components/Beasy/MatchMaker/Inputs/Checkboxes"
+import DoubleSlider from "Components/Beasy/MatchMaker/Inputs/DoubleSlider"
 
 import {
   Row,
@@ -125,22 +126,7 @@ export default class FormsUi extends Component {
                   <FormGroup row>
                     <Colxx sm={6}>
                       <FormGroup >
-                        <Label className="pt-0">
-                          <IntlMessages id={MatchMakerData.achieve().title} />
-                        </Label>
-                        <Colxx>
-                          {MatchMakerData.achieve().ranges.map(r => {
-                            return (
-                              <FormGroup check>
-                                <Label check>
-                                  <Input type="checkbox" key={r.value} name={r.value} />
-                                  <IntlMessages id={r.label} />
-                                </Label>
-                              </FormGroup>
-                            )
-                          })}
-
-                        </Colxx>
+                        <Checkboxes data={MatchMakerData.achieve()}/>
                       </FormGroup>
                     </Colxx>
                     <Colxx sm={6}>
@@ -166,17 +152,7 @@ export default class FormsUi extends Component {
                     </Colxx>
                   </FormGroup>
                   <FormGroup row>
-                    <label>
-                      <IntlMessages id="matchmaker.budget" />
-                    </label>
-                    <RangeTooltip
-                      min={100}
-                      max={10000}
-                      className="mb-5"
-                      defaultValue={[1000, 5000]}
-                      allowCross={false}
-                      pushable={100}
-                    />
+                        <DoubleSlider data={MatchMakerData.budget()}/>
                   </FormGroup>
                   <FormGroup row>
                     <label>

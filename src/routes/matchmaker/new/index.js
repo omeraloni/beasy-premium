@@ -13,7 +13,6 @@ import {
   Card,
   CardBody,
   Input,
-  CardTitle,
   FormGroup,
   Label,
   CustomInput,
@@ -22,7 +21,6 @@ import {
 } from "reactstrap";
 import Select from "react-select";
 import CustomSelectInput from "Components/CustomSelectInput";
-import moment from "moment";
 
 import "react-tagsinput/react-tagsinput.css";
 import "react-datepicker/dist/react-datepicker.css";

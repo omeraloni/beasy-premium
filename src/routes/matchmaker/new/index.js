@@ -44,6 +44,7 @@ export default class FormsUi extends Component {
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
     this.handleBudgetChange = this.handleBudgetChange.bind(this);
+    this.handleNotesChange = this.handleNotesChange.bind(this);
 
     this.state = {
       lookingFor: [],
@@ -125,6 +126,10 @@ export default class FormsUi extends Component {
 
   handleChangeEnd = endDateRange => {
     this.setState({ endDateRange });
+  };
+
+  handleNotesChange = event => {
+    this.setState({ notes: event.target.value });
   };
 
   handleSubmit = event => {
@@ -251,7 +256,7 @@ export default class FormsUi extends Component {
                     <Label className="mt-4">
                       <IntlMessages id="matchmaker.notes" />
                     </Label>
-                    <Input type="textarea" name="notes" id="notes" style={{ height: 200 }} />
+                    <Input type="textarea" name="notes" id="notes" style={{ height: 200 }} onChange={this.handleNotesChange} />
                   </FormGroup>
                   <Button color="primary">
                     <IntlMessages id="Get Beasy" />

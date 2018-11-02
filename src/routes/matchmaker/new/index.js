@@ -34,21 +34,42 @@ import "react-fine-uploader/gallery/gallery.css";
 export default class FormsUi extends Component {
   constructor(props) {
     super(props);
+    this.handleLookingFor = this.handleLookingFor.bind(this);
+    this.handleGoalsChange = this.handleGoalsChange.bind(this);
+    this.handleHowChange = this.handleHowChange.bind(this);
+    this.handleChangeStart = this.handleChangeStart.bind(this);
+    this.handleChangeEnd = this.handleChangeEnd.bind(this);
 
     this.state = {
-      ageOptions: [],
+      lookingFor: [],
+      isPublic: true,
       goalsOptions: [],
       howOptions: [],
-      isPublic: true,
-      startDate: null,
+      achieveOptions: [],
+      genderOptions: [],
+      ageMin: MatchMakerData.age().min,
+      ageMax: MatchMakerData.age().max,
+      budgetMin: MatchMakerData.budget().min,
+      budgetMax: MatchMakerData.budget().max,
       startDateRange: null,
       endDateRange: null,
+      notes: ""
     };
   }
 
-  handleAgeChange = ageOptions => {
-    this.setState({ ageOptions });
-  };
+  handleLookingFor = (event, id) => {
+    console.log("kakakak")
+    console.log(id)
+
+    const { lookingFor } = { ...this.state }
+    console.log(lookingFor)
+    if (event.target.checked) {
+      lookingFor.push(id)
+    } else {
+      lookingFor.splice(lookingFor.indexOf(id), 1)
+    }
+    this.setState({ lookingFor: [...lookingFor] })
+  }
 
   handleGoalsChange = goalsOptions => {
     this.setState({ goalsOptions });
@@ -65,6 +86,12 @@ export default class FormsUi extends Component {
   handleChangeEnd = endDateRange => {
     this.setState({ endDateRange });
   };
+
+  handleSubmit = event => {
+    event.preventDefault();
+    alert(JSON.stringify(this.state, null, '  '));
+
+  }
 
   render() {
     return (
@@ -83,16 +110,19 @@ export default class FormsUi extends Component {
           <Colxx xxs="12">
             <Card>
               <CardBody>
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                   <FormGroup row>
                     <Colxx sm={9}>
-                      <InlineCheckboxes data={MatchMakerData.lookingFor()} />
+                      <InlineCheckboxes
+                        data={MatchMakerData.lookingFor()}
+                        onChangeHandler={this.handleLookingFor} />
                     </Colxx>
                     <Colxx sm={3}>
-                      <label>
+                      <Label>
                         <IntlMessages id="matchmaker.public" />
-                      </label>
+                      </Label>
                       <Switch
+                        name="public"
                         className="custom-switch custom-switch-primary"
                         checked={this.state.isPublic}
                         onChange={isPublic => {
@@ -105,20 +135,20 @@ export default class FormsUi extends Component {
                   <FormGroup row>
                     <Colxx sm={6}>
                       <FormGroup>
-                        <MultiSelect 
-                        data={MatchMakerData.goals()}
-                        values={this.state.goalsOptions}
-                        onChangeHandler={this.handleGoalsChange}
-                         /> 
+                        <MultiSelect
+                          data={MatchMakerData.goals()}
+                          values={this.state.goalsOptions}
+                          onChangeHandler={this.handleGoalsChange}
+                        />
                       </FormGroup>
                     </Colxx>
                     <Colxx sm={6}>
                       <FormGroup>
-                      <MultiSelect 
-                        data={MatchMakerData.how()}
-                        values={this.state.howOptions}
-                        onChangeHandler={this.handleHowChange}
-                         /> 
+                        <MultiSelect
+                          data={MatchMakerData.how()}
+                          values={this.state.howOptions}
+                          onChangeHandler={this.handleHowChange}
+                        />
                       </FormGroup>
                     </Colxx>
                   </FormGroup>
@@ -126,7 +156,7 @@ export default class FormsUi extends Component {
                   <FormGroup row>
                     <Colxx sm={6}>
                       <FormGroup >
-                        <Checkboxes data={MatchMakerData.achieve()}/>
+                        <Checkboxes data={MatchMakerData.achieve()} />
                       </FormGroup>
                     </Colxx>
                     <Colxx sm={6}>
@@ -135,12 +165,12 @@ export default class FormsUi extends Component {
                   </FormGroup>
 
                   <FormGroup row>
-                        <DoubleSlider data={MatchMakerData.budget()}/>
+                    <DoubleSlider data={MatchMakerData.budget()} />
                   </FormGroup>
                   <FormGroup row>
-                    <label>
+                    <Label>
                       <IntlMessages id="matchmaker.duration" />
-                    </label>
+                    </Label>
                     <Row className="mb-5">
                       <Colxx xxs="6">
                         <DatePicker

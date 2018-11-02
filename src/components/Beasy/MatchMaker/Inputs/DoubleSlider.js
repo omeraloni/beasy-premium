@@ -3,8 +3,7 @@ import IntlMessages from "Util/IntlMessages";
 import Wrapper from "Hoc/Wrapper"
 import { RangeTooltip } from "Components/SliderTooltip";
 import {
-    Label,
-    CustomInput
+    Label
 } from "reactstrap";
 
 class DoubleSlider extends Component {
@@ -16,6 +15,7 @@ class DoubleSlider extends Component {
                     <IntlMessages id={data.title} />
                 </Label>
                 <RangeTooltip
+                    name={data.saveAs}
                     min={data.min}
                     max={data.max}
                     className="mb-5"

@@ -8,7 +8,7 @@ import {
 
 class InlineCheckboxes extends Component {
     render() {
-        const { data } = this.props;
+        const { data, onChangeHandler } = this.props;
         return (
             <Wrapper>
                 <Label>
@@ -23,6 +23,8 @@ class InlineCheckboxes extends Component {
                                 id={r.value}
                                 label={r.label}
                                 inline
+                                name={data.saveAs}
+                                onChange = {e=> onChangeHandler(e, r.value)}
                             />)
                     })}
                 </div>

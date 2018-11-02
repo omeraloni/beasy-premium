@@ -35,8 +35,11 @@ export default class FormsUi extends Component {
   constructor(props) {
     super(props);
     this.handleLookingFor = this.handleLookingFor.bind(this);
+    this.handleIsPublic = this.handleIsPublic.bind(this);
     this.handleGoalsChange = this.handleGoalsChange.bind(this);
     this.handleHowChange = this.handleHowChange.bind(this);
+    this.handleAchieveChange = this.handleAchieveChange.bind(this);
+    this.handleGenderChange = this.handleGenderChange.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
 
@@ -58,18 +61,20 @@ export default class FormsUi extends Component {
   }
 
   handleLookingFor = (event, id) => {
-    console.log("kakakak")
-    console.log(id)
-
     const { lookingFor } = { ...this.state }
-    console.log(lookingFor)
+
     if (event.target.checked) {
       lookingFor.push(id)
     } else {
       lookingFor.splice(lookingFor.indexOf(id), 1)
     }
+
     this.setState({ lookingFor: [...lookingFor] })
   }
+
+  handleIsPublic = isPublic => {
+    this.setState({ isPublic });
+  };
 
   handleGoalsChange = goalsOptions => {
     this.setState({ goalsOptions });
@@ -78,6 +83,30 @@ export default class FormsUi extends Component {
   handleHowChange = howOptions => {
     this.setState({ howOptions });
   };
+
+  handleAchieveChange = (event, id) => {
+    const { achieveOptions } = { ...this.state }
+
+    if (event.target.checked) {
+      achieveOptions.push(id)
+    } else {
+      achieveOptions.splice(achieveOptions.indexOf(id), 1)
+    }
+
+    this.setState({ achieveOptions: [...achieveOptions] })
+  }
+
+  handleGenderChange = (event, id) => {
+    const { genderOptions } = { ...this.state }
+
+    if (event.target.checked) {
+      genderOptions.push(id)
+    } else {
+      genderOptions.splice(genderOptions.indexOf(id), 1)
+    }
+
+    this.setState({ genderOptions: [...genderOptions] })
+  }
 
   handleChangeStart = startDateRange => {
     this.setState({ startDateRange });
@@ -125,9 +154,7 @@ export default class FormsUi extends Component {
                         name="public"
                         className="custom-switch custom-switch-primary"
                         checked={this.state.isPublic}
-                        onChange={isPublic => {
-                          this.setState({ isPublic });
-                        }}
+                        onChange={this.handleIsPublic}
                       />
                     </Colxx>
                   </FormGroup>
@@ -156,12 +183,27 @@ export default class FormsUi extends Component {
                   <FormGroup row>
                     <Colxx sm={6}>
                       <FormGroup >
-                        <Checkboxes data={MatchMakerData.achieve()} />
+                        <Checkboxes data={MatchMakerData.achieve()} onChangeHandler={this.handleAchieveChange} />
                       </FormGroup>
                     </Colxx>
                     <Colxx sm={6}>
-                      <Audience />
-                    </Colxx>
+                      <FormGroup>
+                        <Label className="pt-0">
+                          <IntlMessages id="Target Audience" />
+                        </Label>
+                        <FormGroup row>
+                          <Colxx sm={6}>
+                            <FormGroup>
+                              <Checkboxes data={MatchMakerData.gender()} onChangeHandler={this.handleGenderChange} />
+                            </FormGroup>
+                          </Colxx>
+                          <Colxx sm={6}>
+                            <FormGroup>
+                              <DoubleSlider data={MatchMakerData.age()} />
+                            </FormGroup>
+                          </Colxx>
+                        </FormGroup>
+                      </FormGroup>                    </Colxx>
                   </FormGroup>
 
                   <FormGroup row>

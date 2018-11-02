@@ -8,7 +8,7 @@ import {
 
 class Checkboxes extends Component {
     render() {
-        const { data } = this.props;
+        const { data , onChangeHandler} = this.props;
         return (
             <Wrapper>
                 <Label className="pt-0" for={data.title}>
@@ -23,6 +23,7 @@ class Checkboxes extends Component {
                                 id={r.value}
                                 label={r.label}
                                 name={r.value}
+                                onChange = {e=> onChangeHandler(e, r.value)}
                             />
                         )
                     })}

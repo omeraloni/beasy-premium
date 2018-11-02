@@ -214,3 +214,106 @@ module.exports.age = () => {
         step: 1
     });
 }
+
+module.exports.interest = () => {
+    return ({
+        saveAs: "interests",
+        ranges: [
+            {
+                value: 'Fashion',
+                label: 'Fashion'
+            },
+            {
+                value: 'Lifestyle',
+                label: 'Lifestyle',
+            },
+            {
+                value: 'Entertainment',
+                label: 'Entertainment',
+            },
+            {
+                value: 'Music',
+                label: "Music",
+            },
+            {
+                value: 'OutdoorActivity',
+                label: 'Outdoor Activity',
+            },
+            {
+                value: 'Sport',
+                label: 'Sport',
+            },
+            {
+                value: 'Beauty',
+                label: 'Beauty',
+            },
+            {
+                value: 'ArtInfluencer',
+                label: 'Art Influencer',
+            },
+            {
+                value: 'Surfing',
+                label: 'Surfing',
+            },
+            {
+                value: 'Sustainability',
+                label: 'Sustainability',
+            },
+            {
+                value: 'Fun',
+                label: 'Fun',
+            },
+            {
+                value: 'ExtremeSport',
+                label: 'Extreme Sport',
+            },
+            {
+                value: 'Games',
+                label: 'Games',
+            },
+            {
+                value: 'Beach',
+                label: 'Beach',
+            },
+            {
+                value: 'Fitness',
+                label: 'Fitness',
+            },
+            {
+                value: 'Event',
+                label: 'Event',
+            },
+            {
+                value: 'EcoFriendly',
+                label: 'Eco-Friendly',
+            },
+            {
+                value: 'AnimalFriendly',
+                label: 'Animal-Friendly',
+            },
+            {
+                value: 'Healing',
+                label: 'Healing',
+            },
+            {
+                value: 'Yoga',
+                label: 'Yoga',
+            },
+            {
+                value: 'Wellness',
+                label: 'Wellness',
+            },
+            {
+                value: 'Party',
+                label: 'Party',
+            },
+            {
+                value: 'Creation',
+                label: 'Creation',
+            },
+        ],
+        title: "Interests",
+        error: "",
+        adornment: ""
+    });
+}

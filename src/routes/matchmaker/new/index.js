@@ -2,14 +2,16 @@ import React, { Component, Fragment } from "react";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
 import IntlMessages from "Util/IntlMessages";
+import Select from "react-select";
 import MatchMakerData from "Data/MatchMakerFormData";
-import Audience from "Components/Beasy/MatchMaker/Audience"
 import DatePicker from "react-datepicker";
 import Switch from "rc-switch";
 import InlineCheckboxes from "Components/Beasy/MatchMaker/Inputs/InlineCheckboxes"
 import MultiSelect from "Components/Beasy/MatchMaker/Inputs/MultiSelect"
 import Checkboxes from "Components/Beasy/MatchMaker/Inputs/Checkboxes"
 import DoubleSlider from "Components/Beasy/MatchMaker/Inputs/DoubleSlider"
+import countryList from 'country-list'
+import CustomSelectInput from "Components/CustomSelectInput";
 
 import {
   Row,
@@ -21,8 +23,6 @@ import {
   Button,
   Form,
 } from "reactstrap";
-import Select from "react-select";
-import CustomSelectInput from "Components/CustomSelectInput";
 
 import "react-tagsinput/react-tagsinput.css";
 import "react-datepicker/dist/react-datepicker.css";
@@ -41,6 +41,7 @@ export default class FormsUi extends Component {
     this.handleAchieveChange = this.handleAchieveChange.bind(this);
     this.handleGenderChange = this.handleGenderChange.bind(this);
     this.handleAgeChange = this.handleAgeChange.bind(this);
+    this.handleInterestChange = this.handleInterestChange.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
     this.handleBudgetChange = this.handleBudgetChange.bind(this);
@@ -55,6 +56,8 @@ export default class FormsUi extends Component {
       genderOptions: [],
       ageMin: MatchMakerData.age().defaultMin,
       ageMax: MatchMakerData.age().defaultMax,
+      countriesOptions: [],
+      interestOptions: [],
       budgetMin: MatchMakerData.budget().defaultMin,
       budgetMax: MatchMakerData.budget().defaultMax,
       startDateRange: null,
@@ -115,6 +118,14 @@ export default class FormsUi extends Component {
     this.setState({ ageMax: value[1] });
   };
 
+  handleCountriesChange = countriesOptions => {
+    this.setState({ countriesOptions });
+  };
+
+  handleInterestChange = interestOptions => {
+    this.setState({ interestOptions });
+  };
+
   handleBudgetChange = value => {
     this.setState({ budgetMin: value[0] });
     this.setState({ budgetMax: value[1] });
@@ -139,6 +150,7 @@ export default class FormsUi extends Component {
   }
 
   render() {
+    const countries = countryList().getNames().map(c => { return ({ value: c, label: c }) })
     return (
       <Fragment>
         <Row>
@@ -195,7 +207,6 @@ export default class FormsUi extends Component {
                       </FormGroup>
                     </Colxx>
                   </FormGroup>
-
                   <FormGroup row>
                     <Colxx sm={6}>
                       <FormGroup >
@@ -219,11 +230,42 @@ export default class FormsUi extends Component {
                             </FormGroup>
                           </Colxx>
                         </FormGroup>
-                      </FormGroup>                    </Colxx>
+                        <FormGroup row>
+                          <Colxx sm={6}>
+                            <FormGroup>
+                              <Label className="pt-0">
+                                <IntlMessages id={"Locations"} />
+                              </Label>
+                              <Colxx>
+                                <Select
+                                  components={{ Input: CustomSelectInput }}
+                                  className="react-select"
+                                  classNamePrefix="react-select"
+                                  isMulti
+                                  name={"countries"}
+                                  value={this.state.countriesOptions}
+                                  onChange={this.handleCountriesChange}
+                                  options={countries}
+                                />
+
+                              </Colxx>
+                            </FormGroup>
+                          </Colxx>
+                          <Colxx sm={6}>
+                            <FormGroup>
+                              <MultiSelect
+                                data={MatchMakerData.interest()}
+                                values={this.state.interestOptions}
+                                onChangeHandler={this.handleInterestChange}
+                              />                            </FormGroup>
+                          </Colxx>
+                        </FormGroup>
+                      </FormGroup>
+                    </Colxx>
                   </FormGroup>
 
                   <FormGroup row>
-                    <DoubleSlider data={MatchMakerData.budget()} onChangeHandler={this.handleBudgetChange}/>
+                    <DoubleSlider data={MatchMakerData.budget()} onChangeHandler={this.handleBudgetChange} />
                   </FormGroup>
                   <FormGroup row>
                     <Label>

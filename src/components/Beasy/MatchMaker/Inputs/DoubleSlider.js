@@ -8,7 +8,7 @@ import {
 
 class DoubleSlider extends Component {
     render() {
-        const { data, isDollar } = this.props;
+        const { data , onChangeHandler} = this.props;
         return (
             <Wrapper>
                 <Label className="pt-0" for={data.saveAs}>
@@ -22,7 +22,8 @@ class DoubleSlider extends Component {
                     defaultValue={[data.defaultMin, data.defaultMax]}
                     allowCross={false}
                     pushable={data.min}
-                    isDollar= {data.isDollar}
+                    onChange={onChangeHandler}
+                    step={data.step}
                 />
             </Wrapper>
         );

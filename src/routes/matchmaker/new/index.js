@@ -40,8 +40,10 @@ export default class FormsUi extends Component {
     this.handleHowChange = this.handleHowChange.bind(this);
     this.handleAchieveChange = this.handleAchieveChange.bind(this);
     this.handleGenderChange = this.handleGenderChange.bind(this);
+    this.handleAgeChange = this.handleAgeChange.bind(this);
     this.handleChangeStart = this.handleChangeStart.bind(this);
     this.handleChangeEnd = this.handleChangeEnd.bind(this);
+    this.handleBudgetChange = this.handleBudgetChange.bind(this);
 
     this.state = {
       lookingFor: [],
@@ -50,10 +52,10 @@ export default class FormsUi extends Component {
       howOptions: [],
       achieveOptions: [],
       genderOptions: [],
-      ageMin: MatchMakerData.age().min,
-      ageMax: MatchMakerData.age().max,
-      budgetMin: MatchMakerData.budget().min,
-      budgetMax: MatchMakerData.budget().max,
+      ageMin: MatchMakerData.age().defaultMin,
+      ageMax: MatchMakerData.age().defaultMax,
+      budgetMin: MatchMakerData.budget().defaultMin,
+      budgetMax: MatchMakerData.budget().defaultMax,
       startDateRange: null,
       endDateRange: null,
       notes: ""
@@ -107,6 +109,15 @@ export default class FormsUi extends Component {
 
     this.setState({ genderOptions: [...genderOptions] })
   }
+  handleAgeChange = value => {
+    this.setState({ ageMin: value[0] });
+    this.setState({ ageMax: value[1] });
+  };
+
+  handleBudgetChange = value => {
+    this.setState({ budgetMin: value[0] });
+    this.setState({ budgetMax: value[1] });
+  };
 
   handleChangeStart = startDateRange => {
     this.setState({ startDateRange });
@@ -199,7 +210,7 @@ export default class FormsUi extends Component {
                           </Colxx>
                           <Colxx sm={6}>
                             <FormGroup>
-                              <DoubleSlider data={MatchMakerData.age()} />
+                              <DoubleSlider data={MatchMakerData.age()} onChangeHandler={this.handleAgeChange} />
                             </FormGroup>
                           </Colxx>
                         </FormGroup>
@@ -207,7 +218,7 @@ export default class FormsUi extends Component {
                   </FormGroup>
 
                   <FormGroup row>
-                    <DoubleSlider data={MatchMakerData.budget()} />
+                    <DoubleSlider data={MatchMakerData.budget()} onChangeHandler={this.handleBudgetChange}/>
                   </FormGroup>
                   <FormGroup row>
                     <Label>

@@ -196,7 +196,8 @@ module.exports.budget = () => {
         defaultMax: 10000,
         title: "matchmaker.budget",
         isDollar: true,
-        adornment: ""
+        adornment: "",
+        step: 100
     });
 }
 
@@ -209,6 +210,7 @@ module.exports.age = () => {
         defaultMax: 35,
         title: "matchmaker.age",
         isDollar: false,
-        adornment: ""
+        adornment: "",
+        step: 1
     });
 }

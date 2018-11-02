@@ -12,6 +12,7 @@ import Checkboxes from "Components/Beasy/MatchMaker/Inputs/Checkboxes"
 import DoubleSlider from "Components/Beasy/MatchMaker/Inputs/DoubleSlider"
 import countryList from 'country-list'
 import CustomSelectInput from "Components/CustomSelectInput";
+import { database } from '../../../firebase';
 
 import {
   Row,
@@ -145,8 +146,26 @@ export default class FormsUi extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
+    var random = Math.floor(Math.random() * 10000000);
     alert(JSON.stringify(this.state, null, '  '));
 
+    database.ref('goals/' + random).set({
+      isPublic: this.state.isPublic,
+      lookingFor: this.state.lookingFor,
+      goalsOptions: this.state.goalsOptions,
+      howOptions: this.state.howOptions,
+      achieveOptions: this.state.achieveOptions,
+      genderOptions: this.state.genderOptions,
+      ageMin: this.state.ageMin,
+      ageMax: this.state.ageMax,
+      countriesOptions: this.state.countriesOptions,
+      interestOptions: this.state.interestOptions,
+      budgetMin: this.state.budgetMin,
+      budgetMax: this.state.budgetMax,
+      startDateRange: this.state.startDateRange+''.split('T', 1)[0],
+      endDateRange: this.state.endDateRange+''.split('T', 1)[0],
+      notes: this.state.notes
+    });
   }
 
   render() {

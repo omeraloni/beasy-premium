@@ -5,6 +5,7 @@ import TopNav from 'Containers/TopNav'
 import Sidebar from 'Containers/Sidebar';
 
 import beasy from './beasy';
+import dashboard from './dashboard';
 import matchmaker from './matchmaker';
 import dashboards from './dashboards';
 import layouts from './layouts';
@@ -28,6 +29,7 @@ class MainApp extends Component {
 					<div className="container-fluid">
 						<Switch>
 							<Route path={`${match.url}/beasy`} component={beasy} />
+							<Route path={`${match.url}/dashboard`} component={dashboard} />
 							<Route path={`${match.url}/matchmaker`} component={matchmaker} />
 							<Route path={`${match.url}/applications`} component={applications} />
 							<Route path={`${match.url}/dashboards`} component={dashboards} />

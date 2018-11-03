@@ -522,6 +522,8 @@ module.exports = {
   "menu.opportunity_feed": "Opportunity Feed",
   "menu.matchmaker": "MatchMaker",
   "menu.new": "New",
+  "menu.dashboard": "Dashboard",
+  "menu.myDashboard": "My Dashboard",
 
   /* 13.Beasy MatchMaker */
   "matchmaker.matchmaker": "MatchMaker",

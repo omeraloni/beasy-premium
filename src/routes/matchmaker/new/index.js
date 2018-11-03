@@ -13,6 +13,7 @@ import DoubleSlider from "Components/Beasy/MatchMaker/Inputs/DoubleSlider"
 import countryList from 'country-list'
 import CustomSelectInput from "Components/CustomSelectInput";
 import { database } from '../../../firebase';
+import axios from 'axios';
 
 import {
   Row,
@@ -162,10 +163,44 @@ export default class FormsUi extends Component {
       interestOptions: this.state.interestOptions,
       budgetMin: this.state.budgetMin,
       budgetMax: this.state.budgetMax,
-      startDateRange: this.state.startDateRange+''.split('T', 1)[0],
-      endDateRange: this.state.endDateRange+''.split('T', 1)[0],
+      startDateRange: this.state.startDateRange + ''.split('T', 1)[0],
+      endDateRange: this.state.endDateRange + ''.split('T', 1)[0],
       notes: this.state.notes
     });
+
+  axios.get('http://localhost:8080/nlu/analyze', {
+    params: {
+      text: 'Patagonia is an outdoor apparel company based in Ventura, California. A certified B-Corporation, Patagonia’s mission is to build the best product, cause no unnecessary harm and use its business to inspire and implement solutions to the environmental crisis.',
+      features:  {
+         "sentiment": {}, "keywords": {}, "categories": {}, "concepts": {
+        "limit": 3
+      } ,
+      "entities": {
+        "sentiment": true,
+        "limit": 5
+      },
+      "relations": {},
+      "semantic_roles": {},
+
+   
+    }
+    }
+  }).then(response => {
+        console.log("sentiment");
+        console.log(response.data.sentiment);
+        console.log("keywords");
+        console.log(response.data.keywords);
+        console.log("categories");
+        console.log(response.data.categories);
+        console.log("concepts");
+        console.log(response.data.concepts);
+        console.log("entities");
+        console.log(response.data.entities);
+        console.log("relations");
+        console.log(response.data.relations);
+        console.log("semantic_roles");
+        console.log(response.data.semantic_roles);
+    }).catch(error => console.error(error));;
   }
 
   render() {

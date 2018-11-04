@@ -14,6 +14,7 @@ import countryList from 'country-list'
 import CustomSelectInput from "Components/CustomSelectInput";
 import { database } from '../../../firebase';
 import axios from 'axios';
+import { NavLink } from "react-router-dom";
 
 import {
   Row,
@@ -146,7 +147,6 @@ export default class FormsUi extends Component {
   };
 
   handleSubmit = event => {
-    event.preventDefault();
     var random = Math.floor(Math.random() * 10000000);
     alert(JSON.stringify(this.state, null, '  '));
 
@@ -168,38 +168,38 @@ export default class FormsUi extends Component {
       notes: this.state.notes
     });
 
-  axios.get('http://localhost:8080/nlu/analyze', {
-    params: {
-      text: 'Patagonia is an outdoor apparel company based in Ventura, California. A certified B-Corporation, Patagonia’s mission is to build the best product, cause no unnecessary harm and use its business to inspire and implement solutions to the environmental crisis.',
-      features:  {
-         "sentiment": {}, "keywords": {}, "categories": {}, "concepts": {
-        "limit": 3
-      } ,
-      "entities": {
-        "sentiment": true,
-        "limit": 5
-      },
-      "relations": {},
-      "semantic_roles": {},
+    axios.get('http://localhost:8080/nlu/analyze', {
+      params: {
+        text: 'Patagonia is an outdoor apparel company based in Ventura, California. A certified B-Corporation, Patagonia’s mission is to build the best product, cause no unnecessary harm and use its business to inspire and implement solutions to the environmental crisis.',
+        features: {
+          "sentiment": {}, "keywords": {}, "categories": {}, "concepts": {
+            "limit": 3
+          },
+          "entities": {
+            "sentiment": true,
+            "limit": 5
+          },
+          "relations": {},
+          "semantic_roles": {},
 
-   
-    }
-    }
-  }).then(response => {
-        console.log("sentiment");
-        console.log(response.data.sentiment);
-        console.log("keywords");
-        console.log(response.data.keywords);
-        console.log("categories");
-        console.log(response.data.categories);
-        console.log("concepts");
-        console.log(response.data.concepts);
-        console.log("entities");
-        console.log(response.data.entities);
-        console.log("relations");
-        console.log(response.data.relations);
-        console.log("semantic_roles");
-        console.log(response.data.semantic_roles);
+
+        }
+      }
+    }).then(response => {
+      console.log("sentiment");
+      console.log(response.data.sentiment);
+      console.log("keywords");
+      console.log(response.data.keywords);
+      console.log("categories");
+      console.log(response.data.categories);
+      console.log("concepts");
+      console.log(response.data.concepts);
+      console.log("entities");
+      console.log(response.data.entities);
+      console.log("relations");
+      console.log(response.data.relations);
+      console.log("semantic_roles");
+      console.log(response.data.semantic_roles);
     }).catch(error => console.error(error));;
   }
 
@@ -223,7 +223,7 @@ export default class FormsUi extends Component {
           <Colxx xxs="12">
             <Card>
               <CardBody>
-                <Form onSubmit={this.handleSubmit}>
+                <Form>
                   <FormGroup row className="mb-5">
                     <Colxx sm={10}>
                       <InlineCheckboxes
@@ -325,34 +325,34 @@ export default class FormsUi extends Component {
                   </FormGroup>
 
                   <FormGroup row className="mb-5">
-                  <Colxx sm={1}>
-                    <Label>
-                      <IntlMessages id="matchmaker.duration" />
-                    </Label>
+                    <Colxx sm={1}>
+                      <Label>
+                        <IntlMessages id="matchmaker.duration" />
+                      </Label>
                     </Colxx>
                     <Colxx>
-                    <Row className="mb-5">
-                      <Colxx xxs="6">
-                        <DatePicker
-                          selected={this.state.startDateRange}
-                          selectsStart
-                          startDate={this.state.startDateRange}
-                          endDate={this.state.endDateRange}
-                          onChange={this.handleChangeStart}
-                          placeholderText="Start"
-                        />
-                      </Colxx>
-                      <Colxx xxs="6">
-                        <DatePicker
-                          selected={this.state.endDateRange}
-                          selectsEnd
-                          startDate={this.state.startDateRange}
-                          endDate={this.state.endDateRange}
-                          onChange={this.handleChangeEnd}
-                          placeholderText="End"
-                        />
-                      </Colxx>
-                    </Row>
+                      <Row className="mb-5">
+                        <Colxx xxs="6">
+                          <DatePicker
+                            selected={this.state.startDateRange}
+                            selectsStart
+                            startDate={this.state.startDateRange}
+                            endDate={this.state.endDateRange}
+                            onChange={this.handleChangeStart}
+                            placeholderText="Start"
+                          />
+                        </Colxx>
+                        <Colxx xxs="6">
+                          <DatePicker
+                            selected={this.state.endDateRange}
+                            selectsEnd
+                            startDate={this.state.startDateRange}
+                            endDate={this.state.endDateRange}
+                            onChange={this.handleChangeEnd}
+                            placeholderText="End"
+                          />
+                        </Colxx>
+                      </Row>
                     </Colxx>
                   </FormGroup>
                   <FormGroup row>
@@ -361,9 +361,15 @@ export default class FormsUi extends Component {
                     </Label>
                     <Input type="textarea" name="notes" id="notes" style={{ height: 150 }} onChange={this.handleNotesChange} />
                   </FormGroup>
-                  <Button color="primary">
-                    <IntlMessages id="matchmaker.getBeasy" />
-                  </Button>
+
+                  <NavLink
+                    to={`/app/matchmaker/results`}
+                    className="w-40 w-sm-100"
+                  >
+                    <Button color="primary" onClick={this.handleSubmit}>
+                      <IntlMessages id="matchmaker.getBeasy" />
+                    </Button>
+                  </NavLink>
                 </Form>
               </CardBody>
             </Card>

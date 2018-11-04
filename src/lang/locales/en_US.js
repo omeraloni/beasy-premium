@@ -534,6 +534,9 @@ module.exports = {
   "matchmaker.notes": "Add Notes",
   "matchmaker.gender": "Gender",
   "matchmaker.tellUs": "Tell us about your goal and we will match the best partner for you",
-  "matchmaker.getBeasy": "Get Beasy !"
+  "matchmaker.getBeasy": "Get Beasy !",
+
+  /* 13.Beasy Results */
+  "results.title": "Your Potential Partners",
   
 };

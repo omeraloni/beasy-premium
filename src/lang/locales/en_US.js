@@ -533,7 +533,7 @@ module.exports = {
   "matchmaker.duration": "Project Duration",
   "matchmaker.notes": "Add Notes",
   "matchmaker.gender": "Gender",
-  "matchmaker.tellUs": "Tell us about your goal and we will match the best partner for you"
-
+  "matchmaker.tellUs": "Tell us about your goal and we will match the best partner for you",
+  "matchmaker.getBeasy": "Get Beasy !"
   
 };

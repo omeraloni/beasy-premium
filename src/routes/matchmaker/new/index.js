@@ -224,7 +224,7 @@ export default class FormsUi extends Component {
             <Card>
               <CardBody>
                 <Form onSubmit={this.handleSubmit}>
-                  <FormGroup row>
+                  <FormGroup row className="mb-5">
                     <Colxx sm={10}>
                       <InlineCheckboxes
                         data={MatchMakerData.lookingFor()}
@@ -243,7 +243,7 @@ export default class FormsUi extends Component {
                     </Colxx>
                   </FormGroup>
 
-                  <FormGroup row>
+                  <FormGroup row className="mb-5">
                     <Colxx sm={6}>
                       <FormGroup>
                         <MultiSelect
@@ -320,13 +320,17 @@ export default class FormsUi extends Component {
                     </Colxx>
                   </FormGroup>
 
-                  <FormGroup row>
+                  <FormGroup row className="mb-5">
                     <DoubleSlider data={MatchMakerData.budget()} onChangeHandler={this.handleBudgetChange} />
                   </FormGroup>
-                  <FormGroup row>
+
+                  <FormGroup row className="mb-5">
+                  <Colxx sm={1}>
                     <Label>
                       <IntlMessages id="matchmaker.duration" />
                     </Label>
+                    </Colxx>
+                    <Colxx>
                     <Row className="mb-5">
                       <Colxx xxs="6">
                         <DatePicker
@@ -349,15 +353,16 @@ export default class FormsUi extends Component {
                         />
                       </Colxx>
                     </Row>
+                    </Colxx>
                   </FormGroup>
                   <FormGroup row>
                     <Label className="mt-4">
                       <IntlMessages id="matchmaker.notes" />
                     </Label>
-                    <Input type="textarea" name="notes" id="notes" style={{ height: 200 }} onChange={this.handleNotesChange} />
+                    <Input type="textarea" name="notes" id="notes" style={{ height: 150 }} onChange={this.handleNotesChange} />
                   </FormGroup>
                   <Button color="primary">
-                    <IntlMessages id="Get Beasy" />
+                    <IntlMessages id="matchmaker.getBeasy" />
                   </Button>
                 </Form>
               </CardBody>

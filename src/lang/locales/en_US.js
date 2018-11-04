@@ -526,12 +526,14 @@ module.exports = {
   "menu.myDashboard": "My Dashboard",
 
   /* 13.Beasy MatchMaker */
-  "matchmaker.matchmaker": "MatchMaker",
+  "matchmaker.matchmaker": "The MatchMaker",
   "matchmaker.public": "Public",
   "matchmaker.age": "Age",
   "matchmaker.budget": "Budget (Anonymously)",
   "matchmaker.duration": "Project Duration",
   "matchmaker.notes": "Add Notes",
-  "matchmaker.gender": "Gender"
+  "matchmaker.gender": "Gender",
+  "matchmaker.tellUs": "Tell us about your goal and we will match the best partner for you"
 
+  
 };

@@ -216,19 +216,21 @@ export default class FormsUi extends Component {
             <Separator className="mb-5" />
           </Colxx>
         </Row>
-
+        <Label>
+          <IntlMessages id="matchmaker.tellUs" />
+        </Label>
         <Row className="mb-4">
           <Colxx xxs="12">
             <Card>
               <CardBody>
                 <Form onSubmit={this.handleSubmit}>
                   <FormGroup row>
-                    <Colxx sm={9}>
+                    <Colxx sm={10}>
                       <InlineCheckboxes
                         data={MatchMakerData.lookingFor()}
                         onChangeHandler={this.handleLookingFor} />
                     </Colxx>
-                    <Colxx sm={3}>
+                    <Colxx sm={2}>
                       <Label>
                         <IntlMessages id="matchmaker.public" />
                       </Label>

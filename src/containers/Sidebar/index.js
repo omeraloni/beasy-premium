@@ -264,7 +264,7 @@ class Sidebar extends Component {
                   }}
                   clicked={e => this.openSubMenu(e, "matchmaker")}
                   icon={"iconsmind-Idea-2"}
-                  text={"Match Maker"} />
+                  text={"matchmaker.matchmaker"} />
 
                 <SideMenuLink
                   link={"/app/dashboards/default"}

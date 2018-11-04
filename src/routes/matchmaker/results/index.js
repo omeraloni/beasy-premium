@@ -10,7 +10,9 @@ import IntlMessages from "Util/IntlMessages";
 import { Colxx } from "Components/CustomBootstrap";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
 import products from "Data/products.json";
+import moreProducts from "Data/moreProducts.json";
 import ResultCard from "Components/Beasy/Results/ResultCard"
+import MoreResultCard from "Components/Beasy/Results/MoreResultCard"
 export default class ImageListLayout extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +35,7 @@ export default class ImageListLayout extends Component {
                 perPage={{
                   0: 1,
                   1000: 2,
-                  1400: 3
+                  1400: 2
                 }}
                 loop={false}
               >
@@ -50,9 +52,34 @@ export default class ImageListLayout extends Component {
 
           </Row>
           <Row>
-            <Colxx xxs="12">
 
-            </Colxx>
+          <Colxx xxs="12">
+            <CardTitle>
+              <IntlMessages id="carousel.without-controls" />
+            </CardTitle>
+          </Colxx>
+
+          <Colxx xxs="12" className="pl-0 pr-0 mb-4">
+            <ReactSiemaCarousel
+              perPage={{
+                0: 5,
+                480: 6,
+                800: 7,
+                1200: 8
+              }}
+              controls={false}
+              loop={false}
+            >
+              {moreProducts.data.map(p => {
+                return (
+                  <MoreResultCard product={p} />
+                )
+              })}
+            </ReactSiemaCarousel>
+          </Colxx>
+      
+
+
           </Row>
         </div>
       </Fragment>

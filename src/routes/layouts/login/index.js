@@ -53,9 +53,8 @@ onPasswordChangeHandler = () => event => {
                       <br />
                       If you are not a member, please{" "}
                       <NavLink to={`/register`} className="white">
-                        register
+                        <h5> register </h5> 
                       </NavLink>
-                      .
                     </p>
                   </div>
                   <div className="form-side">
@@ -81,6 +80,17 @@ onPasswordChangeHandler = () => event => {
                         <NavLink to={`/forgot-password`}>
                           <IntlMessages id="user.forgot-password-question" />
                         </NavLink>
+
+                        <NavLink to={`/register`} >
+                        <Button
+                          color="danger"
+                          className="btn-shadow"
+                          size="lg"
+                        >
+                          <IntlMessages id="user.register" />
+                        </Button>
+                      </NavLink>
+
                         <Button
                           color="primary"
                           className="btn-shadow"

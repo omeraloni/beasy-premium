@@ -7,6 +7,10 @@ import {
 
 class MoreResultCard extends Component {
     render() {
+        const cardBodyStyle = {
+            flexDirection: 'row'
+          };
+    
         const {product} = this.props
         return (
             <Card>
@@ -16,24 +20,13 @@ class MoreResultCard extends Component {
                 src={product.img}
                 alt="Card"
               />
-              <span className="badge badge-pill badge-theme-1 position-absolute badge-top-left">
-                NEW
-              </span>
-              <span className="badge badge-pill badge-secondary position-absolute badge-top-left-2">
-                TRENDING
-              </span>
             </div>
 
-            <CardBody>
+            <CardBody style={cardBodyStyle}>
               <h6 className="mb-4">
                 {product.name}
               </h6>
 
-              <footer>
-                <p className="text-muted text-small mb-0 font-weight-light">
-                  09.04.2018
-                </p>
-              </footer>
             </CardBody>
           </Card>
         );

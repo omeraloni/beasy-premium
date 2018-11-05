@@ -42,42 +42,44 @@ export default class ImageListLayout extends Component {
                 {products.data.map(p => {
                   return (
                     <div className="pr-3 pl-3">
-                    <ResultCard product={p} />
-                  </div>
+                      <ResultCard product={p} />
+                    </div>
                   )
                 })}
-                
+
               </ReactSiemaCarousel>
             </Colxx>
 
           </Row>
           <Row>
 
-          <Colxx xxs="12">
-            <CardTitle>
-              <IntlMessages id="carousel.without-controls" />
-            </CardTitle>
-          </Colxx>
+            <Colxx xxs="12">
+              <CardTitle>
+                <IntlMessages id="carousel.without-controls" />
+              </CardTitle>
+            </Colxx>
 
-          <Colxx xxs="12" className="pl-0 pr-0 mb-4">
-            <ReactSiemaCarousel
-              perPage={{
-                0: 5,
-                480: 6,
-                800: 7,
-                1200: 8
-              }}
-              controls={false}
-              loop={false}
-            >
-              {moreProducts.data.map(p => {
-                return (
-                  <MoreResultCard product={p} />
-                )
-              })}
-            </ReactSiemaCarousel>
-          </Colxx>
-      
+            <Colxx xxs="12" className="pl-0 pr-0 mb-4">
+              <ReactSiemaCarousel
+                perPage={{
+                  0: 5,
+                  480: 6,
+                  800: 7,
+                  1200: 8
+                }}
+                controls={false}
+                loop={false}
+              >
+                {moreProducts.data.map(p => {
+                  return (
+                    <div className="pr-3 pl-3">
+                      <MoreResultCard product={p} />
+                    </div>
+                  )
+                })}
+              </ReactSiemaCarousel>
+            </Colxx>
+
 
 
           </Row>

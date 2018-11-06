@@ -6,7 +6,6 @@ import {
   DropdownMenu,
   Input
 } from "reactstrap";
-import IntlMessages from "Util/IntlMessages";
 import PerfectScrollbar from "react-perfect-scrollbar";
 
 import { NavLink } from "react-router-dom";
@@ -217,22 +216,18 @@ class TopNav extends Component {
                           key={index}
                           className="d-flex flex-row mb-3 pb-3 border-bottom"
                         >
-                          <a href="/app/layouts/details">
                             <img
                               src={n.image}
                               alt="Notification"
                               className="img-thumbnail list-thumbnail xsmall border-0 rounded-circle"
                             />
-                          </a>
                           <div className="pl-3 pr-2">
-                            <a href="/app/layouts/details">
                               <p className="font-weight-medium mb-1">
                                 {n.message}
                               </p>
                               <p className="text-muted mb-0 text-small">
                                 {n.date}
                               </p>
-                            </a>
                           </div>
                         </div>
                       );

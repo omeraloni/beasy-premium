@@ -11,31 +11,17 @@ import {
   DropdownToggle,
   DropdownMenu,
   Progress,
-  Form,
-  FormGroup,
-  Button,
-  Label,
-  Input,
-  CustomInput,
   CardHeader
 } from "reactstrap";
-import Select from "react-select";
-import CustomSelectInput from "Components/CustomSelectInput";
 import { NavLink } from "react-router-dom";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
 import { CalendarToolbar } from "Components/Calendar/CalendarToolbar";
-import { PolarShadow, LineShadow, SmallLineChart } from "Components/Charts";
+import { LineShadow } from "Components/Charts";
 import {
   visitChartConfig,
   conversionChartConfig,
-  lineChartConfig,
-  polarChartConfig,
-  smallChartData1,
-  smallChartData2,
-  smallChartData3,
-  smallChartData4
 } from "Constants/chartConfig";
 
 import BigCalendar from "react-big-calendar";
@@ -44,9 +30,7 @@ import ReactTable from "react-table";
 import CircularProgressbar from "react-circular-progressbar";
 import { Chart } from "react-chartjs-2";
 import ReactSiemaCarousel from "Components/ReactSiema/ReactSiemaCarousel";
-import Rating from "Components/Rating";
 import DataTablePagination from "Components/DataTables/pagination";
-import Sortable from "react-sortablejs";
 
 import "chartjs-plugin-datalabels";
 import "react-circular-progressbar/dist/styles.css";
@@ -55,28 +39,10 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-table/react-table.css";
 
 import eventsData from "Data/events.json";
-import ticketsData from "Data/tickets.json";
-import logsData from "Data/logs.json";
-import productsData from "Data/products.json";
+import productsData from "Data/dashboard-projects.json";
 import profileStatusData from "Data/dashboard.profile.status.json";
-import cakeData from "Data/dashboard.cakes.json";
 
 Chart.defaults.global.plugins.datalabels.display = false;
-
-const selectData = [
-  { label: "Chocolate", value: "chocolate", key: 0 },
-  { label: "Vanilla", value: "vanilla", key: 1 },
-  { label: "Strawberry", value: "strawberry", key: 2 },
-  { label: "Caramel", value: "caramel", key: 3 },
-  { label: "Cookies and Cream", value: "cookiescream", key: 4 },
-  { label: "Peppermint", value: "peppermint", key: 5 }
-];
-
-const selectDataType = [
-  { label: "Cake", value: "cake", key: 0 },
-  { label: "Cupcake", value: "cupcake", key: 1 },
-  { label: "Dessert", value: "dessert", key: 2 }
-];
 
 const dataTableColumns = [
   {
@@ -90,7 +56,7 @@ const dataTableColumns = [
     Cell: props => <p className="text-muted">{props.value}</p>
   },
   {
-    Header: "Goal",
+    Header: "Goals",
     accessor: "goal",
     Cell: props => <p className="text-muted">{props.value}</p>
   },
@@ -102,12 +68,9 @@ const dataTableColumns = [
 ];
 
 const recentOrders = productsData.data.slice(0, 6);
-const tickets = ticketsData.data;
 const events = eventsData.data;
-const logs = logsData.data;
 const dataTableData = productsData.data.slice(0, 12);
 const profileStatuses = profileStatusData.data;
-const cakes = cakeData.data;
 
 BigCalendar.momentLocalizer(moment);
 export default class MyDashboard extends Component {

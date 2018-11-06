@@ -266,15 +266,6 @@ class Sidebar extends Component {
                   icon={"iconsmind-Idea-2"}
                   text={"matchmaker.matchmaker"} />
 
-                <SideMenuLink
-                  link={"/app/layouts"}
-                  classes={{
-                    active: this.state.selectedParentMenu == "layouts"
-                  }}
-                  clicked={e => this.openSubMenu(e, "layouts")}
-                  icon={"iconsmind-Digital-Drawing"}
-                  text={"menu.layouts"} />
-
               </Nav>
             </PerfectScrollbar>
           </div>
@@ -326,65 +317,6 @@ class Sidebar extends Component {
                   text={"New"} />
 
               </Nav>
-
-             <Nav
-                className={classnames({
-                  "d-block": this.state.selectedParentMenu == "layouts"
-                })}
-                data-parent="layouts"
-              >
-                <SubMenuLink link={"/app/layouts/data-list"}
-                  icon={"simple-icon-credit-card"}
-                  text={"menu.data-list"} />
-
-                <SubMenuLink link={"/app/layouts/thumb-list"}
-                  icon={"simple-icon-list"}
-                  text={"menu.thumb-list"} />
-
-                <NavItem>
-                  <NavLink to="/app/layouts/image-list">
-                    <i className="simple-icon-grid" />{" "}
-                    <IntlMessages id="menu.image-list" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/layouts/details">
-                    <i className="simple-icon-book-open" />{" "}
-                    <IntlMessages id="menu.details" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/layouts/search">
-                    <i className="simple-icon-magnifier" />{" "}
-                    <IntlMessages id="menu.search" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <a href="/login" target="_blank">
-                    <i className="simple-icon-user-following" />{" "}
-                    <IntlMessages id="menu.login" />
-                  </a>
-                </NavItem>
-                <NavItem>
-                  <a href="/register" target="_blank">
-                    <i className="simple-icon-user-follow" />{" "}
-                    <IntlMessages id="menu.register" />
-                  </a>
-                </NavItem>
-                <NavItem>
-                  <a href="/forgot-password" target="_blank">
-                    <i className="simple-icon-user-unfollow" />{" "}
-                    <IntlMessages id="menu.forgot-password" />
-                  </a>
-                </NavItem>
-                <NavItem>
-                  <a href="/error" target="_blank">
-                    <i className="simple-icon-exclamation" />{" "}
-                    <IntlMessages id="menu.error" />
-                  </a>
-                </NavItem>
-              </Nav>
-    
              </PerfectScrollbar>
           </div>
         </div>

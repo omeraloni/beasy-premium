@@ -47,20 +47,10 @@ onPasswordChangeHandler = () => event => {
               <Colxx xxs="12" md="10" className="mx-auto my-auto">
                 <Card className="auth-card">
                   <div className="position-relative image-side ">
-                    <p className="text-white h2">MAGIC IS IN THE DETAILS</p>
-                    <p className="white mb-0">
-                      Please use your credentials to login.
-                      <br />
-                      If you are not a member, please{" "}
-                      <NavLink to={`/register`} className="white">
-                        <h5> register </h5> 
-                      </NavLink>
-                    </p>
+                    <p className="text-white h2">Easier way to do your job Better</p>
                   </div>
                   <div className="form-side">
-                    <NavLink to={`/`} className="white">
                       <span className="logo-single" />
-                    </NavLink>
                     <CardTitle className="mb-4">
                       <IntlMessages id="user.login-title" />
                     </CardTitle>

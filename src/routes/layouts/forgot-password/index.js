@@ -34,7 +34,7 @@ class ForgotPasswordLayout extends Component {
               <Colxx xxs="12" md="10" className="mx-auto my-auto">
                 <Card className="auth-card">
                   <div className="position-relative image-side ">
-                    <p className="text-white h2">MAGIC IS IN THE DETAILS</p>
+                    <p className="text-white h2">Easier way to do your job Better</p>
                     <p className="white mb-0">
                       Please use your e-mail to reset your password. <br />
                       If you are not a member, please{" "}
@@ -45,9 +45,7 @@ class ForgotPasswordLayout extends Component {
                     </p>
                   </div>
                   <div className="form-side">
-                    <NavLink to={`/`} className="white">
                       <span className="logo-single" />
-                    </NavLink>
                     <CardTitle className="mb-4">
                       <IntlMessages id="user.forgot-password" />
                     </CardTitle>

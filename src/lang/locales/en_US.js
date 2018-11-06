@@ -137,7 +137,7 @@ module.exports = {
   "dashboards.pending-for-print": "Pending for print",
   "dashboards.logs": "Logs",
   "dashboards.gogo": "GOGO",
-  "dashboards.magic-is-in-the-details": "MAGIC IS IN THE DETAILS",
+  "dashboards.magic-is-in-the-details": "Easier way to do your job Better",
   "dashboards.yes-it-is-indeed": "Yes, it is indeed!",
   "dashboards.advanced-search": "Advanced Search",
   "dashboards.toppings": "Toppings",
@@ -539,6 +539,7 @@ module.exports = {
   /* 13.Beasy Results */
   "results.title-first": "Your Goal has been posted! ",
   "results.title-second": "Explore your potential partners",
+  "results.more-matching": "Discover more matching partners",
 
     /* 13.Beasy Dashboard */
     "results.title": "Your Potential Partners",

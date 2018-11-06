@@ -141,7 +141,7 @@ class ImageListLayout extends Component {
 
             <Colxx xxs="12">
               <CardTitle>
-                <IntlMessages id="carousel.without-controls" />
+                <IntlMessages id="results.more-matching" />
               </CardTitle>
             </Colxx>
 

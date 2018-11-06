@@ -23,8 +23,8 @@ class MoreResultCard extends Component {
             </div>
 
             <CardBody style={cardBodyStyle}>
-              <h6 className="mb-4">
-                {product.name}
+              <h6 className="mb-">
+                {product.companyDescription}  
               </h6>
 
             </CardBody>

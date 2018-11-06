@@ -142,10 +142,10 @@ class OpportunityCard extends Component {
               </p>
             </div>
             <p className="text-muted text-small mb-2">
-              <IntlMessages id="opp.matching-score" />
+              <IntlMessages id="opp.matching-score" /> : {product.rate}
             </p>
             <div className="mb-3">
-              <Rating total={5} rating={5} interactive={false} />
+              <Rating total={5} rating={product.rate} interactive={false} />
             </div>
 
             <p className="text-muted text-small mb-2">

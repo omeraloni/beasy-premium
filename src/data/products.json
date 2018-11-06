@@ -33,6 +33,7 @@
                 "Social Marketing Promotion",
                 "Influencers Campaign"
             ],
+            "rate" : 3,
             "notes": [
                 "Willing to give products, Social contest, Open for new ideas"
             ]
@@ -40,6 +41,7 @@
         {
             "id": 2,
             "name": "Patagonia",
+            "rate" : 5,
             "area": [
                 "Global"
             ],
@@ -76,6 +78,7 @@
         {
             "id": 3,
             "name": "Lush Cosmetics",
+            "rate" : 2.5,
             "area": [
                 "US"
             ],
@@ -113,6 +116,7 @@
         {
             "id": 4,
             "name": "Influential",
+            "rate" : 3.4,
             "area": [
                 "US"
             ],
@@ -151,6 +155,7 @@
         {
             "id": 5,
             "name": "Corona Extra + Parley",
+            "rate" : 5,
             "area": [
                 "Global"
             ],
@@ -191,6 +196,7 @@
         {
             "id": 6,
             "name": "Netflix",
+            "rate" : 5,
             "area": [
                 "Global"
             ],
@@ -228,6 +234,7 @@
         {
             "id": 7,
             "name": "Viral Nation",
+            "rate" : 3.7,
             "area": [
                 "US"
             ],
@@ -264,6 +271,7 @@
         {
             "id": 8,
             "name": "Jango",
+            "rate" : 4.2,
             "area": [
                 "Global"
             ],
@@ -300,6 +308,7 @@
         {
             "id": 9,
             "name": "Woodies",
+            "rate" : 3,
             "area": [
                 "US"
             ],
@@ -338,6 +347,7 @@
         {
             "id": 10,
             "name": "Planet Fitness",
+            "rate" : 4.7,
             "area": [
                 "US",
                 "Columbia",
@@ -381,7 +391,8 @@
         },
         {
             "id": 11,
-            "name": "Virgin Trains ",
+            "name": "Virgin Trains",
+            "rate" : 4,
             "area": [
                 "UK"
             ],
@@ -420,6 +431,7 @@
         {
             "id": 12,
             "name": "Greenpeace",
+            "rate" : 3.7,
             "area": [
                 "40 countries around the globe"
             ],
@@ -459,6 +471,7 @@
         {
             "id": 13,
             "name": "Yoga Now",
+            "rate" : 2,
             "area": [
                 "Chicago, IL"
             ],
@@ -496,6 +509,7 @@
         {
             "id": 14,
             "name": "Green Fitness Studio",
+            "rate" : 4,
             "area": [
                 "Brooklyn, NY"
             ],
@@ -537,6 +551,7 @@
         {
             "id": 15,
             "name": "SoundCloud",
+            "rate" : 5,
             "area": [
                 "Global"
             ],
@@ -575,6 +590,7 @@
         {
             "id": 16,
             "name": "Billabong",
+            "rate" : 4,
             "area": [
                 "Global"
             ],

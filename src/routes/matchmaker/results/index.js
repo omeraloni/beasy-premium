@@ -110,7 +110,10 @@ class ImageListLayout extends Component {
           <Row>
             <Colxx xxs="12">
               <CardTitle>
-                <IntlMessages id="results.title" />
+                <IntlMessages id="results.title-first" />
+              </CardTitle>
+              <CardTitle>
+                <IntlMessages id="results.title-second" />
               </CardTitle>
             </Colxx>
             <Colxx xxs="12" className="pl-0 pr-0 mb-5">

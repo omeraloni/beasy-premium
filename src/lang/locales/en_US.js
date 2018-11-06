@@ -537,8 +537,9 @@ module.exports = {
   "matchmaker.getBeasy": "Get Beasy !",
 
   /* 13.Beasy Results */
-  "results.title": "Your Potential Partners",
-  
+  "results.title-first": "Your Goal has been posted! ",
+  "results.title-second": "Explore your potential partners",
+
     /* 13.Beasy Dashboard */
     "results.title": "Your Potential Partners",
     "dashboard.pending-requests": "Pending Requests",

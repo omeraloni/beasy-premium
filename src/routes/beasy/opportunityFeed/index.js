@@ -267,68 +267,16 @@ export default class ImageListLayout extends Component {
                 <h1><IntlMessages id="Your Next Business Opportunity" /></h1>
 
                 <div className="float-sm-right">
-                  <Button
-                    color="primary"
-                    size="lg"
-                    className="top-right-button"
-                    onClick={this.toggleModal}
-                  >
-                    <IntlMessages id="layouts.add-new" />
-                  </Button>{" "}
-                  <Modal
-                    isOpen={this.state.modalOpen}
-                    toggle={this.toggleModal}
-                    wrapClassName="modal-right"
-                    backdrop="static"
-                  >
-                    <ModalHeader toggle={this.toggleModal}>
-                      <IntlMessages id="layouts.add-new-modal-title" />
-                    </ModalHeader>
-                    <ModalBody>
-                      <Label>
-                        <IntlMessages id="layouts.product-name" />
-                      </Label>
-                      <Input />
-                      <Label className="mt-4">
-                        <IntlMessages id="layouts.category" />
-                      </Label>
-                      <Select
-                        components={{ Input: CustomSelectInput }}
-                        className="react-select"
-                        classNamePrefix="react-select"
-                        name="form-field-name"
-                        options={this.state.categories}
-                        placeholder={""}
-                      />
-                      <Label className="mt-4">
-                        <IntlMessages id="layouts.description" />
-                      </Label>
-                      <Input type="textarea" name="text" id="exampleText" />
-                      <Label className="mt-4">
-                        <IntlMessages id="layouts.status" />
-                      </Label>
-                      <CustomInput
-                        type="radio"
-                        id="exCustomRadio"
-                        name="customRadio"
-                        label="ON HOLD"
-                      />
-                      <CustomInput
-                        type="radio"
-                        id="exCustomRadio2"
-                        name="customRadio"
-                        label="PROCESSED"
-                      />
-                    </ModalBody>
-                    <ModalFooter>
-                      <Button color="secondary" outline onClick={this.toggleModal}>
-                        <IntlMessages id="layouts.cancel" />
-                      </Button>
-                      <Button color="primary" onClick={this.toggleModal}>
-                        <IntlMessages id="layouts.submit" />
-                      </Button>{" "}
-                    </ModalFooter>
-                  </Modal>
+                  <NavLink to="/app/matchmaker/new">
+                    <Button
+                      color="primary"
+                      size="lg"
+                      className="top-right-button"
+                      onClick={this.toggleModal}
+                    >
+                      <IntlMessages id="layouts.add-new" />
+                    </Button>{" "}
+                  </NavLink>
                   <ButtonDropdown
                     isOpen={this.state.dropdownSplitOpen}
                     toggle={this.toggleSplit}
@@ -374,7 +322,7 @@ export default class ImageListLayout extends Component {
                     </DropdownMenu>
                   </ButtonDropdown>
                 </div>
-                
+
                 <BreadcrumbItems match={this.props.match} />
 
               </div>
@@ -479,7 +427,7 @@ export default class ImageListLayout extends Component {
               if (this.state.displayMode === "imagelist") {
                 return (
                   <Colxx sm="6" lg="4" xl="3" className="mb-3" key={product.id}>
-                    <OpportunityCard product={product}/>
+                    <OpportunityCard product={product} />
                   </Colxx>
                 );
               } else if (this.state.displayMode === "thumblist") {

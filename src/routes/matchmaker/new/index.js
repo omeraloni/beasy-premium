@@ -149,7 +149,6 @@ class FormsUi extends Component {
   handleSubmit = event => {
     event.preventDefault()
     var random = Math.floor(Math.random() * 10000000);
-    alert(JSON.stringify(this.state, null, '  '));
 
     database.ref('goals/' + random).set({
       isPublic: this.state.isPublic,

@@ -539,4 +539,14 @@ module.exports = {
   /* 13.Beasy Results */
   "results.title": "Your Potential Partners",
   
+    /* 13.Beasy Dashboard */
+    "results.title": "Your Potential Partners",
+    "dashboard.pending-requests": "Pending Requests",
+    "dashboard.collaborations": "Collaborations",
+    "dashboard.projects-in-progress": "Projects In Progress",
+    "dashboard.projects": "Projects",
+    "dashboard.calender": "Calender",
+    "dashboard.project-list": "Project List",
+    "dashboard.goal-impression": "Goal Impression",
+    
 };

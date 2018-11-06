@@ -30,7 +30,7 @@
                 "Grow on social network"
             ],
             "how": [
-                "Social Marketing Campaign",
+                "Social Marketing Promotion",
                 "Influencers Campaign"
             ],
             "notes": [
@@ -47,7 +47,7 @@
             "companyDescription": "Activewear and sport gear retailers",
             "companyLocation": "Ventura, California",
             "img": "/assets/img/beasy/patagonia.jpg",
-            "title": "Looking for a Business development partnership",
+            "title": "Looking for a Business Development partnership",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -68,7 +68,7 @@
                 "Grow on social network"
             ],
             "how": [
-                "Cross media campaign"
+                "Cross Promotion Campaign"
             ],
             "notes": [
                 "Patagonia is looking to expand the business to new fields and promote Cross media campaigns with a fresh young brand."
@@ -98,10 +98,10 @@
             "location": "Chicago, Illinois",
             "description": "Lush Cosmetics is an all-natural bath and body brand. We make everything from shampoos and fragrances to massage bars and bath bombs. In addition to making the world more beautiful, one person at a time, Lush is dedicated to eco-friendly products and practices.",
             "goals": [
-                "Target new Audience", "Exposure to potential customers"
+                "Target a new Audience", "Exposure to potential customers"
             ],
             "how": [
-                "Social Marketing Campaign", "Influencers Campaign"
+                "Social Marketing Promotion", "Influencers Campaign"
             ],
             "notes": [
                 "Offering brand partnership - Producing a video/ Social contest"
@@ -116,7 +116,7 @@
             "companyDescription": "Marketing Agency ",
             "companyLocation": "Las Vegas, Nevada",
             "img": "/assets/img/beasy/influental.jpg",
-            "title": "Looking for Strategic Partnerships",
+            "title": "Looking for a Strategic Partnerships",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -132,10 +132,10 @@
             "location": "US",
             "description": "Kenya-born and Brooklyn-based artist Wangechi Mutu creates performance, video, sculptures, and other works of art. The top art influencer’s Instagram feed features work by her and others. She has 31K followers.",
             "goals": [
-                "Create service/product", "Create content"
+                "Create service/product", "Create Content"
             ],
             "how": [
-                "Product line design", "Social Marketing Campaign", "Influencers Campaign"
+                "Product Line Design", "Social Marketing Promotion", "Influencers Campaign"
             ],
             "notes": [
                 "Professional ֿartist Influencer is looking for the next opportunity: Willing to paint and design different products lines to get exposure to her art."
@@ -150,7 +150,7 @@
             "companyDescription": "Drinks",
             "companyLocation": "CA / US",
             "img": "/assets/img/beasy/corona.jpg",
-            "title": "Looking for Strategic Partnerships",
+            "title": "Looking for a Strategic Partnerships",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -166,10 +166,10 @@
             "location": "Santa Cruz, CA",
             "description": "Corona Extra is The best Mexican beer in the world. Parley is an organization and collaboration network that raises awareness for the beauty and fragility of the oceans. With Corona‘s passion for beach, surf and ocean culture, and Parley‘s collaborative, eco-innovative approach to solutions, we are teaming up for the Oceans, to protect 100 islands from plastic pollution by 2020.",
             "goals": [
-                "Exposure to potential customers", "Raise Awareness"
+                "Exposure to potential customers", "Publicity"
             ],
             "how": [
-                "Running an Event" ,"Cross media campaign"
+                "Running an Event" ,"Cross Promotion Campaign"
             ],
             "notes": [
                 "As part of Corona X Parley collaborative project to protect 100 islands by 2020, we are running serial surfing events in Santa Cruz, CA. We are looking for a brand sponsorships that relates to the project’s field and values."
@@ -184,7 +184,7 @@
             "companyDescription": "Internet entertainment service",
             "companyLocation": "Los Gatos, California",
             "img": "/assets/img/beasy/netflix.jpg",
-            "title": "Looking for a Strategic Partnership",
+            "title": "Looking for a Strategic Partnerships",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -200,10 +200,10 @@
             "location": "New York",
             "description": "Netflix is the world's leading internet entertainment service with more than 130 million memberships in over 190 countries enjoying TV series, documentaries and feature films across a wide variety of genres and languages",
             "goals": [
-                "Publicity", "Create brand image"
+                "Publicity", "Create Brand image"
             ],
             "how": [
-                "Event sponsorship", "Social Marketing Campaign"
+                "Become a Sponsor", "Social Marketing Promotion"
             ],
             "notes": [
                 " Looking for brand partnerships that can give added value to Netflix’s Audience, for the upcoming Netflix’s Media events. Partners will have full exposure at the events and cross promotion."
@@ -223,9 +223,9 @@
             "status": "ON HOLD",
             "statusColor": "primary",
             "interests": [
-                "Outdoor activity",
+                "Outdoor Activity",
                 "Sport",
-                "Extreme sport"
+                "Extreme Sport"
             ],
             "gender": [
                 "Male"
@@ -235,7 +235,7 @@
             "location": "US",
             "description": "Devin Graham, or known as devinsupertramp, is a videographer who producers adventure and extreme sport videos on YouTube for social media platforms",
             "goals": [
-                "Create content", "Grow on social network"
+                "Create Content", "Grow on social network"
             ],
             "how": [
                 "Influencers Campaign"
@@ -253,7 +253,7 @@
             "companyDescription": "Free online music streaming service",
             "companyLocation": "New York, NY",
             "img": "/assets/img/beasy/jango.png",
-            "title": "Looking for a Business development partnership",
+            "title": "Looking for a Business Development partnership",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -269,10 +269,10 @@
             "location": "US",
             "description": "Jango is a free custom radio that plays your favorite music. Jango is all about making online music easy and fun - a free online music streaming service that allows you to create custom radio stations.",
             "goals": [
-                "Create service/product", "Social Marketing Campaign"
+                "Create service/product", "Social Marketing Promotion"
             ],
             "how": [
-                "Business development partnership"
+                "Business Development Partnership"
             ],
             "notes": [
                 "Jango is about to launch a new music gaming add-on feature to our app. We are looking for a strategic partner either from the gaming, music or any other relevant field, to team-up with."
@@ -292,7 +292,7 @@
             "status": "ON HOLD",
             "statusColor": "primary",
             "interests": [
-                "Fashion", "Fun", "Beach", "Outdoor activity"
+                "Fashion", "Fun", "Beach", "Outdoor Activity"
             ],
             "gender": [
                 "Female",
@@ -303,10 +303,10 @@
             "location": "West Coast, US",
             "description": "Woodies Bamboo Sunglasses: The combination of natural materials, handmade construction, and a connection to the wholesome fashion of the 1950's.",
             "goals": [
-                "Launch a new product line", "Exposure to potential customers"
+                "Launch a New Product", "Exposure to potential customers"
             ],
             "how": [
-                "Social Marketing Campaign"
+                "Social Marketing Promotion"
             ],
             "notes": [
                 "Woodies is launching a new product line - Wood and bamboo designed Watches and a new matching Sunglasses collection. We are looking for a co-marketing partner to create a cool fashion campaign, promoted in Social media platforms"
@@ -326,7 +326,7 @@
             "status": "ON HOLD",
             "statusColor": "primary",
             "interests": [
-                "Sport",     "Fitness", "Outdoor activity", "Music", "Event"
+                "Sport", "Fitness", "Outdoor Activity", "Music", "Event"
             ],
             "gender": [
                 "Female",
@@ -337,7 +337,7 @@
             "location": "PlanetsFitness clubs across 50 states",
             "description": "PlanetFitness, one of the largest and fastest growing franchisors and operators of fitness centers in the U.S, with more than 1,500 locations in 50 states, is taking the fitness industry by storm! We've revolutionized the industry with our combination of affordable prices, great value and non-intimidating Judgement Free Zone®. PlanetFitness' mission is to enhance people's lives by providing a high-quality fitness experience",
             "goals": [
-                "Exposure to potential customers", "Customers acquisition, Generate Leads"
+                "Exposure to potential customers", "User/Customer acquisition, Generate Leads"
             ],
             "how": [
                 "Running an event"
@@ -374,7 +374,7 @@
                 "Create service/product", "Generate value"
             ],
             "how": [
-                "Traditional Marketing", "Social Marketing", "Make better ride experience"
+                "Traditional Marketing", "Social Marketing Promotion", "Make better ride experience"
             ],
             "notes": [
                 "Virgin Trains operates free onboard entertainment in our trains. We are looking to generate value with our entertainment system by partnerships with Music/ Media/ Content providers brand"
@@ -408,7 +408,7 @@
                 "Publicity", "Exposure"
             ],
             "how": [
-                "Cross media campaign", "Strategic Campaign "
+                "Cross Promotion Campaign", "Strategic Campaign "
             ],
             "notes": [
                 "Greenpeace’s ‘Be apart’ Global campaign is about creating creative communication with companies and influencers around the globe to contribute to Greenpeace protest and Go-Green as a company and individuals. Join us to our partners program.  It’s a win-win situation for everybody"
@@ -423,7 +423,7 @@
             "companyDescription": "Yoga and healing studio",
             "companyLocation": "Chicago, Illinois",
             "img": "/assets/img/beasy/yoganow.jpg",
-            "title": "Looking for Strategic Partnerships",
+            "title": "Looking for a Strategic Partnerships",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -442,7 +442,7 @@
                 "Generate value"
             ],
             "how": [
-                "Event Sponsorship"
+                "Exposure at Event"
             ],
             "notes": [
                 "Yoga Now is running serial events and workshops program throughout the year. We are looking for relevant event sponsor for long-term partnership"
@@ -457,7 +457,7 @@
             "companyDescription": "Service Fitness studio",
             "companyLocation": "Brooklyn, NY",
             "img": "/assets/img/beasy/green-fitness.jpg",
-            "title": "Looking for Strategic Partnerships",
+            "title": "Looking for a Strategic Partnerships",
             "dueDate": "02.04.2018",
             "status": "ON HOLD",
             "statusColor": "primary",
@@ -476,7 +476,7 @@
                 "Create service/product", "Generate value"
             ],
             "how": [
-                "Long-Tern partnership", "Rebranding", "Distribution point", "Cross media promotion"
+                "Long-Tern partnership", "Rebranding", "Distribution point", "Cross Promotion Campaign"
             ],
             "notes": [
                 "Green Fitness Studio is proud to be the first ecofriendly fitness center, we are looking to rebrand to be also a fun, experience venue. If you are a fun, cool brand and you believe you can contribute value to our members, partner with us and you will have full exposure, media promotion, and Distribution point to your Product."
@@ -507,10 +507,10 @@
             "location": "Berlin / London ",
             "description": "SoundCloud is the world’s leading social sound platform where anyone can create sounds and share them everywhere. Recording and uploading sounds to SoundCloud lets people easily share them privately with their friends or publicly to blogs, sites and social networks",
             "goals": [
-                "Exposure to potential customers", "Create content", "Grow on social network"
+                "Exposure to potential customers", "Create Content", "Grow on social network"
             ],
             "how": [
-                "Cross promotion campaign"
+                "Cross Promotion Campaign"
             ],
             "notes": [
                 "SoundCloud Expands “First On SoundCloud” Campaign to the U.K. and Germany. Campaign features artists from both countries who started their careers on SoundCloud. We are looking for a brand to team up for the promotion of this awesome campaign. Brands and creators will get promoted across SoundCloud playlists, social mentions, newsletters and blog, out of home advertising, plus fast track consideration for monetization in SoundCloud’s Premier and partnership opportunities"

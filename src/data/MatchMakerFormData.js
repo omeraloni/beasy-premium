@@ -3,8 +3,8 @@ module.exports.lookingFor = () => {
         saveAs: "lookingFor",
         ranges: [
             {
-                value: 'StrategicPartnership',
-                label: 'Strategic Partnership',
+                value: 'StrategicPartnerships',
+                label: 'Strategic Partnerships',
             },
             {
                 value: 'CoMarketingCampaign',
@@ -87,8 +87,17 @@ module.exports.how = () => {
                 label: 'Social Marketing Promotion'
             },
             {
+                value: 'BusinessDevelopmentPartnership',
+                label: 'Business Development Partnership'
+            },
+         
+            {
+                value: 'ProductLineDesign',
+                label: 'Product Line Design'
+            },
+            {
                 value: 'InfluencersCampaign',
-                label: 'Influencers Campaign (Bloggers, Endorsers, Advocates) ',
+                label: 'Influencers Campaign',
             },
             {
                 value: 'TraditionalMarketing',
@@ -213,6 +222,10 @@ module.exports.age = () => {
         adornment: "",
         step: 1
     });
+}
+
+const interests = () => {
+
 }
 
 module.exports.interest = () => {

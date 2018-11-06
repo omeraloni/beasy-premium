@@ -334,14 +334,14 @@ class FormsUi extends Component {
                     <DoubleSlider data={MatchMakerData.budget()} onChangeHandler={this.handleBudgetChange} />
                   </FormGroup>
 
-                  <FormGroup row className="mb-5">
+                  <FormGroup row className="mb-5 mt-5">
                     <Colxx sm={1}>
                       <Label>
                         <IntlMessages id="matchmaker.duration" />
                       </Label>
                     </Colxx>
                     <Colxx>
-                      <Row className="mb-5">
+                      <Row className="mb-3">
                         <Colxx xxs="6">
                           <DatePicker
                             selected={this.state.startDateRange}
@@ -366,7 +366,7 @@ class FormsUi extends Component {
                     </Colxx>
                   </FormGroup>
                   <FormGroup row>
-                    <Label className="mt-4">
+                    <Label>
                       <IntlMessages id="matchmaker.notes" />
                     </Label>
                     <Input type="textarea" name="notes" id="notes" style={{ height: 150 }} onChange={this.handleNotesChange} />

@@ -3,49 +3,49 @@
         {
             "id": 1,
             "name": "Via",
-            "companyDescription": "Affordable shared rides, on-demand convenience. Via currently operates in NYC, Chicago, and DC. Download the app to ride",
+            "companyDescription": "Shared rides-on-demand",
             "img": "/assets/img/beasy/more/via.png"
         },
         {
             "id": 2,
             "name": "Uber",
-            "companyDescription": "Peer-to-peer ridesharing, taxi cab, food delivery, bicycle-sharing, and transportation network company",
+            "companyDescription": "Peer-to-peer ridesharing",
             "img": "/assets/img/beasy/more/uber.jpg"
         },
         {
             "id": 3,
             "name": "Decathlon",
-            "companyDescription": "Europe’s Number One Sports Retailer. We create equipment and attire for over 80 sports!",
+            "companyDescription": "Europe’s Number One Sports Retailer",
             "img": "/assets/img/beasy/more/decathlon.jpg"
         },
         {
             "id": 4,
             "name": "Adidas",
-            "companyDescription": "Sport shoes, clothing and accessories designs. The largest sportswear manufacturer in Europe!",
+            "companyDescription": "The largest sportswear manufacturer in Europe!",
             "img": "/assets/img/beasy/more/adidas.jpg"
         },
         {
             "id": 5,
             "name": "Nike",
-            "companyDescription": "Design, development, manufacturing, and worldwide marketing and sales of sports footwear, apparel, equipment, accessories, and services.",
+            "companyDescription": "Just do it",
             "img": "/assets/img/beasy/more/nike.jpg"
         },
         {
             "id": 6,
             "name": "DICK'S Sporting Goods",
-            "companyDescription": "American sporting goods retail company. We believe that sports have the power to unite the world.",
+            "companyDescription": "American sporting goods retailer",
             "img": "/assets/img/beasy/more/dick.jpg"
         },
         {
             "id": 7,
             "name": "GoPro",
-            "companyDescription": "The World's Most Versatile Camera. Wear it. Mount it. Love it. Share with",
+            "companyDescription": "The World's Most Versatile Camera",
             "img": "/assets/img/beasy/more/gopro.jpg"
         },
         {
             "id": 8,
-            "name": "GoPro",
-            "companyDescription": "Music streaming platform. Music for every moment. Play, discover and share for free",
+            "name": "Spotify",
+            "companyDescription": "Music for every moment",
             "img": "/assets/img/beasy/more/spotify.jpg"
         }
     ]

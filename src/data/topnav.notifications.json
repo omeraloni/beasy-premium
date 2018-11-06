@@ -1,27 +1,27 @@
 {
     "data": [
       {
-        "image" : "/assets/img/profile-pic-l-2.jpg",
-        "message": "Joisse Kaycee just sent a new comment!",
-        "date" : "09.04.2018 - 12:45",
+        "image" : "/assets/img/beasy/topbar/1.png",
+        "message": "Peace-Boards accepted your Beasy request",
+        "date" : "04.11.2018 - 12:45",
         "id": 1
       },
       {
-        "image" : "/assets/img/notification-thumb.jpg",
-        "message": "1 item is out of stock!",
-        "date" : "09.04.2018 - 12:45",
+        "image" : "/assets/img/beasy/topbar/2.jpg",
+        "message": "Your Event sponsorship goal has 3 new matches",
+        "date" : "04.11.2018 - 11:32",
         "id": 2
       },
       {
-        "image" : "/assets/img/notification-thumb-2.jpg",
-        "message": "New order received! It is total $147,20.",
-        "date" : "09.04.2018 - 12:45",
+        "image" : "/assets/img/beasy/topbar/3.png",
+        "message": "Calendar: 1 upcoming deadline this week",
+        "date" : "03.11.2018 - 19:14",
         "id": 3
       },
       {
-        "image" : "/assets/img/notification-thumb-3.jpg",
-        "message": "3 items just added to wish list by a user!",
-        "date" : "09.04.2018 - 12:45",
+        "image" : "/assets/img/beasy/topbar/4.jpg",
+        "message": "Projects: 1 new comment on project 'One tree planted'",
+        "date" : "03.11.2018 - 18:55",
         "id": 4
       }
     ]

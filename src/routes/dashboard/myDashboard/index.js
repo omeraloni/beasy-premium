@@ -13,7 +13,6 @@ import {
   Progress,
   CardHeader
 } from "reactstrap";
-import { NavLink } from "react-router-dom";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import { Colxx, Separator } from "Components/CustomBootstrap";
 import BreadcrumbContainer from "Components/BreadcrumbContainer";
@@ -225,10 +224,6 @@ export default class MyDashboard extends Component {
                     {recentOrders.map((order, index) => {
                       return (
                         <div key={index} className="d-flex flex-row mb-3">
-                          <NavLink
-                            to="/app/layouts/details"
-                            className="d-block position-relative"
-                          >
                             <img
                               src={order.img}
                               alt={order.name}
@@ -242,10 +237,7 @@ export default class MyDashboard extends Component {
                             >
                               {order.status}
                             </Badge>
-                          </NavLink>
-
                           <div className="pl-3 pt-2 pr-2 pb-2">
-                            <NavLink to="/app/layouts/details">
                               <p className="list-item-heading">{order.name}</p>
                               <div className="pr-4">
                                 <p className="text-muted mb-1 text-small">
@@ -255,7 +247,6 @@ export default class MyDashboard extends Component {
                               <div className="text-primary text-small font-weight-medium d-none d-sm-block">
                                 {order.createDate}
                               </div>
-                            </NavLink>
                           </div>
                         </div>
                       );

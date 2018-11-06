@@ -59,7 +59,7 @@ class FormsUi extends Component {
       genderOptions: [],
       ageMin: MatchMakerData.age().defaultMin,
       ageMax: MatchMakerData.age().defaultMax,
-      countriesOptions: [],
+      countriesOptions: [{value: "United States", label:"United States"}],
       interestOptions: [],
       budgetMin: MatchMakerData.budget().defaultMin,
       budgetMax: MatchMakerData.budget().defaultMax,
@@ -278,22 +278,22 @@ class FormsUi extends Component {
                     </Colxx>
                     <Colxx sm={6}>
                       <FormGroup>
-                        <Label className="pt-0">
+                        <Label className="pt-0" className="mb-3">
                           <IntlMessages id="Target Audience" />
                         </Label>
                         <FormGroup row>
-                          <Colxx sm={6}>
-                            <FormGroup>
-                              <Checkboxes data={MatchMakerData.gender()} onChangeHandler={this.handleGenderChange} />
-                            </FormGroup>
-                          </Colxx>
-                          <Colxx sm={6}>
+                        <Colxx sm={12}>
                             <FormGroup>
                               <DoubleSlider data={MatchMakerData.age()} onChangeHandler={this.handleAgeChange} />
                             </FormGroup>
                           </Colxx>
                         </FormGroup>
                         <FormGroup row>
+                          <Colxx sm={6}>
+                            <FormGroup>
+                              <Checkboxes data={MatchMakerData.gender()} onChangeHandler={this.handleGenderChange} />
+                            </FormGroup>
+                          </Colxx>
                           <Colxx sm={6}>
                             <FormGroup>
                               <Label className="pt-0">
@@ -314,7 +314,10 @@ class FormsUi extends Component {
                               </Colxx>
                             </FormGroup>
                           </Colxx>
-                          <Colxx sm={6}>
+
+                        </FormGroup>
+                        <FormGroup row>
+                             <Colxx sm={12}>
                             <FormGroup>
                               <MultiSelect
                                 data={MatchMakerData.interest()}

@@ -16,7 +16,9 @@ import { withRouter } from 'react-router-dom';
 class ImageListLayout extends Component {
   constructor(props) {
     super(props);
+    this.intersectLabeled = this.intersectLabeled.bind(this);
     this.intersect = this.intersect.bind(this);
+    this.intersectFreeText = this.intersectFreeText.bind(this);
     this.setNumberOfMatches = this.setNumberOfMatches.bind(this);
     this.getTheBestProducts = this.getTheBestProducts.bind(this);
     this.getPrecentage = this.getPrecentage.bind(this);
@@ -24,33 +26,55 @@ class ImageListLayout extends Component {
     this.state = [];
   }
 
+  intersectLabeled = (array1, array2) => {
+    array1 = array1.map(e => this.removeSpecialChars(e.label))
+    array2 = array2.map(e => this.removeSpecialChars(e))
+
+    return array1.filter(element => { 
+      return (-1 !== array2.indexOf(element));
+    });
+  }
+
   intersect = (array1, array2) => {
-    return array1.filter(element => -1 !== array2.indexOf(element.label));
+    array1 = array1.map(e => this.removeSpecialChars(e))
+    array2 = array2.map(e => this.removeSpecialChars(e))
+
+    return array1.filter(element => { 
+      return (-1 !== array2.indexOf(element));
+    });
+  }
+
+  intersectFreeText = (array, text) => {
+    array = array.map(e => this.removeSpecialChars(e))
+
+    text = this.removeSpecialChars(text)
+
+    return array.filter(element => { 
+      return (text.includes(element));
+    });
+  }
+
+  removeSpecialChars(str){
+    return str.replace(/[^A-Z0-9]+/ig, "").toLowerCase()
   }
 
   setNumberOfMatches = (goal, product) => {
     var numberOfMatches = 0;
-    console.log(product.name)
-    numberOfMatches += this.intersect(goal.interestOptions, product.interests).length
-    console.log(numberOfMatches)
+    numberOfMatches += this.intersectLabeled(goal.interestOptions, product.interests).length
     numberOfMatches += this.intersect(goal.genderOptions, product.gender).length
-    console.log(numberOfMatches)
-    numberOfMatches += this.intersect(goal.goalsOptions, product.goals).length
-    console.log(numberOfMatches)
-    numberOfMatches += this.intersect(goal.howOptions, product.how).length
-    console.log(numberOfMatches)
+    numberOfMatches += this.intersectLabeled(goal.goalsOptions, product.goals).length
+    numberOfMatches += this.intersectLabeled(goal.howOptions, product.how).length
+    numberOfMatches += this.intersectFreeText(goal.lookingFor, product.title).length
     product.numberOfMatches = this.getPrecentage(numberOfMatches);
   }
 
   getPrecentage = (numberOfMatches) => {
     var precentage = 0.0;
     var i;
-    for (i = 1; i<=numberOfMatches; i++){
+    for (i = 1; i<=numberOfMatches/2; i++){
         precentage += Math.pow(0.5, i);
     }
     precentage = precentage * 100
-    console.log("Precentage");
-    console.log(precentage);
     return precentage;
   }
 

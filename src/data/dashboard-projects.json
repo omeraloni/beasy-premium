@@ -2,16 +2,16 @@
     "data": [
         {
             "id": 1,
-            "name": "Music Events Sponsorship",
+            "name": "Events Sponsor",
             "partner": "Virgin Records",
-            "goals": "Exposure to potential customers",
+            "goal": "Exposure to potential customers",
             "status": "Active",
             "deadline": "22/12/18",
             "img": "/assets/img/beasy/dashboard/virgin-records.jpg"
         },
         {
             "id": 2,
-            "name": "Co-Marketing Campaign - Supporting Reforestry",
+            "name": "Co-Marketing",
             "partner": "One Tree Planted",
             "goal": "Generate value",
             "status": "In Progress",
@@ -19,17 +19,17 @@
         },
         {
             "id": 3,
-            "name": "Urban Product line design  ",
+            "name": "Product Design",
             "partner": "Urban Outfitters",
-            "goals": "Create Product",
+            "goal": "Create Product",
             "status": "In Progress",
             "img": "/assets/img/beasy/dashboard/urban-outfitters.jpg"
         },
         {
             "id": 4,
-            "name": "Social contest campaign",
+            "name": "Social Campaign",
             "partner": "Juno",
-            "goals": "Exposure to potential customers",
+            "goal": "Exposure to potential customers",
             "status": "Completed",
             "img": "/assets/img/beasy/dashboard/juno.jpg"
         }

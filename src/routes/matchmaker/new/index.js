@@ -33,8 +33,9 @@ import "rc-switch/assets/index.css";
 import "rc-slider/assets/index.css";
 import "react-rater/lib/react-rater.css";
 import "react-fine-uploader/gallery/gallery.css";
+import {withRouter} from 'react-router-dom';
 
-export default class FormsUi extends Component {
+class FormsUi extends Component {
   constructor(props) {
     super(props);
     this.handleLookingFor = this.handleLookingFor.bind(this);
@@ -147,6 +148,7 @@ export default class FormsUi extends Component {
   };
 
   handleSubmit = event => {
+    event.preventDefault()
     var random = Math.floor(Math.random() * 10000000);
     alert(JSON.stringify(this.state, null, '  '));
 
@@ -168,39 +170,45 @@ export default class FormsUi extends Component {
       notes: this.state.notes
     });
 
-    axios.get('http://localhost:8080/nlu/analyze', {
-      params: {
-        text: 'Patagonia is an outdoor apparel company based in Ventura, California. A certified B-Corporation, Patagonia’s mission is to build the best product, cause no unnecessary harm and use its business to inspire and implement solutions to the environmental crisis.',
-        features: {
-          "sentiment": {}, "keywords": {}, "categories": {}, "concepts": {
-            "limit": 3
-          },
-          "entities": {
-            "sentiment": true,
-            "limit": 5
-          },
-          "relations": {},
-          "semantic_roles": {},
+    this.props.history.push({
+      pathname: '/app/matchmaker/results',
+      state: { product: this.state }
+    })
+
+      // axios.get('http://localhost:8080/nlu/analyze', {
+      //   params: {
+      //     text: 'Patagonia is an outdoor apparel company based in Ventura, California. A certified B-Corporation, Patagonia’s mission is to build the best product, cause no unnecessary harm and use its business to inspire and implement solutions to the environmental crisis.',
+      //     features: {
+      //       "sentiment": {}, "keywords": {}, "categories": {}, "concepts": {
+      //         "limit": 3
+      //       },
+      //       "entities": {
+      //         "sentiment": true,
+      //         "limit": 5
+      //       },
+      //       "relations": {},
+      //       "semantic_roles": {},
 
 
-        }
-      }
-    }).then(response => {
-      console.log("sentiment");
-      console.log(response.data.sentiment);
-      console.log("keywords");
-      console.log(response.data.keywords);
-      console.log("categories");
-      console.log(response.data.categories);
-      console.log("concepts");
-      console.log(response.data.concepts);
-      console.log("entities");
-      console.log(response.data.entities);
-      console.log("relations");
-      console.log(response.data.relations);
-      console.log("semantic_roles");
-      console.log(response.data.semantic_roles);
-    }).catch(error => console.error(error));;
+      //     }
+      //   }
+      // }).then(response => {
+      //   console.log("sentiment");
+      //   console.log(response.data.sentiment);
+      //   console.log("keywords");
+      //   console.log(response.data.keywords);
+      //   console.log("categories");
+      //   console.log(response.data.categories);
+      //   console.log("concepts");
+      //   console.log(response.data.concepts);
+      //   console.log("entities");
+      //   console.log(response.data.entities);
+      //   console.log("relations");
+      //   console.log(response.data.relations);
+      //   console.log("semantic_roles");
+      //   console.log(response.data.semantic_roles);
+      // }).catch(error => console.error(error));;
+
   }
 
   render() {
@@ -223,7 +231,7 @@ export default class FormsUi extends Component {
           <Colxx xxs="12">
             <Card>
               <CardBody>
-                <Form>
+                <Form onSubmit={this.handleSubmit}>
                   <FormGroup row className="mb-5">
                     <Colxx sm={10}>
                       <InlineCheckboxes
@@ -362,14 +370,10 @@ export default class FormsUi extends Component {
                     <Input type="textarea" name="notes" id="notes" style={{ height: 150 }} onChange={this.handleNotesChange} />
                   </FormGroup>
 
-                  <NavLink
-                    to={`/app/matchmaker/results`}
-                    className="w-40 w-sm-100"
-                  >
-                    <Button color="primary" onClick={this.handleSubmit}>
+
+                    <Button color="primary">
                       <IntlMessages id="matchmaker.getBeasy" />
                     </Button>
-                  </NavLink>
                 </Form>
               </CardBody>
             </Card>
@@ -380,3 +384,5 @@ export default class FormsUi extends Component {
     );
   }
 }
+
+export default withRouter(FormsUi);

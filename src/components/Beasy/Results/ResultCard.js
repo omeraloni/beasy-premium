@@ -20,8 +20,8 @@ class ResultCard extends Component {
                         src={product.img}
                         alt="Card cap"
                     />
-                    <span className="badge badge-pill badge-theme-1 position-absolute badge-top-left">
-                        NEW
+                    <span className="badge badge-pill badge-theme-2 position-absolute badge-top-left">
+                        {product.numberOfMatches}%
               </span>
                 </div>
 

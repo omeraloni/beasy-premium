@@ -548,5 +548,7 @@ module.exports = {
     "dashboard.calender": "Calender",
     "dashboard.project-list": "Project List",
     "dashboard.goal-impression": "Goal Impression",
+
+    "card.connected": "Connected",
     
 };

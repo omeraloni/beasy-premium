@@ -18,7 +18,9 @@ class OpportunityCard extends Component {
   }
   state = {
     isButtonActive: false,
-    collapse: false
+    collapse: false,
+    buttonColor: "secondary",
+    buttonText: "matchmaker.getBeasy"
   }
   checkButton() {
     this.setState({ isButtonActive: !this.state.isButtonActive });
@@ -26,6 +28,11 @@ class OpportunityCard extends Component {
 
   toggleCard() {
     this.setState({ collapse: !this.state.collapse });
+  }
+
+  connect = () => {
+    this.setState({buttonColor: "primary"})
+    this.setState({buttonText: "card.connected"})
   }
 
 
@@ -56,12 +63,12 @@ class OpportunityCard extends Component {
             <b> <IntlMessages id={product.title} /> </b>
           </p>
           <p className="mb-3">
-              {product.notes}
-            </p>
-          <Collapse isOpen={this.state.collapse}>
-          <p className="text-muted text-small mb-2">
-            <IntlMessages id={"About " + product.name} />
+            {product.notes}
           </p>
+          <Collapse isOpen={this.state.collapse}>
+            <p className="text-muted text-small mb-2">
+              <IntlMessages id={"About " + product.name} />
+            </p>
             <p className="mb-3">
               {product.description}
             </p>
@@ -156,16 +163,23 @@ class OpportunityCard extends Component {
             </Button>
           </ Collapse>
 
-            <Button
-              outline
-              color={"theme-3"}
-              className={`icon-button ml-1 rotate-icon-click ${
-                this.state.collapse ? "rotate" : ""
-                }`}
-              onClick={this.toggleCard}
-            >
-              {this.state.collapse ? <i className="simple-icon-arrow-up" /> : <i className="simple-icon-arrow-down" />}
+          <Button
+            outline
+            color={"theme-3"}
+            className={`icon-button ml-1 rotate-icon-click ${
+              this.state.collapse ? "rotate" : ""
+              }`}
+            onClick={this.toggleCard}
+          >
+
+            {this.state.collapse ? <i className="simple-icon-arrow-up" /> : <i className="simple-icon-arrow-down" />}
+          </Button>
+          <div className="float-md-right">
+
+            <Button color={this.state.buttonColor} onClick={this.connect}>
+              <IntlMessages id={this.state.buttonText} />
             </Button>
+          </div>
         </CardBody>
       </Card>
     );

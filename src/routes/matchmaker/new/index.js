@@ -168,10 +168,12 @@ class FormsUi extends Component {
       endDateRange: this.state.endDateRange + ''.split('T', 1)[0],
       notes: this.state.notes
     });
-
+    var stateToSend = {...this.state};
+    stateToSend.startDateRange = "";
+    stateToSend.endDateRange = "";
     this.props.history.push({
       pathname: '/app/matchmaker/results',
-      state: { product: this.state }
+      state: { product: stateToSend }
     })
 
       // axios.get('http://localhost:8080/nlu/analyze', {

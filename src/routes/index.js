@@ -7,10 +7,7 @@ import Sidebar from 'Containers/Sidebar';
 import beasy from './beasy';
 import dashboard from './dashboard';
 import matchmaker from './matchmaker';
-import dashboards from './dashboards';
 import layouts from './layouts';
-import applications from './applications';
-import ui from './ui';
 
 import { connect } from 'react-redux';
 
@@ -31,10 +28,7 @@ class MainApp extends Component {
 							<Route path={`${match.url}/beasy`} component={beasy} />
 							<Route path={`${match.url}/dashboard`} component={dashboard} />
 							<Route path={`${match.url}/matchmaker`} component={matchmaker} />
-							<Route path={`${match.url}/applications`} component={applications} />
-							<Route path={`${match.url}/dashboards`} component={dashboards} />
 							<Route path={`${match.url}/layouts`} component={layouts} />
-							<Route path={`${match.url}/ui`} component={ui} />
 							<Redirect to="/error" />
 						</Switch>
 					</div>

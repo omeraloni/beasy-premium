@@ -267,15 +267,6 @@ class Sidebar extends Component {
                   text={"matchmaker.matchmaker"} />
 
                 <SideMenuLink
-                  link={"/app/dashboards/default"}
-                  classes={{
-                    active: this.state.selectedParentMenu == "dashboards"
-                  }}
-                  clicked={e => this.openSubMenu(e, "dashboards")}
-                  icon={"iconsmind-Shop-4"}
-                  text={"menu.dashboards"} />
-
-                <SideMenuLink
                   link={"/app/layouts"}
                   classes={{
                     active: this.state.selectedParentMenu == "layouts"
@@ -284,32 +275,6 @@ class Sidebar extends Component {
                   icon={"iconsmind-Digital-Drawing"}
                   text={"menu.layouts"} />
 
-                <SideMenuLink
-                  link={"/app/applications"}
-                  classes={{
-                    active: this.state.selectedParentMenu == "applications"
-                  }}
-                  clicked={e => this.openSubMenu(e, "applications")}
-                  icon={"iconsmind-Air-Balloon"}
-                  text={"menu.applications"} />
-
-                <SideMenuLink
-                  link={"/app/ui"}
-                  classes={{
-                    active: this.state.selectedParentMenu == "ui"
-                  }}
-                  clicked={e => this.openSubMenu(e, "ui")}
-                  icon={"iconsmind-Pantone"}
-                  text={"menu.ui"} />
-
-                <SideMenuLink
-                  link={"/app/menu"}
-                  classes={{
-                    active: this.state.selectedParentMenu == "menu"
-                  }}
-                  clicked={e => this.openSubMenu(e, "menu")}
-                  icon={"iconsmind-Three-ArrowFork"}
-                  text={"menu.menu"} />
               </Nav>
             </PerfectScrollbar>
           </div>
@@ -362,38 +327,7 @@ class Sidebar extends Component {
 
               </Nav>
 
-              <Nav
-                className={classnames({
-                  "d-block": this.state.selectedParentMenu == "dashboards"
-                })}
-                data-parent="dashboards"
-              >
-                <NavItem>
-                  <NavLink to="/app/dashboards/default">
-                    <i className="simple-icon-briefcase" />{" "}
-                    <IntlMessages id="menu.default" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/dashboards/analytics">
-                    <i className="simple-icon-pie-chart" />{" "}
-                    <IntlMessages id="menu.analytics" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/dashboards/ecommerce">
-                    <i className="simple-icon-basket-loaded" />{" "}
-                    <IntlMessages id="menu.ecommerce" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/dashboards/content">
-                    <i className="simple-icon-doc" />{" "}
-                    <IntlMessages id="menu.content" />
-                  </NavLink>
-                </NavItem>
-              </Nav>
-              <Nav
+             <Nav
                 className={classnames({
                   "d-block": this.state.selectedParentMenu == "layouts"
                 })}
@@ -450,185 +384,8 @@ class Sidebar extends Component {
                   </a>
                 </NavItem>
               </Nav>
-              <Nav
-                className={classnames({
-                  "d-block": this.state.selectedParentMenu == "applications"
-                })}
-                data-parent="applications"
-              >
-                <NavItem>
-                  <NavLink to="/app/applications/todo">
-                    <i className="simple-icon-check" />{" "}
-                    <IntlMessages id="menu.todo" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/applications/survey">
-                    <i className="simple-icon-calculator" />{" "}
-                    <IntlMessages id="menu.survey" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/applications/chat">
-                    <i className="simple-icon-bubbles" />{" "}
-                    <IntlMessages id="menu.chat" />
-                  </NavLink>
-                </NavItem>
-              </Nav>
-
-              <Nav
-                className={classnames({
-                  "d-block": this.state.selectedParentMenu == "ui"
-                })}
-                data-parent="ui"
-              >
-                <NavItem>
-                  <NavLink to="/app/ui/alerts">
-                    <i className="simple-icon-bell" />{" "}
-                    <IntlMessages id="menu.alerts" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/badges">
-                    <i className="simple-icon-badge" />{" "}
-                    <IntlMessages id="menu.badges" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/buttons">
-                    <i className="simple-icon-control-play" />{" "}
-                    <IntlMessages id="menu.buttons" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/cards">
-                    <i className="simple-icon-layers" />{" "}
-                    <IntlMessages id="menu.cards" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/carousel">
-                    <i className="simple-icon-picture" />{" "}
-                    <IntlMessages id="menu.carousel" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/charts">
-                    <i className="simple-icon-chart" />{" "}
-                    <IntlMessages id="menu.charts" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/collapse">
-                    <i className="simple-icon-arrow-up" />{" "}
-                    <IntlMessages id="menu.collapse" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/dropdowns">
-                    <i className="simple-icon-arrow-down" />{" "}
-                    <IntlMessages id="menu.dropdowns" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/editors">
-                    <i className="simple-icon-book-open" />{" "}
-                    <IntlMessages id="menu.editors" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/forms">
-                    <i className="simple-icon-check" />{" "}
-                    <IntlMessages id="menu.forms" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/form-components">
-                    <i className="simple-icon-puzzle" />{" "}
-                    <IntlMessages id="menu.form-components" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/icons">
-                    <i className="simple-icon-star" />{" "}
-                    <IntlMessages id="menu.icons" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/input-groups">
-                    <i className="simple-icon-note" />{" "}
-                    <IntlMessages id="menu.input-groups" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/jumbotron">
-                    <i className="simple-icon-screen-desktop" />{" "}
-                    <IntlMessages id="menu.jumbotron" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/modal">
-                    <i className="simple-icon-docs" />{" "}
-                    <IntlMessages id="menu.modal" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/navigation">
-                    <i className="simple-icon-cursor" />{" "}
-                    <IntlMessages id="menu.navigation" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/popover-tooltip">
-                    <i className="simple-icon-pin" />{" "}
-                    <IntlMessages id="menu.popover-tooltip" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/app/ui/sortable">
-                    <i className="simple-icon-shuffle" />{" "}
-                    <IntlMessages id="menu.sortable" />
-                  </NavLink>
-                </NavItem>
-              </Nav>
-
-              <Nav
-                className={classnames({
-                  "d-block": this.state.selectedParentMenu == "menu"
-                })}
-                data-parent="menu"
-              >
-                <NavItem>
-                  <NavLink
-                    to="#"
-                    onClick={e => this.changeDefaultMenuType(e, "menu-default")}
-                  >
-                    <i className="simple-icon-control-pause" />{" "}
-                    <IntlMessages id="menu.default" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    to="#"
-                    onClick={e =>
-                      this.changeDefaultMenuType(e, "menu-sub-hidden")
-                    }
-                  >
-                    <i className="simple-icon-arrow-left" />{" "}
-                    <IntlMessages id="menu.subhidden" />
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink
-                    to="#"
-                    onClick={e => this.changeDefaultMenuType(e, "menu-hidden")}
-                  >
-                    <i className="simple-icon-control-start" />{" "}
-                    <IntlMessages id="menu.hidden" />
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </PerfectScrollbar>
+    
+             </PerfectScrollbar>
           </div>
         </div>
       </div>

@@ -551,5 +551,14 @@ module.exports = {
     "dashboard.goal-impression": "Goal Impression",
 
     "card.connected": "Connected",
+
     
+    "opp.target-audiance": "Project Target Audiance",
+    "opp.age-group": "Age Group: ",
+    "opp.matching-score": "Matching Score",
+    "opp.age-group": "Age Group: ",
+    "opp.age-group": "Age Group: ",
+    "opp.age-group": "Age Group: ",
+    "opp.age-group": "Age Group: ",
+
 };

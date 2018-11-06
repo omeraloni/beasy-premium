@@ -74,7 +74,7 @@ class OpportunityCard extends Component {
             </p>
 
             <p className="text-muted mb-2">
-              <IntlMessages id="Target Audiance" />
+              <IntlMessages id="opp.target-audiance" />
             </p>
             <p className="mb-4" text-large>
               {product.gender.map(g => {
@@ -87,7 +87,7 @@ class OpportunityCard extends Component {
               })}
             </p>
             <p className="mb-3">
-              <IntlMessages id="Age: " />
+              <IntlMessages id="opp.age-group" />
               {product.ageMin} - {product.ageMax}
             </p>
 
@@ -142,7 +142,7 @@ class OpportunityCard extends Component {
               </p>
             </div>
             <p className="text-muted text-small mb-2">
-              <IntlMessages id="Match" />
+              <IntlMessages id="opp.matching-score" />
             </p>
             <div className="mb-3">
               <Rating total={5} rating={5} interactive={false} />

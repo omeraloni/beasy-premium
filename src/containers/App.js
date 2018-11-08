@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import { Redirect, Route, Switch} from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
-import ColorSwitcher from 'Components/ColorSwitcher'
 import {  NotificationContainer} from "Components/ReactNotifications";
 
 import { defaultStartPath } from 'Constants/defaultValues'
@@ -60,7 +59,6 @@ class App extends Component {
 							<Route path={`/error`} component={error} />
 							<Redirect to="/error" />
 						</Switch>
-						<ColorSwitcher />
 					</Fragment>
 				</IntlProvider>
 			</Fragment>

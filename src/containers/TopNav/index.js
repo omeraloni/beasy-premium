@@ -16,7 +16,7 @@ import {
   logoutUser
 } from "Redux/actions";
 
-import { menuHiddenBreakpoint,searchPath } from "Constants/defaultValues";
+import { menuHiddenBreakpoint, searchPath } from "Constants/defaultValues";
 
 import notifications from "Data/topnav.notifications.json";
 
@@ -60,7 +60,7 @@ class TopNav extends Component {
       } else {
         elem.classList.add("mobile-view");
       }
-    }else{
+    } else {
       this.search();
     }
   };
@@ -71,12 +71,12 @@ class TopNav extends Component {
   }
   handleSearchInputKeyPress(e) {
     if (e.key === 'Enter') {
-      this.search() 
+      this.search()
     }
   }
-  
+
   search() {
-    this.props.history.push(searchPath+"/"+this.state.searchKeyword)
+    this.props.history.push(searchPath + "/" + this.state.searchKeyword)
     this.setState({
       searchKeyword: ""
     });
@@ -164,7 +164,7 @@ class TopNav extends Component {
         <NavLink
           to="#"
           className="menu-button-mobile d-xs-block d-sm-block d-md-none"
-          onClick={e => this.mobileMenuButtonClick(e, containerClassnames)}          
+          onClick={e => this.mobileMenuButtonClick(e, containerClassnames)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
             <rect x="0.5" y="0.5" width="25" height="1" />
@@ -180,7 +180,7 @@ class TopNav extends Component {
             placeholder="Search.."
             value={this.state.searchKeyword}
             onChange={e => this.handleSearchInputChange(e)}
-            onKeyPress ={e=> this.handleSearchInputKeyPress(e)}
+            onKeyPress={e => this.handleSearchInputKeyPress(e)}
           />
           <span className="search-icon" onClick={e => this.handleSearchIconClick(e)}>
             <i className="simple-icon-magnifier" />
@@ -216,18 +216,18 @@ class TopNav extends Component {
                           key={index}
                           className="d-flex flex-row mb-3 pb-3 border-bottom"
                         >
-                            <img
-                              src={n.image}
-                              alt="Notification"
-                              className="img-thumbnail list-thumbnail xsmall border-0 rounded-circle"
-                            />
+                          <img
+                            src={n.image}
+                            alt="Notification"
+                            className="img-thumbnail list-thumbnail xsmall border-0 rounded-circle"
+                          />
                           <div className="pl-3 pr-2">
-                              <p className="font-weight-medium mb-1">
-                                {n.message}
-                              </p>
-                              <p className="text-muted mb-0 text-small">
-                                {n.date}
-                              </p>
+                            <p className="font-weight-medium mb-1">
+                              {n.message}
+                            </p>
+                            <p className="text-muted mb-0 text-small">
+                              {n.date}
+                            </p>
                           </div>
                         </div>
                       );
@@ -246,11 +246,22 @@ class TopNav extends Component {
               {this.state.isInFullScreen ? (
                 <i className="simple-icon-size-actual d-block" />
               ) : (
-                <i className="simple-icon-size-fullscreen d-block" />
-              )}
+                  <i className="simple-icon-size-fullscreen d-block" />
+                )}
             </button>
           </div>
-          <div className="user d-inline-block">
+          <div className="header-icons d-inline-block align-middle ">
+            <div className="position-relative d-inline-block user ">
+            <span className="mr-1">
+                <img alt="Profile" src="/assets/img/beasy/Marley.jpg"/>
+              </span>
+            <span className="name">The House Of Marley</span>
+
+            </div>
+
+          </div>
+
+          <div className="user d-inline-block ">
             <UncontrolledDropdown className="dropdown-menu-right">
               <DropdownToggle className="p-0" color="empty">
                 <span className="name mr-1">Daniel Kaufman</span>
@@ -270,6 +281,7 @@ class TopNav extends Component {
               </DropdownMenu>
             </UncontrolledDropdown>
           </div>
+
         </div>
       </nav>
     );

@@ -9,10 +9,7 @@ color options :
 	 'light.orange'		'dark.orange'
 	 'light.red'		  'dark.red'
 */
-var color = 'light.purple';
-if (localStorage.getItem('themeColor')) {
-  color = localStorage.getItem('themeColor');
-}
+var color = 'light.green';
 
 let render = () => {
   const css = import('./assets/css/sass/themes/gogo.' + color + '.scss').then(x => {

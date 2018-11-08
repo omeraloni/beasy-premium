@@ -2,36 +2,49 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128956455-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-128956455-2');
+    </script>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" />
     <link rel="stylesheet" href="/assets/fonts/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="/assets/fonts/iconsmind/style.css">
     <title>Beasy - Making Match Valuable</title>
 
     <style>
-    .loading {
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        border: 2px solid rgba(100,100,100,.2 );
-        border-radius: 50%;
-        border-top-color: rgba(100,100,100,.7 );
-        animation: spin 1s ease-in-out infinite;
-        -webkit-animation: spin 1s ease-in-out infinite;
-        left: calc(50%);
-        top: calc(50%);
-        position: fixed;
-        z-index: 1;
+        .loading {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 2px solid rgba(100, 100, 100, .2);
+            border-radius: 50%;
+            border-top-color: rgba(100, 100, 100, .7);
+            animation: spin 1s ease-in-out infinite;
+            -webkit-animation: spin 1s ease-in-out infinite;
+            left: calc(50%);
+            top: calc(50%);
+            position: fixed;
+            z-index: 1;
         }
 
         @keyframes spin {
-        to { -webkit-transform: rotate(360deg); }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
         }
+
         @-webkit-keyframes spin {
-        to { -webkit-transform: rotate(360deg); }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
         }
-
-
     </style>
 </head>
 
@@ -46,7 +59,7 @@
                 theme = localStorage.getItem("themeColor");
             }
         }
-        if(theme.indexOf("dark") != -1) {
+        if (theme.indexOf("dark") != -1) {
             document.documentElement.style.background = "#1b191b";
         }
     </script>

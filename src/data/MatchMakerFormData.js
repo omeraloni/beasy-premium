@@ -19,7 +19,7 @@ module.exports.lookingFor = () => {
                 label: 'Other',
             }
         ],
-        title: "What are u looking for?",
+        title: "matchmaker.looking-for",
         adornment: ""
     });
 }
@@ -73,7 +73,7 @@ module.exports.goals = () => {
                 label: 'Other',
             }
         ],
-        title: "What is your Goal?",
+        title: "matchmaker.what-is-your-goal",
         adornment: ""
     });
 }
@@ -124,7 +124,7 @@ module.exports.how = () => {
                 label: 'Other',
             }
         ],
-        title: "How?",
+        title: "matchmaker.how",
         adornment: ""
     });
 }
@@ -142,7 +142,7 @@ module.exports.where = () => {
                 label: 'England',
             },
         ],
-        title: "Where?",
+        title: "matchmaker.where",
         adornment: ""
     });
 }
@@ -172,7 +172,7 @@ module.exports.achieve = () => {
                 label: 'Other',
             },
         ],
-        title: "What do you want to achieve?",
+        title: "matchmaker.achieve",
         error: "Please check at least 1 achievement",
         adornment: ""
     });
@@ -325,7 +325,7 @@ module.exports.interest = () => {
                 label: 'Creation',
             },
         ],
-        title: "Interests",
+        title: "opp.interests",
         error: "",
         adornment: ""
     });

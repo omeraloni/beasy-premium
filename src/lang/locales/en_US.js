@@ -540,6 +540,13 @@ module.exports = {
   "matchmaker.gender": "Gender",
   "matchmaker.tellUs": "Tell us about your goal and we will match the best partner for you",
   "matchmaker.getBeasy": "Get Beasy !",
+  "matchmaker.looking-for": "What are u looking for?",
+  "matchmaker.what-is-your-goal": "What is your Goal?",
+  "matchmaker.how": "How?",
+  "matchmaker.where": "Where?",
+  "matchmaker.achieve": "What do you want to achieve?",
+  "matchmaker.target-audience": "Target Audience",
+  "matchmaker.locations": "Locations",
 
   /* 13.Beasy Results */
   "results.title-first": "Your Goal has been posted! ",

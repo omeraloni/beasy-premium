@@ -280,7 +280,7 @@ class FormsUi extends Component {
                     <Colxx sm={6}>
                       <FormGroup>
                         <Label className="pt-0" className="mb-3">
-                          <IntlMessages id="Target Audience" />
+                          <IntlMessages id="matchmaker.target-audience" />
                         </Label>
                         <FormGroup row>
                         <Colxx sm={12}>
@@ -298,7 +298,7 @@ class FormsUi extends Component {
                           <Colxx sm={6}>
                             <FormGroup>
                               <Label className="pt-0">
-                                <IntlMessages id={"Locations"} />
+                                <IntlMessages id={"matchmaker.lAdd to Favoritesocations"} />
                               </Label>
                               <Colxx>
                                 <Select

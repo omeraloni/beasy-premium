@@ -56,7 +56,7 @@ class ResultCard extends Component {
                         </div>
                         <footer>
                             <p className="text-muted text-small mb-2">
-                                <IntlMessages id="Add to Favorites" />
+                                <IntlMessages id="opp.add-to-favorites" />
                             </p>
                             <Button
                                 outline

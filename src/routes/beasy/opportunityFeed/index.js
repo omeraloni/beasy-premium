@@ -20,8 +20,6 @@ import {
   Badge
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
-import Select from "react-select";
-import CustomSelectInput from "Components/CustomSelectInput";
 
 import IntlMessages from "Util/IntlMessages";
 import { Colxx, Separator } from "Components/CustomBootstrap";
@@ -264,7 +262,7 @@ export default class ImageListLayout extends Component {
           <Row>
             <Colxx xxs="12">
               <div className="mb-2">
-                <h1><IntlMessages id="Your Next Business Opportunity" /></h1>
+                <h1><IntlMessages id="feed.next-business-opportunity" /></h1>
 
                 <div className="float-sm-right">
                   <NavLink to="/app/matchmaker/new">

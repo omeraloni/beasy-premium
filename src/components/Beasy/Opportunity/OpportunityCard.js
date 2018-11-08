@@ -52,22 +52,22 @@ class OpportunityCard extends Component {
 
         <CardBody>
           <p className="text-muted text-small mb-2">
-            <IntlMessages id={product.name + " "} />
+            {product.name + " "}
             <i className="simple-icon-location-pin" />
-            <IntlMessages id={" " + product.companyLocation} />
+            {" " + product.companyLocation}
           </p>
           <p className="text-muted text-small mb-2">
-            <IntlMessages id={product.companyDescription} />
+            {product.companyDescription}
           </p>
           <p className="text mb-2">
-            <b> <IntlMessages id={product.title} /> </b>
+            <b> {product.title} </b>
           </p>
           <p className="mb-3">
             {product.notes}
           </p>
           <Collapse isOpen={this.state.collapse}>
             <p className="text-muted text-small mb-2">
-              <IntlMessages id={"About " + product.name} />
+              <IntlMessages id={"opp.about"} /> { product.name} 
             </p>
             <p className="mb-3">
               {product.description}
@@ -93,12 +93,12 @@ class OpportunityCard extends Component {
 
             <p className="mb-3">
               <i className="simple-icon-location-pin" />
-              <IntlMessages id={" " + product.location} />
+              {" " + product.location}
             </p>
 
 
             <p className="text-muted text-small mb-2">
-              <IntlMessages id="Interests" />
+              <IntlMessages id="opp.interests" />
             </p>
             <div className="mb-3">
               <p className="d-sm-inline-block mb-1">
@@ -113,7 +113,7 @@ class OpportunityCard extends Component {
             </div>
 
             <p className="text-muted text-small mb-2">
-              <IntlMessages id="Goals" />
+              <IntlMessages id="opp.goals" />
             </p>
             <div className="mb-3">
               <p className="d-sm-inline-block mb-1">
@@ -128,7 +128,7 @@ class OpportunityCard extends Component {
             </div>
 
             <p className="text-muted text-small mb-2">
-              <IntlMessages id="How" />
+              <IntlMessages id="opp.how" />
             </p>
             <div className="mb-3">
               <p className="d-sm-inline-block mb-1">
@@ -149,7 +149,7 @@ class OpportunityCard extends Component {
             </div>
 
             <p className="text-muted text-small mb-2">
-              <IntlMessages id="Add to Favorites" />
+              <IntlMessages id="opp.add-to-favorites" />
             </p>
             <Button
               outline

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import IntlMessages from "Util/IntlMessages";
-import { Nav, NavItem } from "reactstrap";
-import { NavLink } from "react-router-dom";
+import { Nav } from "reactstrap";
 import SideMenuLink from "Components/Beasy/SideMenu/SideMenuLink/SideMenuLink";
 import SubMenuLink from "Components/Beasy/SideMenu/SubMenuLink/SubMenuLink";
 import ComingSoonBadge from "Components/Beasy/Badges/ComingSoonBadge"
@@ -246,7 +244,7 @@ class Sidebar extends Component {
                   }}
                   clicked={e => this.openSubMenu(e, "beasy")}
                   icon={"iconsmind-Compass-Rose"}
-                  text={"Beasy"} />
+                  text={"menu.beasy"} />
 
                 <SideMenuLink
                   link={"/app/dashboard/myDashboard"}
@@ -288,7 +286,7 @@ class Sidebar extends Component {
 
                 <SubMenuLink link={"/app/beasy/aboutUs"}
                   icon={"iconsmind-Information"}
-                  text={"About Us"} >
+                  text={"menu.about-us"} >
                   <ComingSoonBadge> </ComingSoonBadge>
 
                 </ SubMenuLink>
@@ -302,7 +300,7 @@ class Sidebar extends Component {
               >
                 <SubMenuLink link={"/app/dashboard/myDashboard"}
                   icon={"iconsmind-Home-5"}
-                  text={"My Dashboard"} />
+                  text={"menu.myDashboard"} />
 
               </Nav>
 
@@ -314,7 +312,7 @@ class Sidebar extends Component {
               >
                 <SubMenuLink link={"/app/matchmaker/new"}
                   icon={"iconsmind-Home-5"}
-                  text={"New"} />
+                  text={"menu.new"} />
 
               </Nav>
              </PerfectScrollbar>

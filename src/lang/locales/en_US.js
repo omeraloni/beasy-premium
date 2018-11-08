@@ -519,11 +519,16 @@ module.exports = {
 
   /* 13.Beasy Menu */
   "menu.beasy": "Beasy",
+  "menu.about-us": "About Us",
   "menu.opportunity_feed": "Opportunity Feed",
   "menu.matchmaker": "MatchMaker",
   "menu.new": "New",
   "menu.dashboard": "Dashboard",
   "menu.myDashboard": "My Dashboard",
+  "menu.coming-soon": "Coming Soon",
+
+  /* 13.Beasy MatchMaker */
+  "feed.next-business-opportunity": "Your Next Business Opportunity",
 
   /* 13.Beasy MatchMaker */
   "matchmaker.matchmaker": "The MatchMaker",
@@ -541,25 +546,26 @@ module.exports = {
   "results.title-second": "Explore your potential partners",
   "results.more-matching": "Discover more matching partners",
 
-    /* 13.Beasy Dashboard */
-    "results.title": "Your Potential Partners",
-    "dashboard.pending-requests": "Pending Requests",
-    "dashboard.collaborations": "Collaborations",
-    "dashboard.projects-in-progress": "Projects In Progress",
-    "dashboard.projects": "Projects",
-    "dashboard.calender": "Calender",
-    "dashboard.project-list": "Project List",
-    "dashboard.goal-impression": "Goal Impression",
+  /* 13.Beasy Dashboard */
+  "results.title": "Your Potential Partners",
+  "dashboard.pending-requests": "Pending Requests",
+  "dashboard.collaborations": "Collaborations",
+  "dashboard.projects-in-progress": "Projects In Progress",
+  "dashboard.projects": "Projects",
+  "dashboard.calender": "Calender",
+  "dashboard.project-list": "Project List",
+  "dashboard.goal-impression": "Goal Impression",
 
-    "card.connected": "Connected",
+  "card.connected": "Connected",
 
-    
-    "opp.target-audiance": "Project Target Audiance",
-    "opp.age-group": "Age Group: ",
-    "opp.matching-score": "Matching Score",
-    "opp.age-group": "Age Group: ",
-    "opp.age-group": "Age Group: ",
-    "opp.age-group": "Age Group: ",
-    "opp.age-group": "Age Group: ",
+
+  "opp.target-audiance": "Project Target Audiance",
+  "opp.age-group": "Age Group: ",
+  "opp.matching-score": "Matching Score",
+  "opp.interests": "Interests",
+  "opp.about": "About ",
+  "opp.goals": "Goals",
+  "opp.how": "How",
+  "opp.add-to-favorites": "Add to Favorites",
 
 };

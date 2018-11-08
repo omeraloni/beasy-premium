@@ -7,7 +7,7 @@ class ComingSoonBadge extends Component {
         return (
 
             <Badge color="outline-dark" pill className="mb-1">
-                <IntlMessages id="Coming Soon" />
+                <IntlMessages id="menu.coming-soon" />
             </Badge>
         );
     }
